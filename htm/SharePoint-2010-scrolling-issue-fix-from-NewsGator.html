@@ -1,0 +1,17 @@
+<h1>SharePoint&nbsp;2010 scrolling issue fix from NewsGator</h1>
+<p>SharePoint 2010 can have issues with scrolling in webkit browsers. I found this in the NewsGatorSkin.master. &nbsp;From its comments it fixes the scrolling issues in Chrome and Safari.</p>
+<p>var $ = window.jQuery142;</p>
+<p>if (!$) return;</p>
+<p>if ($.browser.webkit || $.browser.safari) {</p>
+<p>//handle scrolling on less supported browsers like chrome :)</p>
+<p>//once web parts complete loading they reload the default ribbon behavior so you get normal sharepoint style scrolling. This bypasses the bug in web kit that causing nested scrolling to fail if the page has no height/scrolling at render time</p>
+<p>$('body').css("overflow", "auto");</p>
+<p>var h = $('#s4-workspace').height();</p>
+<p>$('#s4-workspace').css("height", "auto").css("overflow-y", "auto").css("min-height", h);</p>
+<p>}</p>
+<p>else {</p>
+<p>//handle normal ribbon rendering and behavior on fully supported browsers</p>
+<p>//default ribbon behavior from the start</p>
+<p>var _fV4UI = true;</p>
+<p>}</p>
+<div>enjoy.</div> 
