@@ -2,11 +2,13 @@
 layout: post
 title:  "From CSS2 to Compass / Sass"
 date:   2014-08-28 13:34:54
+categories:
 ---
 If you have been seeing talk of CSS extensions like LESS and SASS but have not had a chance to use them then this article might give you an idea of what it would be like.
 
 First I will show what it was like using CSS 2 before CSS 3 came along.
-CSS 2:
+
+##CSS 2:
 {% highlight ruby %}
 .box{
   border: 1px solid gainsboro;
@@ -15,7 +17,8 @@ CSS 2:
 Wee. No wait. Boring.
 
 Then CSS3 came and we can do great stuff like round corners.
-CSS 3:
+
+##CSS 3:
 {% highlight ruby %}
 .box {
   -webkit-border-radius: 10px;
@@ -26,7 +29,8 @@ CSS 3:
 }
 {% endhighlight %}
 But look at all those pre-fixes. So with SASS we can define it once and use it many many times.
-SASS:
+
+##SASS:
 {% highlight ruby %}
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -52,7 +56,8 @@ The output is converted to be just like the CSS3 above that was all written by h
 .box2 ...
 {% endhighlight %}
 But then with Compass (which uses SASS) we don't have to write the MIXINs. They are written for us. We can just include the set of MIXINs we want and then start using them like this...
-Compass:
+
+##Compass:
 {% highlight ruby %}
 @import "compass/css3";
 

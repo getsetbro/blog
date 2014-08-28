@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Use paint.NET to get logo's out of Photoshop PSD files"
+date:   2014-02-20 10:30:00
+categories:
+---
+1.  Go to [http://www.dotpdn.com/downloads/pdn.html](http://www.dotpdn.com/downloads/pdn.html). Download link is on the right.
+2.  Extract from zip and install. Choosing the QUICK install is fine.
+3.  If you do not have the needed version of .NET if will notify you. If needed, install that and then paint.NET.
+4.  Next download the psdplugin from codeplex [http://psdplugin.codeplex.com/](http://psdplugin.codeplex.com/). This allows opening Photoshop files (.PSD) in paint.NET
+5.  Extract the psdplugin files from zip and follow these steps from the Readme.txt:
+    1.  Exit all instances of Paint.NET.
+    2.  Copy Photoshop.dll into the FileTypes directory such as: "C:\Program Files\Paint.NET\FileTypes"
+    3.  Restart Paint.NET, which will automatically detect the plugin.
+6.  Open a .PSD file.
+7.  Make the "Layers" box taller.
+8.  Find the layer with the logo.
+    1.  Hopefully it was labeled "Logo" but if not find it by turning off every layer until you see it hide.
+    2.  Turn layers on and off by checking / unchecking the checkbox on the right of them.
+    3.  Once you find the logo layer leave it turned on.
+9.  Turn off all layers that are behind the logo so that you see the workspace checkerboard as the background of the logo.
+10.  Select the "Rectangle Select" tool (first one in the tools box) and draw a box around the logo.
+11.  Choose "Crop to selection" from the "Image" menu.
+12.  Save as a PNG - 32bit. Allow it to "Flatten" before saving.
+13.  Done.

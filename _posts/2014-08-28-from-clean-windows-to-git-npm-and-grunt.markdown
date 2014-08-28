@@ -2,6 +2,7 @@
 layout: post
 title:  "From clean Windows to git, npm, and grunt"
 date:   2014-08-28 13:34:54
+categories:
 ---
 Steps for building git stuff on windows - As Easy As Possible
 
