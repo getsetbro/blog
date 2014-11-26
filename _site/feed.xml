@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>getsetblog</title>
+    <description>Official blog spot of Seth Broweleit.
+</description>
+    <link>http://getsetbro.com/</link>
+    <atom:link href="http://getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 26 Nov 2014 01:18:04 -0600</pubDate>
+    <lastBuildDate>Wed, 26 Nov 2014 01:18:04 -0600</lastBuildDate>
+    <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>CSS systems</title>
+        <description>&lt;h4 id=&quot;i-am-making-a-list-of-css-systems-when-i-become-aware-of-them&quot;&gt;I am making a list of css systems when I become aware of them:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;//twitter.github.com/bootstrap&quot;&gt;Bootstrap.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//foundation.zurb.com&quot;&gt;Foundation.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//www.getskeleton.com&quot;&gt;Skeleton.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//purecss.io&quot;&gt;Pure.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//topcoat.io&quot;&gt;Topcoat.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//pea.rs&quot;&gt;Pears.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//gumbyframework.com&quot;&gt;Gumby.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//malarkey.github.io/Rock-Hammer&quot;&gt;Rock Hammer.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//tuktuk.tapquo.com&quot;&gt;Tuktuk.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//www.unsemantic.com&quot;&gt;Unsemantic.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//zengrids.com&quot;&gt;Zen grid.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//inuitcss.com&quot;&gt;inuit.css.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//docs.atlassian.com/aui/latest&quot;&gt;AUI.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//baselinecss.com&quot;&gt;Baseline.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//typeplate.com&quot;&gt;Typeplate.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//960.gs&quot;&gt;960 grid.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//www.99lime.com/elements&quot;&gt;HTML KickStart.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//imperavi.com/kube/stencils&quot;&gt;Kube.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//weice.in/ivory&quot;&gt;Ivory.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;styleguides&quot;&gt;Styleguides:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;//gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides&quot;&gt;gimmebar front end styleguides&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//bradfrost.github.io/this-is-responsive/patterns.html&quot;&gt;brad frost responsive patterns&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//www.starbucks.com/static/reference/styleguide&quot;&gt;starbucks styleguide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;//clearleft.com/styleguide/&quot;&gt;clearleft styleguide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;docs&quot;&gt;Docs:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;//docs.google.com/spreadsheet/ccc?key=0AiN0QfBTPpOCdDFjWlM0eU1ra21XanZkekxGbjA2WWc&quot;&gt;tyler sticka Styleguide and Boilerplate patterns spreadsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 20 Nov 2014 02:00:00 -0600</pubDate>
+        <link>http://getsetbro.com/CSS-systems.html</link>
+        <guid isPermaLink="true">http://getsetbro.com/CSS-systems.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>From CSS2 to Compass / Sass</title>
+        <description>&lt;p&gt;If you have been seeing talk of CSS extensions like LESS and SASS but have not had a chance to use them then this article might give you an idea of what it would be like.&lt;/p&gt;
+
+&lt;p&gt;First I will show what it was like using CSS 2 before CSS 3 came along.&lt;/p&gt;
+
+&lt;h2 id=&quot;css-2&quot;&gt;CSS 2:&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gainsboro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Wee. No wait. Boring.&lt;/p&gt;
+
+&lt;p&gt;Then CSS3 came and we can do great stuff like round corners.&lt;/p&gt;
+
+&lt;h2 id=&quot;css-3&quot;&gt;CSS 3:&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But look at all those pre-fixes. So with SASS we can define it once and use it many many times.&lt;/p&gt;
+
+&lt;h2 id=&quot;sass&quot;&gt;SASS:&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@mixin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The output is converted to be just like the CSS3 above that was all written by hand:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But then with Compass (which uses SASS) we don’t have to write the MIXINs. They are written for us. We can just include the set of MIXINs we want and then start using them like this…&lt;/p&gt;
+
+&lt;h2 id=&quot;compass&quot;&gt;Compass:&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compass/css3&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 28 Aug 2014 08:34:54 -0500</pubDate>
+        <link>http://getsetbro.com/from-css-2-to-compass-sass.html</link>
+        <guid isPermaLink="true">http://getsetbro.com/from-css-2-to-compass-sass.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>From clean Windows to git, npm, and grunt</title>
+        <description>&lt;p&gt;Steps for building git stuff on windows - As Easy As Possible&lt;/p&gt;
+
+&lt;p&gt;Install git from http://git-scm.com/downloads
+During the install choose all defaults except for Run Git from the Windows Command Prompt:&lt;/p&gt;
+
+&lt;p&gt;(if you instead install github-for-windows it does not add GIT commands to windows command prompt)&lt;/p&gt;
+
+&lt;p&gt;Next Install node from nodejs.org/download
+Install 32 or 64 bit.
+The default choices install everything needed. NPM and NODE commands are added to windows command prompt (puts command in your system path, allowing it to be run from any directory.)&lt;/p&gt;
+
+&lt;p&gt;Install grunt.
+From a command prompt type:
+npm install -g grunt-cli
+This installs grunt and the GRUNT command is added to win command prompt&lt;/p&gt;
+
+&lt;p&gt;Now we can git projects and build them. From the command prompt type:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;checkout&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bootstrap3_bis2&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When I tried this I got a windows firewall blocked notification - so i allowed it.&lt;/p&gt;
+
+&lt;p&gt;Then I got a couple errors so instead I had to type:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;force&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And got: Error launcher could not find chrome “set env variable CHROME_BIN”.
+No biggy, it built the file needed. Boom, roasted.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Aug 2014 08:34:54 -0500</pubDate>
+        <link>http://getsetbro.com/from-clean-windows-to-git-npm-and-grunt.html</link>
+        <guid isPermaLink="true">http://getsetbro.com/from-clean-windows-to-git-npm-and-grunt.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>web prototyping with github pages</title>
+        <description>&lt;p&gt;This is an easy way, without needing to learn too much github stuff right away, to quickly get static stuff up online for others to view. I use it for prototyping, spikes, mockups, anything.&lt;/p&gt;
+
+&lt;p&gt;In your github repositories click the NEW button:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5520/14321018403_b02f152efb_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On this next page give it a name and click CREATE:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5516/14114211090_c9e164a376_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the created page find and click SETTINGS:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5510/14298913412_222af0b105_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the settings page find and click AUTOMATIC PAGE GENERATOR:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm4.staticflickr.com/3683/14298913362_c932992378_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the auto page click CONTINUE TO LAYOUTS:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm4.staticflickr.com/3737/14114211210_a472cd39e3_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the generated page click PUBLISH (you will be able to make all the changes you need later in your IDE)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm4.staticflickr.com/3744/14114299927_d34639889e_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the next page CLONE IN DESKTOP, first have installed &lt;a href=&quot;//mac.github.com&quot;&gt;GITHUB FOR MAC //mac.github.com&lt;/a&gt; or &lt;a href=&quot;//windows.github.com&quot;&gt;GITHUB FOR WINDOWS //windows.github.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5490/14300276964_39edf37b6c_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then choose a folder to save the repo to and click CLONE:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm4.staticflickr.com/3669/14114210800_1291d2b080_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then I drag the repo folder into SublimeText and make changes. You can delete and add files and folders. GITHUB FOR MAC will track the changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5551/14321017993_f7c9fbd476_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To upload to github. Go to CHANGES tab of the repo in GITHUB FOR MAC/WINDOWS and click COMMIT AND SYNC.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm3.staticflickr.com/2940/14114190638_710f8066bc_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Real soon your changes will show at your repo pages url like mine &lt;a href=&quot;//getsetbro.github.io/newrepo&quot;&gt;//getsetbro.github.io/newrepo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5526/14114190508_d8ecb61ce3_o.png&quot; alt=&quot;example&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Jun 2014 05:30:00 -0500</pubDate>
+        <link>http://getsetbro.com/web-prototyping-with-github-pages.html</link>
+        <guid isPermaLink="true">http://getsetbro.com/web-prototyping-with-github-pages.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Use paint.NET to get logo&#39;s out of Photoshop PSD files</title>
+        <description>&lt;ol&gt;
+  &lt;li&gt;Go to &lt;a href=&quot;http://www.dotpdn.com/downloads/pdn.html&quot;&gt;http://www.dotpdn.com/downloads/pdn.html&lt;/a&gt;. Download link is on the right.&lt;/li&gt;
+  &lt;li&gt;Extract from zip and install. Choosing the QUICK install is fine.&lt;/li&gt;
+  &lt;li&gt;If you do not have the needed version of .NET if will notify you. If needed, install that and then paint.NET.&lt;/li&gt;
+  &lt;li&gt;Next download the psdplugin from codeplex &lt;a href=&quot;http://psdplugin.codeplex.com/&quot;&gt;http://psdplugin.codeplex.com/&lt;/a&gt;. This allows opening Photoshop files (.PSD) in paint.NET&lt;/li&gt;
+  &lt;li&gt;Extract the psdplugin files from zip and follow these steps from the Readme.txt:
+    &lt;ol&gt;
+      &lt;li&gt;Exit all instances of Paint.NET.&lt;/li&gt;
+      &lt;li&gt;Copy Photoshop.dll into the FileTypes directory such as: “C:\Program Files\Paint.NET\FileTypes”&lt;/li&gt;
+      &lt;li&gt;Restart Paint.NET, which will automatically detect the plugin.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open a .PSD file.&lt;/li&gt;
+  &lt;li&gt;Make the “Layers” box taller.&lt;/li&gt;
+  &lt;li&gt;Find the layer with the logo.
+    &lt;ol&gt;
+      &lt;li&gt;Hopefully it was labeled “Logo” but if not find it by turning off every layer until you see it hide.&lt;/li&gt;
+      &lt;li&gt;Turn layers on and off by checking / unchecking the checkbox on the right of them.&lt;/li&gt;
+      &lt;li&gt;Once you find the logo layer leave it turned on.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Turn off all layers that are behind the logo so that you see the workspace checkerboard as the background of the logo.&lt;/li&gt;
+  &lt;li&gt;Select the “Rectangle Select” tool (first one in the tools box) and draw a box around the logo.&lt;/li&gt;
+  &lt;li&gt;Choose “Crop to selection” from the “Image” menu.&lt;/li&gt;
+  &lt;li&gt;Save as a PNG - 32bit. Allow it to “Flatten” before saving.&lt;/li&gt;
+  &lt;li&gt;Done.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Thu, 20 Feb 2014 04:30:00 -0600</pubDate>
+        <link>http://getsetbro.com/use-paint.net-to-get-logo-s-out-of-photoshop-psd-files.html</link>
+        <guid isPermaLink="true">http://getsetbro.com/use-paint.net-to-get-logo-s-out-of-photoshop-psd-files.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>From clean windows to node, grunt, and yeoman</title>
+        <description>&lt;p&gt;A bit about Node.js and how to some steps to get some experience with it. If you are like me sometimes you can’t quite get your head around something until you start to use it.&lt;/p&gt;
+
+&lt;p&gt;Node.js is a platform for server-side and networking applications. Node.js applications are written in JavaScript, and can be run on Windows, Mac and Linux. Node.js includes networking capabilities (like HTTP), and access to the file system. So it sounds like a web server, but it isn’t one. To make node.js behave like a web server it needs to be programmed to handle the HTTP requests and provide the responses. Express is the “minimalist web framework” for that. We don’t need Express for the purposes of this article.&lt;/p&gt;
+
+&lt;p&gt;Install Node.js from the node website. http://nodejs.org/download/. You can choose the 32bit or 64bit .msi or .exe. For me it installed into C:\Program Files\nodejs. In a command prompt you can verify this by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The installer will install Node and NPM (a package manager). We will use NPM to install several things.
+In a command prompt window type or paste this to install Yeoman:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A nice thing is that this installs almost everything we need to get going. It installs Yeoman, Grunt, and Bower. Bower is a package manager for the web. Bower runs over Git, and is package-agnostic. Bower depends on Node and npm. It’s installed globally using npm.&lt;/p&gt;
+
+&lt;p&gt;Make sure that git is installed, as some bower packages require it to be fetched and installed.&lt;/p&gt;
+
+&lt;p&gt;To use Bower on Windows, install msysgit from http://git-scm.com/downloads/. Be sure to check the “Run Git from the Windows Command Prompt” option on the Adjusting your PATH environment screen of the install wizard. (If you instead install github-for-windows (http://windows.github.com) it does not add GIT commands to windows command prompt)&lt;/p&gt;
+
+&lt;p&gt;Now you have got all of the tools. Use NPM to get a Yeoman webapp generator. A Yeoman generator will add project files to a folder, then Grunt can use those files to build and stuff.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webapp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once that is downloaded run this to set it up:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;yo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webapp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If instead of the generic webapp generator you wanted the angular generator you would first download it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webapp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and then run it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;yo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;angular&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the command window you will be asked some questions that you use your keyboard to answer.
+“Sass with Compass” needs Ruby installed so deselect that if you do not have Ruby installed. That process can take awhile and when it is done you are back to a prompt with a blinking cursor. If you are not then it did not finish and is not ready to build.&lt;/p&gt;
+
+&lt;p&gt;When it does complete you can build and view your project with:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or just plain:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;for a production build. And to run the tests:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 20 Feb 2014 02:00:00 -0600</pubDate>
+        <link>http://getsetbro.com/from-clean-windows-to-node-grunt-and-yeoman.html</link>
+        <guid isPermaLink="true">http://getsetbro.com/from-clean-windows-to-node-grunt-and-yeoman.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Stop paying your SharePoint jQuery Tax</title>
+        <description>&lt;p&gt;Stop paying your jQuery tax by Sam Saffron is a great post about why but also how to put external JavaScript includes at the bottom of the page. This is an important how-to for performance but even more critical for developers of a CMS system like SharePoint. In SharePoint you want to be able to open a page in edit-mode and drop in some dynamic content. But to add some jQuery code in the middle of the page you need the jQuery JS file to be referenced above it. For this most developers will put a link to jQuery.min.js in the HEAD of the site. WRONG. This is where it is important to use a mechanism like what the article describes so you can get both the performance of external JS includes at the bottom and the ability to add JS in the middle of your page.&lt;/p&gt;
+
+&lt;p&gt;Here are some simplified steps of how you will want to accomplish it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Put a line of JS in the HEAD of your site that sets up the JavaScript array. This will collect all of the JS that you put in the middle of your page:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;vg&quot;&gt;$=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Put some JS in the middle of your page in this format:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;jQueryTest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Content&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BEFORE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jQuery&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;has&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;selected&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changed&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;script type=&amp;quot;text/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;javascript&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;function MyTest(){&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;$(&amp;quot;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#jQueryTest&amp;quot;).html(&amp;quot;Content AFTER jQuery code has selected and changed it.&amp;quot;);&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MyTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Each time that you add JS code to the middle of the page you push it into the array.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;At the bottom of the site link to jQuery JS and after that add a function that loops through the array and runs it:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;jquery.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;script type=&amp;quot;text/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;javascript&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;$.each(q,function(i,f){&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;$(f);&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;s2&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 20 Aug 2012 03:00:00 -0500</pubDate>
+        <link>http://getsetbro.com/stop-paying-your-sp-jquery-tax.html</link>
+        <guid isPermaLink="true">http://getsetbro.com/stop-paying-your-sp-jquery-tax.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -18,7 +18,6 @@ categories:
  - [Tuktuk.](//tuktuk.tapquo.com)
  - [Unsemantic.](//www.unsemantic.com)
  - [Zen grid.](//zengrids.com)
- - [Barebones.](//barebones.paulrobertlloyd.com)
  - [inuit.css.](//inuitcss.com)
  - [AUI.](//docs.atlassian.com/aui/latest)
  - [Baseline.](//baselinecss.com)
@@ -30,7 +29,10 @@ categories:
 
 
 ####Styleguides:
- - [front-end-styleguides](//gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides)
+ - [gimmebar front end styleguides](//gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides)
+ - [brad frost responsive patterns](//bradfrost.github.io/this-is-responsive/patterns.html)
+ - [starbucks styleguide](//www.starbucks.com/static/reference/styleguide)
+ - [clearleft styleguide](//clearleft.com/styleguide/)
 
 ####Docs:
- - [Styleguide and Boilerplate patters](//docs.google.com/spreadsheet/ccc?key=0AiN0QfBTPpOCdDFjWlM0eU1ra21XanZkekxGbjA2WWc)
+ - [tyler sticka Styleguide and Boilerplate patterns spreadsheet](//docs.google.com/spreadsheet/ccc?key=0AiN0QfBTPpOCdDFjWlM0eU1ra21XanZkekxGbjA2WWc)
