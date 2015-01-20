@@ -17,7 +17,16 @@ In a command prompt window type or paste this to install Yeoman:
 {% highlight ruby %}
 npm install -g yo
 {% endhighlight %}
-A nice thing is that this installs almost everything we need to get going. It installs Yeoman, Grunt, and Bower. Bower is a package manager for the web. Bower runs over Git, and is package-agnostic. Bower depends on Node and npm. It's installed globally using npm.
+The "-g" will install it globally on your system and not just in the project at hand. Leave off the "-g" if you want it to only install in the current project.
+Next install Grunt:
+{% highlight ruby %}
+npm install -g grunt
+{% endhighlight %}
+and Bower:
+{% highlight ruby %}
+npm install -g bower
+{% endhighlight %}
+Bower is a package manager for the web. Bower runs over Git, and is package-agnostic. Bower depends on Node and npm. It's installed globally using npm.
 
 Make sure that git is installed, as some bower packages require it to be fetched and installed.
 

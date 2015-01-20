@@ -6,9 +6,9 @@
 </description>
     <link>http://getsetbro.com/</link>
     <atom:link href="http://getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 26 Nov 2014 01:18:04 -0600</pubDate>
-    <lastBuildDate>Wed, 26 Nov 2014 01:18:04 -0600</lastBuildDate>
-    <generator>Jekyll v2.5.2</generator>
+    <pubDate>Tue, 20 Jan 2015 15:23:07 -0600</pubDate>
+    <lastBuildDate>Tue, 20 Jan 2015 15:23:07 -0600</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>CSS systems</title>
@@ -280,7 +280,16 @@ In a command prompt window type or paste this to install Yeoman:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;A nice thing is that this installs almost everything we need to get going. It installs Yeoman, Grunt, and Bower. Bower is a package manager for the web. Bower runs over Git, and is package-agnostic. Bower depends on Node and npm. It’s installed globally using npm.&lt;/p&gt;
+&lt;p&gt;The “-g” will install it globally on your system and not just in the project at hand. Leave off the “-g” if you want it to only install in the current project.
+Next install Grunt:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and Bower:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bower&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Bower is a package manager for the web. Bower runs over Git, and is package-agnostic. Bower depends on Node and npm. It’s installed globally using npm.&lt;/p&gt;
 
 &lt;p&gt;Make sure that git is installed, as some bower packages require it to be fetched and installed.&lt;/p&gt;
 
