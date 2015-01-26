@@ -6,8 +6,8 @@
 </description>
     <link>http://getsetbro.com/</link>
     <atom:link href="http://getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 20 Jan 2015 15:28:48 -0600</pubDate>
-    <lastBuildDate>Tue, 20 Jan 2015 15:28:48 -0600</lastBuildDate>
+    <pubDate>Mon, 26 Jan 2015 10:54:22 -0600</pubDate>
+    <lastBuildDate>Mon, 26 Jan 2015 10:54:22 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -123,52 +123,6 @@
         <pubDate>Thu, 28 Aug 2014 08:34:54 -0500</pubDate>
         <link>http://getsetbro.com/from-css-2-to-compass-sass.html</link>
         <guid isPermaLink="true">http://getsetbro.com/from-css-2-to-compass-sass.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>From clean Windows to git, npm, and grunt</title>
-        <description>&lt;p&gt;Steps for building git stuff on windows - As Easy As Possible&lt;/p&gt;
-
-&lt;p&gt;Install git from http://git-scm.com/downloads
-During the install choose all defaults except for Run Git from the Windows Command Prompt:&lt;/p&gt;
-
-&lt;p&gt;(if you instead install github-for-windows it does not add GIT commands to windows command prompt)&lt;/p&gt;
-
-&lt;p&gt;Next Install node from nodejs.org/download
-Install 32 or 64 bit.
-The default choices install everything needed. NPM and NODE commands are added to windows command prompt (puts command in your system path, allowing it to be run from any directory.)&lt;/p&gt;
-
-&lt;p&gt;Install grunt.
-From a command prompt type:
-npm install -g grunt-cli
-This installs grunt and the GRUNT command is added to win command prompt&lt;/p&gt;
-
-&lt;p&gt;Now we can git projects and build them. From the command prompt type:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;checkout&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bootstrap3_bis2&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;When I tried this I got a windows firewall blocked notification - so i allowed it.&lt;/p&gt;
-
-&lt;p&gt;Then I got a couple errors so instead I had to type:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;grunt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;force&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And got: Error launcher could not find chrome “set env variable CHROME_BIN”.
-No biggy, it built the file needed. Boom, roasted.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 28 Aug 2014 08:34:54 -0500</pubDate>
-        <link>http://getsetbro.com/from-clean-windows-to-git-npm-and-grunt.html</link>
-        <guid isPermaLink="true">http://getsetbro.com/from-clean-windows-to-git-npm-and-grunt.html</guid>
         
         
       </item>
