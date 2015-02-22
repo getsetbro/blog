@@ -26,6 +26,9 @@ categories:
  - [HTML KickStart.](//www.99lime.com/elements)
  - [Kube.](//imperavi.com/kube/stencils)
  - [Ivory.](//weice.in/ivory)
+ - [Kickstart](//getkickstart.com)
+ - [Uikit](//getuikit.com)
+
 
 
 ####Styleguides:
