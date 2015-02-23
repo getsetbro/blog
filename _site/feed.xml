@@ -6,8 +6,8 @@
 </description>
     <link>http://getsetbro.com/</link>
     <atom:link href="http://getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 22 Feb 2015 18:32:18 -0600</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 18:32:18 -0600</lastBuildDate>
+    <pubDate>Sun, 22 Feb 2015 18:33:20 -0600</pubDate>
+    <lastBuildDate>Sun, 22 Feb 2015 18:33:20 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -19,10 +19,10 @@
     &lt;p&gt;&lt;strong&gt;Facebook react&lt;/strong&gt; - &lt;a href=&quot;//facebook.github.io/react&quot;&gt;//facebook.github.io/react&lt;/a&gt; - This one started it all. “A JavaScript library for building user interfaces.”&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;ractiveJS&lt;/strong&gt; - &lt;a href=&quot;//www.ractivejs.org&quot;&gt;//www.ractivejs.org&lt;/a&gt; - “The Web UI library for perfectionists with deadlines.”&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;reactiveJS&lt;/strong&gt; - &lt;a href=&quot;//github.com/mattbaker/Reactive.js&quot;&gt;//github.com/mattbaker/Reactive.js&lt;/a&gt; - This is a tough on. There are several that have created a library with the name. None of them have grabbed the domain for it. I give it to this one. It’s the first [relevant] google result.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;reactiveJS&lt;/strong&gt; - &lt;a href=&quot;//github.com/mattbaker/Reactive.js&quot;&gt;//github.com/mattbaker/Reactive.js&lt;/a&gt; - This is a tough on. There are several that have created a library with the name. None of them have grabbed the domain for it. I give it to this one. It’s the first [relevant] google result.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;ractiveJS&lt;/strong&gt; - &lt;a href=&quot;//www.ractivejs.org&quot;&gt;//www.ractivejs.org&lt;/a&gt; - “The Web UI library for perfectionists with deadlines.”&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;reactiveUI&lt;/strong&gt; - &lt;a href=&quot;//github.com/reactiveui/ReactiveUI&quot;&gt;//github.com/reactiveui/ReactiveUI&lt;/a&gt; - “A MVVM framework that integrates with the Reactive Extensions for .NET to create elegant, testable User Interfaces that run on any mobile or desktop platform.”&lt;/p&gt;
