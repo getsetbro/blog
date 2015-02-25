@@ -6,7 +6,7 @@ categories: JS
 ---
 What do these things have in common? They sound the same. Another thing in common is that they are different from each other. It will take some research to find out what each one does for you but at least this will serve to make you ask the question "Which React?"
 
-The main reason for this post is I have seen lots and lots of tweets that mention "ReactiveJS" and then they link to "RactiveJS."
+The main reason for this post is I have seen so so many mention "ReactiveJS" and then they link to "RactiveJS."
 
 
 *	**Facebook React** - [//facebook.github.io/react](//facebook.github.io/react) - This one started it all. "A JavaScript library for building user interfaces."
