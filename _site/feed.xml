@@ -6,9 +6,110 @@
 </description>
     <link>http://blog.getsetbro.com/</link>
     <atom:link href="http://blog.getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 27 Feb 2015 12:01:38 -0600</pubDate>
-    <lastBuildDate>Fri, 27 Feb 2015 12:01:38 -0600</lastBuildDate>
+    <pubDate>Fri, 27 Feb 2015 15:52:04 -0600</pubDate>
+    <lastBuildDate>Fri, 27 Feb 2015 15:52:04 -0600</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>The SVG tutorial that will make it click</title>
+        <description>&lt;p&gt;When you want a shape in your webapp that is responsive and looks sharp at any size SVG is the way to go but where would you start? Here are some steps that can get you something useable and hopefully make some concepts around SVG click for you. There is much more to it, of course, but this might get you off and running.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Optional: Logon to your favorite web browser&lt;/li&gt;
+  &lt;li&gt;Head to an online SVG generator such as &lt;a href=&quot;//editor.method.ac&quot;&gt;//editor.method.ac&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Half way down, on the left, choose a shape from the shape library.
+        &lt;ul&gt;
+          &lt;li&gt;Some shapes have a lot of code behind them so choose a simple one like the triangle.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now draw it on the canvas with the shift key pressed so I keeps a square ratio for the width and height. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How big to draw? For this lets make it around 200 X 200. A big SVG object can have a lot of nice detail. But if the page ever lost the CSS that tells the large SVG to be a small icon then your visitor will be looking at a page full of SVG.&lt;/p&gt;
+
+&lt;p&gt;Notice that under the view menu you can see the source of the shape that you just drew.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Before you export be sure to change the canvas size to match the content.
+    &lt;ul&gt;
+      &lt;li&gt;This makes it so we don’t have extra unused space in our file.
+        &lt;ul&gt;
+          &lt;li&gt;and we will be able to tell what size the shape is by the width and height shown in the SVG attributes. You will see what I mean.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Make sure no SVG shapes are selected by choosing the Arrow tool and clicking outside of the shape and seeing the selection box goes away.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;On the right, under canvas, choose “Fit to Content” from the sizes drop-down.
+    &lt;ul&gt;
+      &lt;li&gt;If it already on “Fit to Content” you need to select something else and then again choose “Fit to Content”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;View the source
+    &lt;ul&gt;
+      &lt;li&gt;from the View menu and copy the code of the SVG file.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now paste it in a new bin somewhere like &lt;a href=&quot;//jsbin.com&quot;&gt;//jsbin.com&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;What you have is static sized SVG shape that does not resize. Next we’ll fix that.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The beginning of your SVG code looks like this&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&amp;lt;svg width=&amp;quot;189&amp;quot; height=&amp;quot;165&amp;quot;...&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;This is the width and height of the contents.
+    &lt;ul&gt;
+      &lt;li&gt;Add the viewBox attribute to the SVG element using the width and height attribute values:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&amp;lt;svg width=&amp;quot;189&amp;quot; height=&amp;quot;165&amp;quot; viewBox=&amp;quot;0 0 189 165&amp;quot;&amp;gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;Now change the width and height to 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&amp;lt;svg width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot; viewBox=&amp;quot;0 0 189 165&amp;quot;&amp;gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;You now have a shape that scales and responds to its confines.
+    &lt;ul&gt;
+      &lt;li&gt;Now the problem becomes what its confines are&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Understand how the viewBox wants to use the width and height of the contents inside of it.
+    &lt;ul&gt;
+      &lt;li&gt;If you use numbers bigger than the contents you will have wasted space.
+        &lt;ul&gt;
+          &lt;li&gt;If you use numbers that are smaller than the contents you will cut off part of the contents.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Try putting it into a bootstrap grid and see what you’ve got&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe src=&quot;http://jsbin.com/dogeno/1/embed?output&quot; style=&quot;border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 330px; height: 330px;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;http://jsbin.com/dogeno/1/embed?html&quot; style=&quot;border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 330px; height: 330px;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Notice that I stripped everything but the SVG and the PATH. The Title and G elements have there place but for this we are not in need of them.&lt;/p&gt;
+
+&lt;p&gt;I wont go into what this tag does but it’s a good thing: preserveAspectRatio=”xMidYMid meet”&lt;/p&gt;
+
+&lt;p&gt;To put it simply, to make a SVG element responsive the width &amp;amp; height move to the viewBox &amp;amp; change them to 100%.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;//pbs.twimg.com/media/B-4asHkUcAE42Kv.png&quot; alt=&quot;svg&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Mar 2015 07:00:00 -0600</pubDate>
+        <link>http://blog.getsetbro.com/js/the-svg-tutorial-that-will-make-it-click.html</link>
+        <guid isPermaLink="true">http://blog.getsetbro.com/js/the-svg-tutorial-that-will-make-it-click.html</guid>
+        
+        
+        <category>js</category>
+        
+      </item>
     
       <item>
         <title>React vs ReactiveJS vs RactiveJS vs ReactiveUI vs ReactiveX</title>
@@ -49,7 +150,7 @@ Here is a article on React vs Ractive - via Ractive &lt;a href=&quot;//blog.ract
     
       <item>
         <title>CSS systems</title>
-        <description>&lt;h4 id=&quot;i-am-making-a-list-of-css-systems-when-i-become-aware-of-them&quot;&gt;I am making a list of css systems when I become aware of them:&lt;/h4&gt;
+        <description>&lt;h4 id=&quot;i-am-making-a-list-of-css-systems-when-i-become-aware-of-them&quot;&gt;I am making a list of CSS systems when I become aware of them:&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;//twitter.github.com/bootstrap&quot;&gt;Bootstrap.&lt;/a&gt;&lt;/li&gt;

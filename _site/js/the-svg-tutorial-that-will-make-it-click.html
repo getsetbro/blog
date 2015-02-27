@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>CSS systems</title>
+    <title>The SVG tutorial that will make it click</title>
     <meta name="description" content="Official blog spot of Seth Broweleit.
 ">
     <meta name="author" content="Seth Broweleit">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://blog.getsetbro.com/CSS-systems.html">
+    <link rel="canonical" href="http://blog.getsetbro.com/js/the-svg-tutorial-that-will-make-it-click.html">
 </head>
 
 
@@ -58,49 +58,100 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">CSS systems</h1>
-    <p class="post-meta">Nov 20, 2014</p>
+    <h1 class="post-title">The SVG tutorial that will make it click</h1>
+    <p class="post-meta">Mar 1, 2015</p>
   </header>
 
   <article class="post-content">
-    <h4 id="i-am-making-a-list-of-css-systems-when-i-become-aware-of-them">I am making a list of CSS systems when I become aware of them:</h4>
+    <p>When you want a shape in your webapp that is responsive and looks sharp at any size SVG is the way to go but where would you start? Here are some steps that can get you something useable and hopefully make some concepts around SVG click for you. There is much more to it, of course, but this might get you off and running.</p>
 
 <ul>
-  <li><a href="//twitter.github.com/bootstrap">Bootstrap.</a></li>
-  <li><a href="//foundation.zurb.com">Foundation.</a></li>
-  <li><a href="//www.getskeleton.com">Skeleton.</a></li>
-  <li><a href="//purecss.io">Pure.</a></li>
-  <li><a href="//topcoat.io">Topcoat.</a></li>
-  <li><a href="//pea.rs">Pears.</a></li>
-  <li><a href="//gumbyframework.com">Gumby.</a></li>
-  <li><a href="//malarkey.github.io/Rock-Hammer">Rock Hammer.</a></li>
-  <li><a href="//tuktuk.tapquo.com">Tuktuk.</a></li>
-  <li><a href="//www.unsemantic.com">Unsemantic.</a></li>
-  <li><a href="//zengrids.com">Zen grid.</a></li>
-  <li><a href="//inuitcss.com">inuit.css.</a></li>
-  <li><a href="//docs.atlassian.com/aui/latest">AUI.</a></li>
-  <li><a href="//baselinecss.com">Baseline.</a></li>
-  <li><a href="//typeplate.com">Typeplate.</a></li>
-  <li><a href="//960.gs">960 grid.</a></li>
-  <li><a href="//www.99lime.com/elements">HTML KickStart.</a></li>
-  <li><a href="//imperavi.com/kube/stencils">Kube.</a></li>
-  <li><a href="//weice.in/ivory">Ivory.</a></li>
-  <li><a href="//getkickstart.com">Kickstart</a></li>
-  <li><a href="//getuikit.com">Uikit</a></li>
+  <li>Optional: Logon to your favorite web browser</li>
+  <li>Head to an online SVG generator such as <a href="//editor.method.ac">//editor.method.ac</a>
+    <ul>
+      <li>Half way down, on the left, choose a shape from the shape library.
+        <ul>
+          <li>Some shapes have a lot of code behind them so choose a simple one like the triangle.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Now draw it on the canvas with the shift key pressed so I keeps a square ratio for the width and height. </li>
 </ul>
 
-<h4 id="styleguides">Styleguides:</h4>
+<p>How big to draw? For this lets make it around 200 X 200. A big SVG object can have a lot of nice detail. But if the page ever lost the CSS that tells the large SVG to be a small icon then your visitor will be looking at a page full of SVG.</p>
+
+<p>Notice that under the view menu you can see the source of the shape that you just drew.</p>
+
 <ul>
-  <li><a href="//gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides">gimmebar front end styleguides</a></li>
-  <li><a href="//bradfrost.github.io/this-is-responsive/patterns.html">brad frost responsive patterns</a></li>
-  <li><a href="//www.starbucks.com/static/reference/styleguide">starbucks styleguide</a></li>
-  <li><a href="//clearleft.com/styleguide/">clearleft styleguide</a></li>
+  <li>Before you export be sure to change the canvas size to match the content.
+    <ul>
+      <li>This makes it so we don’t have extra unused space in our file.
+        <ul>
+          <li>and we will be able to tell what size the shape is by the width and height shown in the SVG attributes. You will see what I mean.</li>
+        </ul>
+      </li>
+      <li>Make sure no SVG shapes are selected by choosing the Arrow tool and clicking outside of the shape and seeing the selection box goes away.</li>
+    </ul>
+  </li>
+  <li>On the right, under canvas, choose “Fit to Content” from the sizes drop-down.
+    <ul>
+      <li>If it already on “Fit to Content” you need to select something else and then again choose “Fit to Content”</li>
+    </ul>
+  </li>
+  <li>View the source
+    <ul>
+      <li>from the View menu and copy the code of the SVG file.</li>
+    </ul>
+  </li>
+  <li>Now paste it in a new bin somewhere like <a href="//jsbin.com">//jsbin.com</a>
+    <ul>
+      <li>What you have is static sized SVG shape that does not resize. Next we’ll fix that.</li>
+    </ul>
+  </li>
+  <li>The beginning of your SVG code looks like this</li>
+</ul>
+<pre>&lt;svg width=&quot;189&quot; height=&quot;165&quot;...</pre>
+<ul>
+  <li>This is the width and height of the contents.
+    <ul>
+      <li>Add the viewBox attribute to the SVG element using the width and height attribute values:</li>
+    </ul>
+  </li>
+</ul>
+<pre>&lt;svg width=&quot;189&quot; height=&quot;165&quot; viewBox=&quot;0 0 189 165&quot;&gt;</pre>
+<ul>
+  <li>Now change the width and height to 100%</li>
+</ul>
+<pre>&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 189 165&quot;&gt;</pre>
+<ul>
+  <li>You now have a shape that scales and responds to its confines.
+    <ul>
+      <li>Now the problem becomes what its confines are</li>
+    </ul>
+  </li>
+  <li>Understand how the viewBox wants to use the width and height of the contents inside of it.
+    <ul>
+      <li>If you use numbers bigger than the contents you will have wasted space.
+        <ul>
+          <li>If you use numbers that are smaller than the contents you will cut off part of the contents.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Try putting it into a bootstrap grid and see what you’ve got</li>
 </ul>
 
-<h4 id="docs">Docs:</h4>
-<ul>
-  <li><a href="//docs.google.com/spreadsheet/ccc?key=0AiN0QfBTPpOCdDFjWlM0eU1ra21XanZkekxGbjA2WWc">tyler sticka Styleguide and Boilerplate patterns spreadsheet</a></li>
-</ul>
+<iframe src="http://jsbin.com/dogeno/1/embed?output" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 330px; height: 330px;"></iframe>
+<iframe src="http://jsbin.com/dogeno/1/embed?html" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 330px; height: 330px;"></iframe>
+
+<p>Notice that I stripped everything but the SVG and the PATH. The Title and G elements have there place but for this we are not in need of them.</p>
+
+<p>I wont go into what this tag does but it’s a good thing: preserveAspectRatio=”xMidYMid meet”</p>
+
+<p>To put it simply, to make a SVG element responsive the width &amp; height move to the viewBox &amp; change them to 100%.</p>
+
+<p><img src="//pbs.twimg.com/media/B-4asHkUcAE42Kv.png" alt="svg" /></p>
 
   </article>
 
