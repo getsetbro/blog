@@ -446,3 +446,13 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+a {
+  background-image: linear-gradient(to right, rgba(111, 111, 111, 0) 50%, #dedede 50%);
+  background-size: 200%;
+  transition: background-position .25s ease;
+  background-position: 0 0; }
+
+a:hover {
+  background-position: -100% 0;
+  text-decoration: none; }

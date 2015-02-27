@@ -24,8 +24,6 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
-
 // Using media queries with like this:
 // @include media-query($palm) {
 //     .wrapper {
@@ -39,11 +37,21 @@ $on-laptop:        800px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
         "syntax-highlighting"
 ;
+
+a{
+	background-image: linear-gradient(to right, rgba(111, 111, 111, 0) 50%, rgba(222, 222, 222, 1) 50%);
+	background-size: 200%;
+	transition: background-position .25s ease;
+	background-position: 0 0;
+}
+a:hover{
+	background-position: -100% 0;
+	text-decoration: none;
+} 
+
