@@ -5,7 +5,7 @@ date:   2014-11-20 8:00:00
 categories:
 ---
 
-####I am making a list of css systems when I become aware of them:
+####I am making a list of CSS systems when I become aware of them:
 
  - [Bootstrap.](//twitter.github.com/bootstrap)
  - [Foundation.](//foundation.zurb.com)
