@@ -8,16 +8,16 @@ What do these things have in common? They sound the same. They are, in fact, dif
 
 The main reason for this post is I have seen so so many mention "[ReactiveJS](//twitter.com/reactivejs/status/569619957362888704)" and then they link to "RactiveJS."
 
-+	**[Facebook React](//facebook.github.io/react)** - This one started it all. "A JavaScript library for building user interfaces."
-Here is a good intro - [//developer.telerik.com/featured/introduction-to-the-react-javascript-framework](//developer.telerik.com/featured/introduction-to-the-react-javascript-framework)
++	**[Facebook React](//facebook.github.io/react)** - This one started it all. "React is a JavaScript library created by a collaboration of Facebook and Instagram. Its aim is to allow developers to create fast user interfaces easily."
+Here is an intro - [//developer.telerik.com/featured/introduction-to-the-react-javascript-framework](//developer.telerik.com/featured/introduction-to-the-react-javascript-framework)
 
-+	**[ReactiveJS](//github.com/mattbaker/Reactive.js)** - There are several that have created a library with the name. None of them have grabbed the domain for it. I give it to this one. It's the first [relevant] google result.
++	**[ReactiveJS](//github.com/mattbaker/Reactive.js)** - There are several that have created a library with the name. None of them have grabbed the domain for it. I give it to this one. It's the first [relevant] google result. "Reactive.js will augment ("reactify") a given Javascript function so that it may track dependencies on other reactive functions. You might think of a reactive function as representing a cell in a spreadsheet..." [//github.com/mattbaker/Reactive.js](//github.com/mattbaker/Reactive.js)
 
 +	**[RactiveJS](//www.ractivejs.org)** - "The Web UI library for perfectionists with deadlines."
-Here is a article on React vs Ractive [//blog.ractivejs.org/posts/whats-the-difference-between-react-and-ractive](//blog.ractivejs.org/posts/whats-the-difference-between-react-and-ractive)
+Here is a article on React vs Ractive - via Ractive [//blog.ractivejs.org/posts/whats-the-difference-between-react-and-ractive](//blog.ractivejs.org/posts/whats-the-difference-between-react-and-ractive)
 
-+	**[ReactiveUI](//github.com/reactiveui/ReactiveUI)** - Supports Xamarin mobile apps. "A framework that integrates with the Reactive Extensions for .NET to create elegant, testable User Interfaces that run on any mobile or desktop platform."
++	**[ReactiveUI](//github.com/reactiveui/ReactiveUI)** - For building with the [Xamarin Platform](//xamarin.com). "A framework that integrates with the Reactive Extensions for .NET to create elegant, testable User Interfaces that run on any mobile or desktop platform."
 
-+	**[ReactiveX (RxJS)](//reactive-extensions.github.io/RxJS)** - or Reactive Extensions (Rx). Supports Xamarin mobile apps. "An API for asynchronous programming with observable streams" It's the JS "flavor" of Reactive Extensions which is "is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators." [//rx.codeplex.com](//rx.codeplex.com)
++	**[ReactiveX (RxJS)](//reactive-extensions.github.io/RxJS)** - or Reactive Extensions (Rx). For building with the [Xamarin Platform](//xamarin.com). "An API for asynchronous programming with observable streams" It's the JS "flavor" of Reactive Extensions which is "is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators." [//rx.codeplex.com](//rx.codeplex.com)
 
 So there you have it... so far.
