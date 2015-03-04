@@ -99,7 +99,7 @@ If you want different margins then customize bootstrap before you download it. O
 
 **Conventions**
 
-SuitCSS is a reliable and testable styling methodology for component-based UI development. The SuitCSS naming convention helps to scope component CSS and make your widgets render more predictably.
+SUIT CSS is a reliable and testable styling methodology for component-based UI development. The SUIT CSS naming convention helps to scope component CSS and make your widgets render more predictably.
 
 + **.ComponentName** "Article"
 + **.ComponentName--modifierName** "Article--black"
@@ -107,7 +107,7 @@ SuitCSS is a reliable and testable styling methodology for component-based UI de
 + **.u-utilityName** "u-floatLeft"
 + **.is-stateName** "is-selected"
 
-"The component's name must be written in pascal case. Nothing else in the HTML/CSS uses pascal case." <a href="//github.com/suitcss/suit/blob/master/doc/naming-conventions.md" target="_blank">suitcss naming-conventions</a>
+"The component's name must be written in pascal case. Nothing else in the HTML/CSS uses pascal case." <a href="//github.com/suitcss/suit/blob/master/doc/naming-conventions.md" target="_blank">SUIT CSS naming-conventions</a>
 
 For a full demo see: [//jsbin.com/lumeqa/2/](//jsbin.com/lumeqa/2/)
 
