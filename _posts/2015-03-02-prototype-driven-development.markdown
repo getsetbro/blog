@@ -26,7 +26,7 @@ A prototype will provide proof of concepts and be a source of documentation thro
 
 Proper setup of build tools means that the code in the prototype will be the same code in production.
 
-Example: [PatternLab](//demo.patternlab.io). Shows the single components, or in groups, and shows the code used to build them. It shows the components alone as well as next to other components. It shows if a component is ready for re-use.
+Example: [PatternLab](//demo.patternlab.io). Shows the single components, components in groups, and shows the code used to build them. It shows the components alone as well as next to other components. It shows if a component is ready for re-use.
 
 <a href="//demo.patternlab.io/?p=molecules-comment-form" target="_blank">single-form</a> |
 <a href="//demo.patternlab.io/?p=organisms-comment-thread" target="_blank">comment-thread</a>
@@ -37,7 +37,7 @@ Example: [PatternLab](//demo.patternlab.io). Shows the single components, or in 
 
 ###Build System
 
-With an enhanced build system we can build the Prototype + Style Guide along side our project in VS.
+With an enhanced build system we can build the Prototype + Style Guide alongside our project in VS.
 
 **Installs**
 
@@ -60,7 +60,7 @@ Why not Nuget and MSBuild? [Hanselman answered](//www.hanselman.com/blog/Introdu
 
 ###JavaScript
 
-We'll need some JS Patterns to avoid conflicts so components can be reusable. If two components want to save a number to a variable named "width" then last one to define it will win. And the app will lose.
+We'll need some JS Patterns to avoid conflicts so components can be reusable. If two components want to save a number to a variable named "width" then the last one to define it will win. And the app will lose.
 
 **Modular Pattern**
 [//jsbin.com/lumeqa/12/edit?html,js,output](//jsbin.com/lumeqa/7/edit?html,js,output)
@@ -122,7 +122,7 @@ It is a learning curve for sure but the results are worth it. This will scale fr
 
 No more IMG for icons.
 
-Font icons are easy to use. Their icons pick up the font color. I very much heart icomoon [//icomoon.io](//icomoon.io)
+Font icons are easy to use. Their icons pick up the font color. I very really like icomoon [//icomoon.io](//icomoon.io)
 
 But SVG wins the cagematch: [//css-tricks.com/icon-fonts-vs-svg](//css-tricks.com/icon-fonts-vs-svg) Automated grunt task. SVG can be animated. [//grunticon.com](//grunticon.com)
 
