@@ -456,3 +456,9 @@ a {
 a:hover {
   background-position: -100% 0;
   text-decoration: none; }
+
+hr {
+  border: 0 none;
+  height: 1px;
+  background-color: silver;
+  margin: 15px 0; }

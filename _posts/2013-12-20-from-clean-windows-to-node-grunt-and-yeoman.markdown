@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "From clean windows to node, grunt, and yeoman"
-date:   2014-02-20 8:00:00
+date:   2013-12-20 8:00:00
 categories:
 ---
 A bit about Node.js and how to some steps to get some experience with it. If you are like me sometimes you can’t quite get your head around something until you start to use it.
