@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>getsetblog</title>
+    <title>Override Windows fast-startup option</title>
     <meta name="description" content="Official blog spot of Seth Broweleit.
 ">
     <meta name="author" content="Seth Broweleit">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://blog.getsetbro.com/">
+    <link rel="canonical" href="http://blog.getsetbro.com/Override-Windows-fast-startup-option.html">
 
 </head>
 
@@ -55,95 +55,44 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Override Windows fast-startup option</h1>
+    <p class="post-meta">May 26, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 26, 2015</span>
+  <article class="post-content">
+    <h2 id="windows-has-a-fast-startup-option-which-makes-it-hard-to-boot-into-bios">Windows has a fast-startup option which makes it hard to boot into bios.</h2>
 
-        <h2>
-          <a class="post-link" href="/Override-Windows-fast-startup-option.html">Override Windows fast-startup option</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 2, 2015</span>
+<p>I stroubled to get the tablet in to the boot menu for a while until I found info on this forum: 
+<a href="//forum.tabletpcreview.com/acer-gateway/40963-how-enter-into-iconia-w500s-bios-settings.html" target="_blank">forum.tabletpcreview.com/acer-gateway/40963-how-enter-into-iconia-w500s-bios-settings.html</a></p>
 
-        <h2>
-          <a class="post-link" href="/prototype-driven-development.html">Prototype Driven Development</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 1, 2015</span>
+<p>“If you have the Windows 8 Developer Preview installed, you will not be able to boot up the bios screen the normal way, as Win 8 has a fast-startup option that overrides it.”
+so find the “disable fast startup” option.</p>
 
-        <h2>
-          <a class="post-link" href="/js/the-svg-tutorial-that-will-make-it-click.html">The SVG tutorial that will make it click</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 25, 2015</span>
+<p>If this helps just one person it is worth it. That person might be me.</p>
 
-        <h2>
-          <a class="post-link" href="/js/FB-react-vs-reactiveJS-vs-ractiveJS-vs-reactiveUI-vs-reactiveX.html">React vs ReactiveJS vs RactiveJS vs ReactiveUI vs ReactiveX</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 20, 2014</span>
+<h2 id="to-disable-the-fast-startup-in-windows">To Disable the fast startup in windows:</h2>
 
-        <h2>
-          <a class="post-link" href="/CSS-systems.html">CSS systems</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 28, 2014</span>
+<ul>
+  <li>In power options, “Choose what the Power buttons do”</li>
+  <li>Then click “Change settings that are currently unavailable”</li>
+  <li>Then scroll down to to the shutdown setting and disable fast startup.</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/from-css-2-to-compass-sass.html">From CSS2 to Compass / Sass</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 20, 2014</span>
+<h2 id="then-you-will-be-able-to-use-the-documented-steps-to-get-to-the-bios">Then you will be able to use the documented steps to get to the bios.</h2>
 
-        <h2>
-          <a class="post-link" href="/web-prototyping-with-github-pages.html">web prototyping with github pages</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 20, 2014</span>
+<ul>
+  <li>Power button + windows button at the same time.</li>
+  <li>Then press F2 when you see the cursor.</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/use-paint.net-to-get-logo-s-out-of-photoshop-psd-files.html">Use paint.NET to get logo's out of Photoshop PSD files</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 20, 2013</span>
+<p>If you do not press F2 quickly enough it will boot into Windows.</p>
 
-        <h2>
-          <a class="post-link" href="/from-clean-windows-to-node-grunt-and-yeoman.html">From clean windows to node, grunt, and yeoman</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 20, 2012</span>
+<p>Remember you will need a usb drive that has been prepared to be bootable, not just a iso file on a drive.</p>
 
-        <h2>
-          <a class="post-link" href="/stop-paying-your-sp-jquery-tax.html">Stop paying your SharePoint jQuery Tax</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 
