@@ -70,12 +70,26 @@
   <li>On a Mac I tried “ssh pi@raspberrypi.lan” but I got “ssh: Could not resolve hostname raspberrypi.lan: nodename nor servname provided, or not known”</li>
   <li>I could see on my router app the IP of the PI so I was able to connect with “ssh pi@192.168.1.12”</li>
   <li>The default password was “raspberry” for the user “pi”</li>
+  <li>I typed “sudo raspi-config” and the config UI showed up in my terminal app</li>
 </ul>
 
-<p>.</p>
+<p>I found this helpful guide for the config menu</p>
+
+<blockquote>
+  <ol>
+    <li>Expand Filesystem: no need to do this — some may disagree on this point</li>
+    <li>Change User Password: up to you</li>
+    <li>Enable Boot to Desktop/Scratch: by <em>default</em>, this is set to console, which is what we want to keep</li>
+    <li>Internationalisation Options: set your timezone (if in the US, choose America, then find the correct city with your timezone)</li>
+    <li>Enable Camera: <em>no</em> (you can always change this later)</li>
+    <li>Add to Rastrack: <em>no</em></li>
+    <li>Overclock: this is up to you, I usually choose Medium, which makes the Pi run a little bit faster at the expense of power and potential component damange</li>
+    <li>Advanced options: <em>choose A4 SSH</em> - this will enable secure shell access, which means that you can control your Raspberry Pi from a remote computer (extremely useful)</li>
+  </ol>
+</blockquote>
 
 <ul>
-  <li>I typed “sudo raspi-config” and the config UI showed up in my terminal app</li>
+  <li>Number 8 was done for me</li>
   <li>I set the timezone</li>
   <li>I ran “sudo apt-get update &amp;&amp; sudo apt-get upgrade”</li>
   <li>I indeed have wheezy and I have ARM hardware as shown by these lines:</li>
@@ -91,6 +105,40 @@
   </li>
 </ul>
 
+<hr />
+
+<h3 id="to-open-config-files-in-the-nano-editor">To open config files in the nano editor</h3>
+
+<ul>
+  <li>network “sudo nano /etc/network/interfaces”</li>
+  <li>keyboard “sudo nano /etc/default/keyboard”</li>
+</ul>
+
+<hr />
+
+<h3 id="log-continued">Log continued…</h3>
+
+<ul>
+  <li>When using my keyboard I noticed some characters weren’t what I typed</li>
+  <li>In the keyboard file I change XKBLAYOUT from “gb” to “us”</li>
+  <li>nano is a simple built-in editor. Type in ctrl-X and Y then enter to overwrite to save the file.</li>
+  <li>Make these keyboard changes take effect by rebooting: “sudo reboot”</li>
+</ul>
+
+<hr />
+
+<h3 id="list-of-commands-to-know">List of commands to know</h3>
+
+<ul>
+  <li>power off “sudo poweroff”</li>
+  <li>reboot “sudo reboot”</li>
+  <li>apt-get update   &lt;–updates the list</li>
+  <li>apt-get upgrade    &lt;–installs the updates</li>
+  <li>apt-get autoclean   &lt;–cleans up afterwards if necessary</li>
+  <li>You can substitute “aptitude” for “apt-get.”</li>
+</ul>
+
+<hr />
 
   </article>
 
