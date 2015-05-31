@@ -133,7 +133,81 @@
 
 <hr />
 
-<h3 id="setup-static-ip-address">Setup static IP address</h3>
+<h3 id="log-continued-1">Log continued…</h3>
+
+<ul>
+  <li>I want to play sound through the audio jack</li>
+  <li>Check to see if sound is ready</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="s2">&quot;lsmod | grep snd_bcm2835&quot;</span></code></pre></div>
+
+<ul>
+  <li>It shows bcm2835 is there</li>
+  <li>Grab a WAV file “wget http://www.freespecialeffects.co.uk/soundfx/computers/bleep_01.wav”</li>
+  <li>Play it using “aplay bleep_01.wav”</li>
+</ul>
+
+<p>Play mp3 files</p>
+
+<ul>
+  <li>To play mp3s “sudo apt-get -y install mpg321”</li>
+  <li>Get an mp3 “wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3”</li>
+  <li>Play “mpg321 fire_burning.mp3”</li>
+  <li>Play with volume at 50% “mpg321 -g 50 fire_burning.mp3”</li>
+</ul>
+
+<p>Installing NodeJS</p>
+
+<ul>
+  <li>Latest stable node.js package available from the node-arm site “wget http://node-arm.herokuapp.com/node_latest_armhf.deb”</li>
+  <li>Install it “sudo dpkg -i node_latest_armhf.deb”</li>
+  <li>Check to see if we get a version number “node -v” it says “v0.12.1”</li>
+  <li>Check NPM “npm -v” it says “2.5.1”</li>
+</ul>
+
+<p>Using NodeJS</p>
+
+<ul>
+  <li>Another check to see Node working is to type “node” and then at the prompt “new Date()” it says “Sun May 31 2015 09:25:09 GMT-0500 (CDT)”</li>
+  <li>After SSH we are in /home/pi folder</li>
+  <li>Make a directory called node_programs “mkdir node_programs”</li>
+  <li>Change directory to node_programs “cd node_programs”</li>
+  <li>Make and change to new folder helloworld “mkdir helloworld &amp;&amp; cd helloworld”</li>
+  <li>Initialize a new node project here “npm init” and click enter through all the prompts</li>
+  <li>Start an empty file named index.js “nano index.js” - the nano editor opens to a blank file.</li>
+  <li>CTRL + X to exit, Y selects Yes, and Enter completes and closes it.</li>
+</ul>
+
+<p>Use nodejs to play a mp3</p>
+
+<ul>
+  <li>“npm install mpg321” in the node program folder created above</li>
+  <li>Put an mp3 in the current folder “wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3”</li>
+  <li>Open to edit the index.js file “nano index.js”</li>
+  <li>Paste the following:</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="n">mpg321</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s1">&#39;mpg321&#39;</span><span class="p">);</span>
+
+<span class="n">var</span> <span class="nb">proc</span> <span class="o">=</span> <span class="n">mpg321</span><span class="p">()</span>
+  <span class="o">.</span><span class="n">loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="sr">//</span> <span class="n">infinity</span> <span class="kp">loop</span>
+  <span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;./fire_burning.mp3&#39;</span><span class="p">)</span>
+  <span class="o">.</span><span class="n">exec</span><span class="p">();</span>
+
+<span class="sr">//</span> <span class="no">SIGINT</span> <span class="n">hack</span> <span class="o">-</span> <span class="n">stops</span> <span class="n">running</span> <span class="n">on</span> <span class="n">ctrl</span> <span class="o">+</span> <span class="n">C</span> <span class="k">in</span> <span class="n">the</span> <span class="n">terminal</span>
+<span class="n">process</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;SIGINT&#39;</span><span class="p">,</span> <span class="n">function</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">process</span><span class="o">.</span><span class="n">exit</span><span class="p">();</span>
+<span class="p">});</span></code></pre></div>
+
+<ul>
+  <li>Run the index.js file with node “node index.js”</li>
+  <li>The mp3 plays through the audio jack</li>
+</ul>
+
+<hr />
+
+<h3 id="for-setting-a-static-ip-address">For setting a static IP address</h3>
 
 <ul>
   <li>Get the needed numbers below by typing “ifconfig” and “netstat -nr”</li>
