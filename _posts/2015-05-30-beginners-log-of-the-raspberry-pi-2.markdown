@@ -28,8 +28,10 @@ I found this helpful guide for the config menu
 * I set the timezone
 * I ran "sudo apt-get update && sudo apt-get upgrade"
 * I indeed have wheezy and I have ARM hardware as shown by these lines:
-* + Hit http://raspberrypi.collabora.com wheezy Release
-* + Hit http://archive.raspberrypi.org wheezy/main armhf Packages
+{% highlight ruby %}
+Hit http://raspberrypi.collabora.com wheezy Release
+Hit http://archive.raspberrypi.org wheezy/main armhf Packages
+{% endhighlight %}
 
 ***
 
@@ -56,6 +58,31 @@ I found this helpful guide for the config menu
 * apt-get update   <--updates the list
 * apt-get upgrade    <--installs the updates
 * apt-get autoclean   <--cleans up afterwards if necessary
-* You can substitute "aptitude" for "apt-get."
+* You can substitute "aptitude" for "apt-get." Aptitude is an Ncurses viewer of packages installed or available. Aptitude can be used from the command line in a similar way to apt-get. See man aptitude for more information.
 
 ***
+
+###Setup static IP address
+
+* Get the needed numbers below by typing "ifconfig" and "netstat -nr"
+* Typed "sudo nano /etc/network/interfaces"
+* Changed this:
+{% highlight ruby %}
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+{% endhighlight %}
+* To this:
+{% highlight ruby %}
+auto eth0
+allow-hotplug eth0
+iface eth0 inet static
+address 192.168.1.81
+netmask 255.255.255.0
+broadcast 192.168.1.255
+network 192.168.1.0
+gateway 192.168.1.1
+{% endhighlight %}
+* "sudo reboot" - once back in run "ifconfig" to reveal your new settings.
+
+

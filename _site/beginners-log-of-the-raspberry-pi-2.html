@@ -93,17 +93,10 @@
   <li>I set the timezone</li>
   <li>I ran “sudo apt-get update &amp;&amp; sudo apt-get upgrade”</li>
   <li>I indeed have wheezy and I have ARM hardware as shown by these lines:</li>
-  <li>
-    <ul>
-      <li>Hit http://raspberrypi.collabora.com wheezy Release</li>
-    </ul>
-  </li>
-  <li>
-    <ul>
-      <li>Hit http://archive.raspberrypi.org wheezy/main armhf Packages</li>
-    </ul>
-  </li>
 </ul>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Hit</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">raspberrypi</span><span class="o">.</span><span class="n">collabora</span><span class="o">.</span><span class="n">com</span> <span class="n">wheezy</span> <span class="no">Release</span>
+<span class="no">Hit</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">archive</span><span class="o">.</span><span class="n">raspberrypi</span><span class="o">.</span><span class="n">org</span> <span class="n">wheezy</span><span class="o">/</span><span class="n">main</span> <span class="n">armhf</span> <span class="no">Packages</span></code></pre></div>
 
 <hr />
 
@@ -135,10 +128,40 @@
   <li>apt-get update   &lt;–updates the list</li>
   <li>apt-get upgrade    &lt;–installs the updates</li>
   <li>apt-get autoclean   &lt;–cleans up afterwards if necessary</li>
-  <li>You can substitute “aptitude” for “apt-get.”</li>
+  <li>You can substitute “aptitude” for “apt-get.” Aptitude is an Ncurses viewer of packages installed or available. Aptitude can be used from the command line in a similar way to apt-get. See man aptitude for more information.</li>
 </ul>
 
 <hr />
+
+<h3 id="setup-static-ip-address">Setup static IP address</h3>
+
+<ul>
+  <li>Get the needed numbers below by typing “ifconfig” and “netstat -nr”</li>
+  <li>Typed “sudo nano /etc/network/interfaces”</li>
+  <li>Changed this:</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">allow</span><span class="o">-</span><span class="n">hotplug</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">manual</span></code></pre></div>
+
+<ul>
+  <li>To this:</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">allow</span><span class="o">-</span><span class="n">hotplug</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
+<span class="n">address</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">81</span>
+<span class="n">netmask</span> <span class="mi">255</span><span class="o">.</span><span class="mi">255</span><span class="o">.</span><span class="mi">255</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">broadcast</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">255</span>
+<span class="n">network</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">gateway</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">1</span></code></pre></div>
+
+<ul>
+  <li>“sudo reboot” - once back in run “ifconfig” to reveal your new settings.</li>
+</ul>
+
 
   </article>
 
