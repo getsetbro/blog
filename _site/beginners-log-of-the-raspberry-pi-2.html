@@ -123,12 +123,23 @@
 <h3 id="list-of-commands-to-know">List of commands to know</h3>
 
 <ul>
+  <li>“sudo raspi-config” This opens the configuration screen for the operating system</li>
   <li>power off “sudo poweroff”</li>
-  <li>reboot “sudo reboot”</li>
+  <li>“sudo shutdown -h now” (or sudo halt)</li>
+  <li>reboot “sudo reboot” or “sudo shutdown -r now”</li>
   <li>apt-get update   &lt;–updates the list</li>
   <li>apt-get upgrade    &lt;–installs the updates</li>
   <li>apt-get autoclean   &lt;–cleans up afterwards if necessary</li>
   <li>You can substitute “aptitude” for “apt-get.” Aptitude is an Ncurses viewer of packages installed or available. Aptitude can be used from the command line in a similar way to apt-get. See man aptitude for more information.</li>
+  <li>“startx” start GUI from prompt</li>
+  <li>“lsusb” to display a list of usb devices</li>
+  <li>“ls” command can be used to list items attached</li>
+  <li>“cat /proc/cpuinfo” display hardware info</li>
+  <li>“cat /proc/meminfo” displays details about the Raspberry Pi’s memory</li>
+  <li>“cat /proc/partitions” reveals the size and number of partitions on your SD card or HDD</li>
+  <li>“cat /proc/version” shows you which version of the Pi you are using.</li>
+  <li>“vcgencmd measure_temp” vcgencmd series of commands, which can reveal things like CPU temperature</li>
+  <li>To check all your environment variables “env”</li>
 </ul>
 
 <hr />
@@ -217,7 +228,10 @@
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">auto</span> <span class="n">eth0</span>
 <span class="n">allow</span><span class="o">-</span><span class="n">hotplug</span> <span class="n">eth0</span>
-<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">manual</span></code></pre></div>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">manual</span>
+<span class="n">auto</span> <span class="n">wlan0</span>
+<span class="n">allow</span><span class="o">-</span><span class="n">hotplug</span> <span class="n">wlan0</span>
+<span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">manual</span></code></pre></div>
 
 <ul>
   <li>To this:</li>
@@ -225,8 +239,11 @@
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">auto</span> <span class="n">eth0</span>
 <span class="n">allow</span><span class="o">-</span><span class="n">hotplug</span> <span class="n">eth0</span>
-<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">static</span>
-<span class="n">address</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">81</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+<span class="n">auto</span> <span class="n">wlan0</span>
+<span class="n">allow</span><span class="o">-</span><span class="n">hotplug</span> <span class="n">wlan0</span>
+<span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">static</span>
+<span class="n">address</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">185</span> <span class="o">//</span><span class="n">something</span> <span class="n">higher</span> <span class="n">than</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">dhcp</span> <span class="n">devices</span>
 <span class="n">netmask</span> <span class="mi">255</span><span class="o">.</span><span class="mi">255</span><span class="o">.</span><span class="mi">255</span><span class="o">.</span><span class="mi">0</span>
 <span class="n">broadcast</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">255</span>
 <span class="n">network</span> <span class="mi">192</span><span class="o">.</span><span class="mi">168</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span>
@@ -234,6 +251,22 @@
 
 <ul>
   <li>“sudo reboot” - once back in run “ifconfig” to reveal your new settings.</li>
+</ul>
+
+<hr />
+
+<h3 id="misc">Misc</h3>
+
+<ul>
+  <li>Installed Chromium “sudo apt-get install chromium-browser”</li>
+  <li>Chromium in Kiosk Mode: “chromium –kiosk http://www.google.com” - ALT + F4 to close it</li>
+</ul>
+
+<h3 id="add-a-user">Add a user</h3>
+
+<ul>
+  <li>“sudo adduser admin” follow the prompts to complete the new user</li>
+  <li>as pi “sudo su” and then run “visudo” which allows you to edit the /etc/sudoers file. add a line exactly matching the one for pi</li>
 </ul>
 
 

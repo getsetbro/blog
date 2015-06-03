@@ -69,6 +69,7 @@ Hit http://archive.raspberrypi.org wheezy/main armhf Packages
 * "cat /proc/partitions" reveals the size and number of partitions on your SD card or HDD
 * "cat /proc/version" shows you which version of the Pi you are using.
 * "vcgencmd measure_temp" vcgencmd series of commands, which can reveal things like CPU temperature
+* To check all your environment variables "env"
 
 ***
 
@@ -167,7 +168,6 @@ gateway 192.168.1.1
 
 * Installed Chromium "sudo apt-get install chromium-browser"
 * Chromium in Kiosk Mode: "chromium --kiosk http://www.google.com" - ALT + F4 to close it
-* To check all your environment variables "env"
 
 ###Add a user
 
