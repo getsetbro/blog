@@ -107,30 +107,6 @@ Using NodeJS
 * Start an empty file named index.js "nano index.js" - the nano editor opens to a blank file.
 * CTRL + X to exit, Y selects Yes, and Enter completes and closes it.
 
-Use nodejs to play a mp3
-
-* "npm install mpg321" in the node program folder created above
-* Put an mp3 in the current folder "wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3"
-* Open to edit the index.js file "nano index.js"
-* Paste the following:
-
-{% highlight ruby %}
-var mpg321 = require('mpg321');
-
-var proc = mpg321()
-  .loop(0) // infinity loop
-  .file('./fire_burning.mp3')
-  .exec();
-
-// SIGINT hack - stops running on ctrl + C in the terminal
-process.on('SIGINT', function (data) {
-  process.exit();
-});
-{% endhighlight %}
-
-* Run the index.js file with node "node index.js"
-* The mp3 plays through the audio jack
-
 ***
 
 ###For setting a static IP address
@@ -174,3 +150,27 @@ gateway 192.168.1.1
 * "sudo adduser admin" follow the prompts to complete the new user
 * as pi "sudo su" and then run "visudo" which allows you to edit the /etc/sudoers file. add a line exactly matching the one for pi
 
+***
+Use nodejs to play a mp3
+
+* "npm install mpg321" in the node program folder created above
+* Put an mp3 in the current folder "wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3"
+* Open to edit the index.js file "nano index.js"
+* Paste the following:
+
+{% highlight ruby %}
+var mpg321 = require('mpg321');
+
+var proc = mpg321()
+  .loop(0) // infinity loop
+  .file('./fire_burning.mp3')
+  .exec();
+
+// SIGINT hack - stops running on ctrl + C in the terminal
+process.on('SIGINT', function (data) {
+  process.exit();
+});
+{% endhighlight %}
+
+* Run the index.js file with node "node index.js"
+* The mp3 plays through the audio jack

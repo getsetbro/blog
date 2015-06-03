@@ -190,32 +190,6 @@
   <li>CTRL + X to exit, Y selects Yes, and Enter completes and closes it.</li>
 </ul>
 
-<p>Use nodejs to play a mp3</p>
-
-<ul>
-  <li>“npm install mpg321” in the node program folder created above</li>
-  <li>Put an mp3 in the current folder “wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3”</li>
-  <li>Open to edit the index.js file “nano index.js”</li>
-  <li>Paste the following:</li>
-</ul>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="n">mpg321</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s1">&#39;mpg321&#39;</span><span class="p">);</span>
-
-<span class="n">var</span> <span class="nb">proc</span> <span class="o">=</span> <span class="n">mpg321</span><span class="p">()</span>
-  <span class="o">.</span><span class="n">loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="sr">//</span> <span class="n">infinity</span> <span class="kp">loop</span>
-  <span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;./fire_burning.mp3&#39;</span><span class="p">)</span>
-  <span class="o">.</span><span class="n">exec</span><span class="p">();</span>
-
-<span class="sr">//</span> <span class="no">SIGINT</span> <span class="n">hack</span> <span class="o">-</span> <span class="n">stops</span> <span class="n">running</span> <span class="n">on</span> <span class="n">ctrl</span> <span class="o">+</span> <span class="n">C</span> <span class="k">in</span> <span class="n">the</span> <span class="n">terminal</span>
-<span class="n">process</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;SIGINT&#39;</span><span class="p">,</span> <span class="n">function</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">process</span><span class="o">.</span><span class="n">exit</span><span class="p">();</span>
-<span class="p">});</span></code></pre></div>
-
-<ul>
-  <li>Run the index.js file with node “node index.js”</li>
-  <li>The mp3 plays through the audio jack</li>
-</ul>
-
 <hr />
 
 <h3 id="for-setting-a-static-ip-address">For setting a static IP address</h3>
@@ -269,6 +243,32 @@
   <li>as pi “sudo su” and then run “visudo” which allows you to edit the /etc/sudoers file. add a line exactly matching the one for pi</li>
 </ul>
 
+<hr />
+<p>Use nodejs to play a mp3</p>
+
+<ul>
+  <li>“npm install mpg321” in the node program folder created above</li>
+  <li>Put an mp3 in the current folder “wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3”</li>
+  <li>Open to edit the index.js file “nano index.js”</li>
+  <li>Paste the following:</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="n">mpg321</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s1">&#39;mpg321&#39;</span><span class="p">);</span>
+
+<span class="n">var</span> <span class="nb">proc</span> <span class="o">=</span> <span class="n">mpg321</span><span class="p">()</span>
+  <span class="o">.</span><span class="n">loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="sr">//</span> <span class="n">infinity</span> <span class="kp">loop</span>
+  <span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="s1">&#39;./fire_burning.mp3&#39;</span><span class="p">)</span>
+  <span class="o">.</span><span class="n">exec</span><span class="p">();</span>
+
+<span class="sr">//</span> <span class="no">SIGINT</span> <span class="n">hack</span> <span class="o">-</span> <span class="n">stops</span> <span class="n">running</span> <span class="n">on</span> <span class="n">ctrl</span> <span class="o">+</span> <span class="n">C</span> <span class="k">in</span> <span class="n">the</span> <span class="n">terminal</span>
+<span class="n">process</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;SIGINT&#39;</span><span class="p">,</span> <span class="n">function</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">process</span><span class="o">.</span><span class="n">exit</span><span class="p">();</span>
+<span class="p">});</span></code></pre></div>
+
+<ul>
+  <li>Run the index.js file with node “node index.js”</li>
+  <li>The mp3 plays through the audio jack</li>
+</ul>
 
   </article>
 
