@@ -53,12 +53,22 @@ Hit http://archive.raspberrypi.org wheezy/main armhf Packages
 
 ###List of commands to know
 
+* "sudo raspi-config" This opens the configuration screen for the operating system
 * power off "sudo poweroff"
-* reboot "sudo reboot"
+* "sudo shutdown -h now" (or sudo halt)
+* reboot "sudo reboot" or "sudo shutdown -r now"
 * apt-get update   <--updates the list
 * apt-get upgrade    <--installs the updates
 * apt-get autoclean   <--cleans up afterwards if necessary
 * You can substitute "aptitude" for "apt-get." Aptitude is an Ncurses viewer of packages installed or available. Aptitude can be used from the command line in a similar way to apt-get. See man aptitude for more information.
+* "startx" start GUI from prompt
+* "lsusb" to display a list of usb devices
+* "ls" command can be used to list items attached
+* "cat /proc/cpuinfo" display hardware info
+* "cat /proc/meminfo" displays details about the Raspberry Pi’s memory
+* "cat /proc/partitions" reveals the size and number of partitions on your SD card or HDD
+* "cat /proc/version" shows you which version of the Pi you are using.
+* "vcgencmd measure_temp" vcgencmd series of commands, which can reveal things like CPU temperature
 
 ***
 
@@ -131,13 +141,19 @@ process.on('SIGINT', function (data) {
 auto eth0
 allow-hotplug eth0
 iface eth0 inet manual
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
 {% endhighlight %}
 * To this:
 {% highlight ruby %}
 auto eth0
 allow-hotplug eth0
-iface eth0 inet static
-address 192.168.1.81
+iface eth0 inet dhcp
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet static
+address 192.168.1.185 //something higher than the amount of dhcp devices
 netmask 255.255.255.0
 broadcast 192.168.1.255
 network 192.168.1.0
@@ -145,4 +161,16 @@ gateway 192.168.1.1
 {% endhighlight %}
 * "sudo reboot" - once back in run "ifconfig" to reveal your new settings.
 
+***
+
+###Misc
+
+* Installed Chromium "sudo apt-get install chromium-browser"
+* Chromium in Kiosk Mode: "chromium --kiosk http://www.google.com" - ALT + F4 to close it
+* To check all your environment variables "env"
+
+###Add a user
+
+* "sudo adduser admin" follow the prompts to complete the new user
+* as pi "sudo su" and then run "visudo" which allows you to edit the /etc/sudoers file. add a line exactly matching the one for pi
 
