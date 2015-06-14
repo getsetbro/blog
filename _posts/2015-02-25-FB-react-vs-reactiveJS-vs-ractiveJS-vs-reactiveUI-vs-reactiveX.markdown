@@ -18,6 +18,7 @@ Here is a article on React vs Ractive - via Ractive [//blog.ractivejs.org/posts/
 
 +	**[ReactiveUI](//github.com/reactiveui/ReactiveUI)** - For building with the [Xamarin Platform](//xamarin.com). "A framework that integrates with the Reactive Extensions for .NET to create elegant, testable User Interfaces that run on any mobile or desktop platform."
 
-+	**[ReactiveX (RxJS)](//reactive-extensions.github.io/RxJS)** - or Reactive Extensions (Rx). For building with the [Xamarin Platform](//xamarin.com). "An API for asynchronous programming with observable streams" It's the JS "flavor" of Reactive Extensions which is "is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators." [//rx.codeplex.com](//rx.codeplex.com)
++ **[ReactiveX (RxJS)](//reactive-extensions.github.io/RxJS)** - or Reactive Extensions (Rx). For building with the [Xamarin Platform](//xamarin.com). "An API for asynchronous programming with observable streams" It's the JS "flavor" of Reactive Extensions which is "is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators." [//rx.codeplex.com](//rx.codeplex.com)
 
-So there you have it... so far.
++ **[React Native](//reactnative.com)** - Facebook again. "Build native iOS and Android apps with JavaScript" with React. The home page points to twitter [@reactjs](//twitter.com/reactjs).
+
