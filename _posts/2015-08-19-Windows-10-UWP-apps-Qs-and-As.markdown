@@ -5,8 +5,6 @@ date:   2015-08-19 11:00:00
 categories:
 ---
 
-​##Q's + A​​​'s
-
 ###Q: How do you start a JS win10 uwp ​​app?​
 A: It starts with a default html page (no CSS needed) and a default JS file. The JS file has boilerplate code to initialize the app and get the basic controls running.
 
@@ -22,10 +20,7 @@ A: -PageControls- are 3 files (html, css, js) and should go in their own folder 
 ***
 
 ###Q: How do navigate from page to page?​​​
-A: Program the links to run WinJS.Navigation.navigate( "/pages/page2/page2.html" );​​
-{% highlight ruby %}
-WinJS.Navigation.navigate(location, initialState).done();​​
-{% endhighlight %}
+A: Program the links to run WinJS.Navigation.navigate( "/pages/page2/page2.html" );​​{% highlight ruby %}WinJS.Navigation.navigate(location, initialState).done();​​{% endhighlight %}
 ​
 ***
 
