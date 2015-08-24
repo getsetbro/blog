@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>getsetblog</title>
+    <title>Windows 10 UWP apps Q's and A's</title>
     <meta name="description" content="Official blog spot of Seth Broweleit.
 ">
     <meta name="author" content="Seth Broweleit">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://blog.getsetbro.com/">
+    <link rel="canonical" href="http://blog.getsetbro.com/Windows-10-UWP-apps-Qs-and-As.html">
 
 </head>
 
@@ -55,127 +55,47 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Windows 10 UWP apps Q's and A's</h1>
+    <p class="post-meta">Aug 19, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Aug 24, 2015</span>
+  <article class="post-content">
+    <h3 id="q-how-do-you-start-a-js-win10-uwp-app">Q: How do you start a JS win10 uwp ​​app?​</h3>
+<p>A: It starts with a default html page (no CSS needed) and a default JS file. The JS file has boilerplate code to initialize the app and get the basic controls running.</p>
 
-        <h2>
-          <a class="post-link" href="/Your-webapp-on-the-UWP-Tested.html">Your web-app on the Universal Windows Platform - Tested</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 19, 2015</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/Windows-10-UWP-apps-Qs-and-As.html">Windows 10 UWP apps Q's and A's</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 30, 2015</span>
+<h3 id="q-how-do-you-add-a-page">Q: How do you add a page?​​​​​​</h3>
+<p>A: -PageControls- are 3 files (html, css, js) and should go in their own folder in the PAGES folder:</p>
 
-        <h2>
-          <a class="post-link" href="/beginners-log-of-the-raspberry-pi-2.html">Beginners Log of the Raspberry Pi 2</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 26, 2015</span>
+<ol>
+  <li>pages / home / home.html</li>
+  <li>pages / home / home.css</li>
+  <li>pages / home / home.js</li>
+</ol>
 
-        <h2>
-          <a class="post-link" href="/Bookmarklet-to-make-your-browser-a-Text-Editor.html">Bookmarklet to make your browser a Text Editor</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 26, 2015</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/Override-Windows-fast-startup-option.html">Override Windows fast-startup option</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 2, 2015</span>
+<h3 id="q-how-do-navigate-from-page-to-page">Q: How do navigate from page to page?​​​</h3>
+<p>A: Program the links to run</p>
 
-        <h2>
-          <a class="post-link" href="/prototype-driven-development.html">Prototype Driven Development</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 1, 2015</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">WinJS</span><span class="o">.</span><span class="n">Navigation</span><span class="o">.</span><span class="n">navigate</span><span class="p">(</span> <span class="s2">&quot;/pages/page2/page2.html&quot;</span> <span class="p">);</span><span class="err">​​</span></code></pre></div>
 
-        <h2>
-          <a class="post-link" href="/js/the-svg-tutorial-that-will-make-it-click.html">The SVG tutorial that will make it click</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 25, 2015</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">WinJS</span><span class="o">.</span><span class="n">Navigation</span><span class="o">.</span><span class="n">navigate</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">initialState</span><span class="p">)</span><span class="o">.</span><span class="n">done</span><span class="p">();</span><span class="err">​​</span></code></pre></div>
 
-        <h2>
-          <a class="post-link" href="/js/FB-react-vs-reactiveJS-vs-ractiveJS-vs-reactiveUI-vs-reactiveX.html">React vs ReactiveJS vs RactiveJS vs ReactiveUI vs ReactiveX</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 20, 2014</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/CSS-systems.html">CSS systems</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 28, 2014</span>
+<h3 id="q-how-do-i-layout-items-so-they-fit-and-scroll-like-a-native-app">Q: How do I layout items so they fit and scroll like a native app</h3>
+<p>A: With custom CSS3, using things like flexbox or height: calc( 100% - 20px ​)</p>
 
-        <h2>
-          <a class="post-link" href="/from-css-2-to-compass-sass.html">From CSS2 to Compass / Sass</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 20, 2014</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/web-prototyping-with-github-pages.html">web prototyping with github pages</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 20, 2014</span>
+<h5 id="more-to-come">…more to come…</h5>
 
-        <h2>
-          <a class="post-link" href="/use-paint.net-to-get-logo-s-out-of-photoshop-psd-files.html">Use paint.NET to get logo's out of Photoshop PSD files</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 20, 2013</span>
-
-        <h2>
-          <a class="post-link" href="/from-clean-windows-to-node-grunt-and-yeoman.html">From clean windows to node, grunt, and yeoman</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 20, 2012</span>
-
-        <h2>
-          <a class="post-link" href="/stop-paying-your-sp-jquery-tax.html">Stop paying your SharePoint jQuery Tax</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 
