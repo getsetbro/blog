@@ -55,14 +55,14 @@ Only a Windows platform will pass the IF test and continue into the code.
 
 ###Live Tile
 We got the code for the Live Tile from:
-[gist.github.com/seksenov/5270d534fad70e98054b](https://gist.github.com/seksenov/5270d534fad70e98054b) and added a button to the app to run the "updateTile" function.
+[gist.github.com/seksenov/...](https://gist.github.com/seksenov/5270d534fad70e98054b) and added a button to the app to run the "updateTile" function.
 
 Guess what... it worked.
 ![alt text](http://getsetbro.com/images/yourapponuwp/liveTile.png "Live Tile")
 
 ###Active Notifications (Toasts)
 Getting this going was as easy as copy and pasting from an example that devs from the Windows team had posted:
-[gist.github.com/seksenov/2a08ea82483a0578d1aa](https://gist.github.com/seksenov/2a08ea82483a0578d1aa).
+[gist.github.com/seksenov/...](https://gist.github.com/seksenov/2a08ea82483a0578d1aa).
 
 Yes it worked ootb but we decided to only show the toast if Cortana had detected and captured a phrase with speech recognition
 ![alt text](http://getsetbro.com/images/yourapponuwp/toast.png "Toast")
@@ -72,9 +72,9 @@ Getting Cortana working took a few more steps than the others, there are more fi
 
 ####Steps
 
-1. Add a vcd.xml file to your site [gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-vcd-xml](https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-vcd-xml)
-2. Point to the vcd.xml file in the head of your web-app [gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-html](https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-html)
-3. Do something in your app when the commands come in from Cortana [gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-js](https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-js)
+1. Add a vcd.xml file to your site [gist.github.com/seksenov/...#file-vcd-xml](https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-vcd-xml)
+2. Point to the vcd.xml file in the head of your web-app [gist.github.com/seksenov/...#file-cortana-html](https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-html)
+3. Do something in your app when the commands come in from Cortana [gist.github.com/seksenov/...#file-cortana-js](https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-js)
 
 ![alt text](http://getsetbro.com/images/yourapponuwp/cortana.png "Cortana")
 
