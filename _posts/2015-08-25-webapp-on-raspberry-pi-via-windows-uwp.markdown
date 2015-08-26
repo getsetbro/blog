@@ -18,7 +18,7 @@ If you are unfamiliar with the Windows UWP bridge it's toolkit enables "you to q
 
 First thing is to get the win10 IOT operating system on to a sdcard for the Raspberry Pi to run. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here [ms-iot.github.io/content/en-US/win10/SetupRPI.htm](http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm)
 
-With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this point, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.
+With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this time, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.
 
 <aside class="thumbnail pullright">
   <img src="http://getsetbro.com/images/onraspiviawinuwp/winservices.png" alt="Windows services list">
@@ -27,13 +27,14 @@ With the Pi on the network you can connect to it from your dev machine. Make sur
 
 ---
 
-Scott Hanselman's article is accurate for the commands to connect and login: [hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx](http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx). He had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:
+Scott Hanselman's article is accurate for the commands to connect and login: [hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx](http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx).
 
+Be aware that to the credentials for the Pi the username is "MINWINPC\administrator" and password is "p@ssw0rd" - some articles I saw did not have the machine name as part of the username in their instructions.
+
+Scott had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:
 ![Project properties](http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png)
 
 In your setting choose not to use authentication. (shown here [oliviaklose.com/hello-blinky/](http://oliviaklose.com/hello-blinky/) )
-
-Be aware that to the credentials for the Pi the username is "MINWINPC\administrator" and password is "p@ssw0rd" - some articles I saw did not have the machine name as part of the username in their instructions.
 
 The device is serving up a webpage that can be provide tasks at http://IP.AD.DRE.SS or http://minwinpc (if and when it works). Once you have deployed you will go to this webpage to START your app - using the webpage interface.
 
