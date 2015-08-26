@@ -33,10 +33,9 @@ Be aware that to the credentials for the Pi the username is "MINWINPC\administra
 
 Scott had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:
 ![Project properties](http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png)
-
 In your setting choose not to use authentication. (shown here [oliviaklose.com/hello-blinky/](http://oliviaklose.com/hello-blinky/) )
 
-The device is serving up a webpage that can be provide tasks at http://IP.AD.DRE.SS or http://minwinpc (if and when it works). Once you have deployed you will go to this webpage to START your app - using the webpage interface.
+The device is serving up a webpage that can be viewed at http://IP.AD.DRE.SS. Once you have deployed you will go to this webpage to START your app - using the webpage interface.
 
 The remote machine IP address can get stuck - I had to create a new app when the IP of my device changed.
 
