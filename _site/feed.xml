@@ -6,9 +6,65 @@
 </description>
     <link>http://blog.getsetbro.com/</link>
     <atom:link href="http://blog.getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 24 Aug 2015 15:23:24 -0500</pubDate>
-    <lastBuildDate>Mon, 24 Aug 2015 15:23:24 -0500</lastBuildDate>
+    <pubDate>Wed, 26 Aug 2015 13:55:52 -0500</pubDate>
+    <lastBuildDate>Wed, 26 Aug 2015 13:55:52 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Webapp on Raspberry Pi via the Windows UWP</title>
+        <description>&lt;!-- 
+bold
+**bold**
+ --&gt;
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/win10iot.png&quot; alt=&quot;Windows 10 IOT boot image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I mentioned in the last post I was going to try deploying our “Vacation Planner” web application to a Raspberry PI. I did try it and it did work. The web-app didn’t need any changes to run on the device. So while I don’t have a list of tweaks needed to make a webapp work on IOT devices I can tell you about some of the gotchas I encountered getting to the place where I could install the web-app.&lt;/p&gt;
+
+&lt;p&gt;If you are unfamiliar with the Windows UWP bridge it “ toolkits enable you to quickly bring your existing applications to the Universal Windows Platform and Windows Store.” It wraps web-apps and deploys it to multiple devices (PCs, tablets, phones, HoloLens, Surface Hub, Xbox, and Raspberry Pi).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/win10devices.png&quot; alt=&quot;Windows 10 Devices&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First thing is to get win10 IOT operating system on to a sdcard for the raspberry Pi to run from. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here &lt;a href=&quot;http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm&quot;&gt;ms-iot.github.io/content/en-US/win10/SetupRPI.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this point, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.&lt;/p&gt;
+
+&lt;aside class=&quot;thumbnail pullright&quot;&gt;
+  &lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/winservices.png&quot; alt=&quot;Windows services list&quot; /&gt;
+&lt;/aside&gt;
+&lt;p&gt;With the Pi on the network you can connect to it from your dev machine. Make sure the Windows Remote Management service is running on the dev system. For me it was off so I had to start it. I chose to have it always start automatically.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Scott Hanselman’s article is accurate for the commands to connect and login: &lt;a href=&quot;http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx&quot;&gt;hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx&lt;/a&gt;. He had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png&quot; alt=&quot;Project properties&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In your setting choose not to use authentication. (shown here &lt;a href=&quot;http://oliviaklose.com/hello-blinky/&quot;&gt;oliviaklose.com/hello-blinky/&lt;/a&gt; )&lt;/p&gt;
+
+&lt;p&gt;Be aware that to the credentials for the Pi the username is “MINWINPC\administrator” and password is “p@ssw0rd” - some articles I saw did not have the machine name as part of the username in their instructions.&lt;/p&gt;
+
+&lt;p&gt;The device is serving up a webpage that can be provide tasks at http://IP.AD.DRE.SS or http://minwinpc (if and when it works). Once you have deployed you will go to this webpage to START your app - using the webpage interface.&lt;/p&gt;
+
+&lt;p&gt;The remote machine IP address can get stuck - I had to create a new app when the IP of my device changed.&lt;/p&gt;
+
+&lt;h2 id=&quot;photo-gallery&quot;&gt;Photo gallery&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/kiosk.png&quot; alt=&quot;End result&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;date-picker&quot;&gt;Date Picker&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/datepicker.png&quot; alt=&quot;Date picker in effect&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;deployed&quot;&gt;Deployed&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/deployed.png&quot; alt=&quot;The deployed code output&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;[ Words: 511 ]&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Aug 2015 11:00:00 -0500</pubDate>
+        <link>http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html</link>
+        <guid isPermaLink="true">http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Your web-app on the Universal Windows Platform - Tested</title>
@@ -61,14 +117,14 @@ I hope you notice that there is not much there, and there is not going to be. It
 
 &lt;h3 id=&quot;live-tile&quot;&gt;Live Tile&lt;/h3&gt;
 &lt;p&gt;We got the code for the Live Tile from:
-&lt;a href=&quot;https://gist.github.com/seksenov/5270d534fad70e98054b&quot;&gt;gist.github.com/seksenov/5270d534fad70e98054b&lt;/a&gt; and added a button to the app to run the “updateTile” function.&lt;/p&gt;
+&lt;a href=&quot;https://gist.github.com/seksenov/5270d534fad70e98054b&quot;&gt;gist.github.com/seksenov/…&lt;/a&gt; and added a button to the app to run the “updateTile” function.&lt;/p&gt;
 
 &lt;p&gt;Guess what… it worked.
 &lt;img src=&quot;http://getsetbro.com/images/yourapponuwp/liveTile.png&quot; alt=&quot;alt text&quot; title=&quot;Live Tile&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;active-notifications-toasts&quot;&gt;Active Notifications (Toasts)&lt;/h3&gt;
 &lt;p&gt;Getting this going was as easy as copy and pasting from an example that devs from the Windows team had posted:
-&lt;a href=&quot;https://gist.github.com/seksenov/2a08ea82483a0578d1aa&quot;&gt;gist.github.com/seksenov/2a08ea82483a0578d1aa&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;https://gist.github.com/seksenov/2a08ea82483a0578d1aa&quot;&gt;gist.github.com/seksenov/…&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Yes it worked ootb but we decided to only show the toast if Cortana had detected and captured a phrase with speech recognition
 &lt;img src=&quot;http://getsetbro.com/images/yourapponuwp/toast.png&quot; alt=&quot;alt text&quot; title=&quot;Toast&quot; /&gt;&lt;/p&gt;
@@ -79,9 +135,9 @@ I hope you notice that there is not much there, and there is not going to be. It
 &lt;h4 id=&quot;steps&quot;&gt;Steps&lt;/h4&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Add a vcd.xml file to your site &lt;a href=&quot;https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-vcd-xml&quot;&gt;gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-vcd-xml&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Point to the vcd.xml file in the head of your web-app &lt;a href=&quot;https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-html&quot;&gt;gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Do something in your app when the commands come in from Cortana &lt;a href=&quot;https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-js&quot;&gt;gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add a vcd.xml file to your site &lt;a href=&quot;https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-vcd-xml&quot;&gt;gist.github.com/seksenov/…#file-vcd-xml&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Point to the vcd.xml file in the head of your web-app &lt;a href=&quot;https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-html&quot;&gt;gist.github.com/seksenov/…#file-cortana-html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Do something in your app when the commands come in from Cortana &lt;a href=&quot;https://gist.github.com/seksenov/17032e9a6eb9c17f88b5#file-cortana-js&quot;&gt;gist.github.com/seksenov/…#file-cortana-js&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/yourapponuwp/cortana.png&quot; alt=&quot;alt text&quot; title=&quot;Cortana&quot; /&gt;&lt;/p&gt;
@@ -773,77 +829,6 @@ Here is a article on React vs Ractive - via Ractive &lt;a href=&quot;//blog.ract
         <pubDate>Thu, 20 Nov 2014 02:00:00 -0600</pubDate>
         <link>http://blog.getsetbro.com/CSS-systems.html</link>
         <guid isPermaLink="true">http://blog.getsetbro.com/CSS-systems.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>From CSS2 to Compass / Sass</title>
-        <description>&lt;p&gt;If you have been seeing talk of CSS extensions like LESS and SASS but have not had a chance to use them then this article might give you an idea of what it would be like.&lt;/p&gt;
-
-&lt;p&gt;First I will show what it was like using CSS 2 before CSS 3 came along.&lt;/p&gt;
-
-&lt;h2 id=&quot;css-2&quot;&gt;CSS 2:&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gainsboro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Wee. No wait. Boring.&lt;/p&gt;
-
-&lt;p&gt;Then CSS3 came and we can do great stuff like round corners.&lt;/p&gt;
-
-&lt;h2 id=&quot;css-3&quot;&gt;CSS 3:&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;But look at all those pre-fixes. So with SASS we can define it once and use it many many times.&lt;/p&gt;
-
-&lt;h2 id=&quot;sass&quot;&gt;SASS:&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@mixin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The output is converted to be just like the CSS3 above that was all written by hand:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;But then with Compass (which uses SASS) we don’t have to write the MIXINs. They are written for us. We can just include the set of MIXINs we want and then start using them like this…&lt;/p&gt;
-
-&lt;h2 id=&quot;compass&quot;&gt;Compass:&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;compass/css3&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;vi&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Thu, 28 Aug 2014 08:34:54 -0500</pubDate>
-        <link>http://blog.getsetbro.com/from-css-2-to-compass-sass.html</link>
-        <guid isPermaLink="true">http://blog.getsetbro.com/from-css-2-to-compass-sass.html</guid>
         
         
       </item>

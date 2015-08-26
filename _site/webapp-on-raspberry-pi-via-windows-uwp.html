@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>getsetblog</title>
+    <title>Webapp on Raspberry Pi via the Windows UWP</title>
     <meta name="description" content="Official blog spot of Seth Broweleit.
 ">
     <meta name="author" content="Seth Broweleit">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://blog.getsetbro.com/">
+    <link rel="canonical" href="http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html">
 
 </head>
 
@@ -55,135 +55,62 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Webapp on Raspberry Pi via the Windows UWP</h1>
+    <p class="post-meta">Aug 25, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Aug 25, 2015</span>
+  <article class="post-content">
+    <!-- 
+bold
+**bold**
+ -->
+<p><img src="http://getsetbro.com/images/onraspiviawinuwp/win10iot.png" alt="Windows 10 IOT boot image" /></p>
 
-        <h2>
-          <a class="post-link" href="/webapp-on-raspberry-pi-via-windows-uwp.html">Webapp on Raspberry Pi via the Windows UWP</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 24, 2015</span>
+<p>I mentioned in the last post I was going to try deploying our “Vacation Planner” web application to a Raspberry PI. I did try it and it did work. The web-app didn’t need any changes to run on the device. So while I don’t have a list of tweaks needed to make a webapp work on IOT devices I can tell you about some of the gotchas I encountered getting to the place where I could install the web-app.</p>
 
-        <h2>
-          <a class="post-link" href="/Your-webapp-on-the-UWP-Tested.html">Your web-app on the Universal Windows Platform - Tested</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 19, 2015</span>
+<p>If you are unfamiliar with the Windows UWP bridge it “ toolkits enable you to quickly bring your existing applications to the Universal Windows Platform and Windows Store.” It wraps web-apps and deploys it to multiple devices (PCs, tablets, phones, HoloLens, Surface Hub, Xbox, and Raspberry Pi).</p>
 
-        <h2>
-          <a class="post-link" href="/Windows-10-UWP-apps-Qs-and-As.html">Windows 10 UWP apps Q's and A's</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 30, 2015</span>
+<p><img src="http://getsetbro.com/images/onraspiviawinuwp/win10devices.png" alt="Windows 10 Devices" /></p>
 
-        <h2>
-          <a class="post-link" href="/beginners-log-of-the-raspberry-pi-2.html">Beginners Log of the Raspberry Pi 2</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 26, 2015</span>
+<p>First thing is to get win10 IOT operating system on to a sdcard for the raspberry Pi to run from. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here <a href="http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm">ms-iot.github.io/content/en-US/win10/SetupRPI.htm</a></p>
 
-        <h2>
-          <a class="post-link" href="/Bookmarklet-to-make-your-browser-a-Text-Editor.html">Bookmarklet to make your browser a Text Editor</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 26, 2015</span>
+<p>With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this point, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.</p>
 
-        <h2>
-          <a class="post-link" href="/Override-Windows-fast-startup-option.html">Override Windows fast-startup option</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 2, 2015</span>
+<aside class="thumbnail pullright">
+  <img src="http://getsetbro.com/images/onraspiviawinuwp/winservices.png" alt="Windows services list" />
+</aside>
+<p>With the Pi on the network you can connect to it from your dev machine. Make sure the Windows Remote Management service is running on the dev system. For me it was off so I had to start it. I chose to have it always start automatically.</p>
 
-        <h2>
-          <a class="post-link" href="/prototype-driven-development.html">Prototype Driven Development</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 1, 2015</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/js/the-svg-tutorial-that-will-make-it-click.html">The SVG tutorial that will make it click</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 25, 2015</span>
+<p>Scott Hanselman’s article is accurate for the commands to connect and login: <a href="http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx">hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx</a>. He had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:</p>
 
-        <h2>
-          <a class="post-link" href="/js/FB-react-vs-reactiveJS-vs-ractiveJS-vs-reactiveUI-vs-reactiveX.html">React vs ReactiveJS vs RactiveJS vs ReactiveUI vs ReactiveX</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 20, 2014</span>
+<p><img src="http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png" alt="Project properties" /></p>
 
-        <h2>
-          <a class="post-link" href="/CSS-systems.html">CSS systems</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 28, 2014</span>
+<p>In your setting choose not to use authentication. (shown here <a href="http://oliviaklose.com/hello-blinky/">oliviaklose.com/hello-blinky/</a> )</p>
 
-        <h2>
-          <a class="post-link" href="/from-css-2-to-compass-sass.html">From CSS2 to Compass / Sass</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 20, 2014</span>
+<p>Be aware that to the credentials for the Pi the username is “MINWINPC\administrator” and password is “p@ssw0rd” - some articles I saw did not have the machine name as part of the username in their instructions.</p>
 
-        <h2>
-          <a class="post-link" href="/web-prototyping-with-github-pages.html">web prototyping with github pages</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 20, 2014</span>
+<p>The device is serving up a webpage that can be provide tasks at http://IP.AD.DRE.SS or http://minwinpc (if and when it works). Once you have deployed you will go to this webpage to START your app - using the webpage interface.</p>
 
-        <h2>
-          <a class="post-link" href="/use-paint.net-to-get-logo-s-out-of-photoshop-psd-files.html">Use paint.NET to get logo's out of Photoshop PSD files</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 20, 2013</span>
+<p>The remote machine IP address can get stuck - I had to create a new app when the IP of my device changed.</p>
 
-        <h2>
-          <a class="post-link" href="/from-clean-windows-to-node-grunt-and-yeoman.html">From clean windows to node, grunt, and yeoman</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 20, 2012</span>
+<h2 id="photo-gallery">Photo gallery</h2>
+<p><img src="http://getsetbro.com/images/onraspiviawinuwp/kiosk.png" alt="End result" /></p>
 
-        <h2>
-          <a class="post-link" href="/stop-paying-your-sp-jquery-tax.html">Stop paying your SharePoint jQuery Tax</a>
-        </h2>
-      </li>
-    
-  </ul>
+<h3 id="date-picker">Date Picker</h3>
+<p><img src="http://getsetbro.com/images/onraspiviawinuwp/datepicker.png" alt="Date picker in effect" /></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h3 id="deployed">Deployed</h3>
+<p><img src="http://getsetbro.com/images/onraspiviawinuwp/deployed.png" alt="The deployed code output" /></p>
+
+<hr />
+<p>[ Words: 511 ]</p>
+
+  </article>
 
 </div>
 
