@@ -16,7 +16,7 @@ If you are unfamiliar with the Windows UWP bridge it's toolkit enables "you to q
 
 ![Windows 10 Devices](http://getsetbro.com/images/onraspiviawinuwp/win10devices.png)
 
-First thing is to get win10 IOT operating system on to a sdcard for the raspberry Pi to run from. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here [ms-iot.github.io/content/en-US/win10/SetupRPI.htm](http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm)
+First thing is to get the win10 IOT operating system on to a sdcard for the Raspberry Pi to run. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here [ms-iot.github.io/content/en-US/win10/SetupRPI.htm](http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm)
 
 With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this point, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.
 

@@ -71,11 +71,11 @@ bold
 
 <p>I mentioned in the last post I was going to try deploying our “Vacation Planner” web application to a Raspberry PI. I did try it and it did work. The web-app didn’t need any changes to run on the device. So while I don’t have a list of tweaks needed to make a webapp work on IOT devices I can tell you about some of the gotchas I encountered getting to the place where I could install the web-app.</p>
 
-<p>If you are unfamiliar with the Windows UWP bridge it’s toolkit enables “you to quickly bring your existing applications to the Universal Windows Platform and Windows Store.” It wraps web-apps and deploys it to multiple devices (PCs, tablets, phones, HoloLens, Surface Hub, Xbox, and Raspberry Pi).</p>
+<p>If you are unfamiliar with the Windows UWP bridge it’s toolkit enables “you to quickly bring your existing applications to the Universal Windows Platform and Windows Store.” It wraps web-apps so you can deploy it to multiple devices (PCs, tablets, phones, HoloLens, Surface Hub, Xbox, and Raspberry Pi).</p>
 
 <p><img src="http://getsetbro.com/images/onraspiviawinuwp/win10devices.png" alt="Windows 10 Devices" /></p>
 
-<p>First thing is to get win10 IOT operating system on to a sdcard for the raspberry Pi to run from. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here <a href="http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm">ms-iot.github.io/content/en-US/win10/SetupRPI.htm</a></p>
+<p>First thing is to get the win10 IOT operating system on to a sdcard for the Raspberry Pi to run. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here <a href="http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm">ms-iot.github.io/content/en-US/win10/SetupRPI.htm</a></p>
 
 <p>With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this point, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.</p>
 
@@ -108,7 +108,7 @@ bold
 <p><img src="http://getsetbro.com/images/onraspiviawinuwp/deployed.png" alt="The deployed code output" /></p>
 
 <hr />
-<p>[ Words: 510 ]</p>
+<p>[ Words: 512 ]</p>
 
   </article>
 
