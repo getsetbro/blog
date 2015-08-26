@@ -6,17 +6,13 @@
 </description>
     <link>http://blog.getsetbro.com/</link>
     <atom:link href="http://blog.getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 26 Aug 2015 14:04:45 -0500</pubDate>
-    <lastBuildDate>Wed, 26 Aug 2015 14:04:45 -0500</lastBuildDate>
+    <pubDate>Wed, 26 Aug 2015 14:10:21 -0500</pubDate>
+    <lastBuildDate>Wed, 26 Aug 2015 14:10:21 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Webapp on Raspberry Pi via the Windows UWP</title>
-        <description>&lt;!-- 
-bold
-**bold**
- --&gt;
-&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/win10iot.png&quot; alt=&quot;Windows 10 IOT boot image&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/win10iot.png&quot; alt=&quot;Windows 10 IOT boot image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I mentioned in the last post I was going to try deploying our “Vacation Planner” web application to a Raspberry PI. I did try it and it did work. The web-app didn’t need any changes to run on the device. So while I don’t have a list of tweaks needed to make a webapp work on IOT devices I can tell you about some of the gotchas I encountered getting to the place where I could install the web-app.&lt;/p&gt;
 
@@ -26,7 +22,7 @@ bold
 
 &lt;p&gt;First thing is to get the win10 IOT operating system on to a sdcard for the Raspberry Pi to run. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here &lt;a href=&quot;http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm&quot;&gt;ms-iot.github.io/content/en-US/win10/SetupRPI.htm&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this point, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.&lt;/p&gt;
+&lt;p&gt;With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this time, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.&lt;/p&gt;
 
 &lt;aside class=&quot;thumbnail pullright&quot;&gt;
   &lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/winservices.png&quot; alt=&quot;Windows services list&quot; /&gt;
@@ -35,17 +31,17 @@ bold
 
 &lt;hr /&gt;
 
-&lt;p&gt;Scott Hanselman’s article is accurate for the commands to connect and login: &lt;a href=&quot;http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx&quot;&gt;hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx&lt;/a&gt;. He had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png&quot; alt=&quot;Project properties&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In your setting choose not to use authentication. (shown here &lt;a href=&quot;http://oliviaklose.com/hello-blinky/&quot;&gt;oliviaklose.com/hello-blinky/&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;Scott Hanselman’s article is accurate for the commands to connect and login: &lt;a href=&quot;http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx&quot;&gt;hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Be aware that to the credentials for the Pi the username is “MINWINPC\administrator” and password is “p@ssw0rd” - some articles I saw did not have the machine name as part of the username in their instructions.&lt;/p&gt;
 
-&lt;p&gt;The device is serving up a webpage that can be provide tasks at http://IP.AD.DRE.SS or http://minwinpc (if and when it works). Once you have deployed you will go to this webpage to START your app - using the webpage interface.&lt;/p&gt;
+&lt;p&gt;Scott had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:
+&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png&quot; alt=&quot;Project properties&quot; /&gt;
+In your setting choose not to use authentication. (shown here &lt;a href=&quot;http://oliviaklose.com/hello-blinky/&quot;&gt;oliviaklose.com/hello-blinky/&lt;/a&gt; )&lt;/p&gt;
 
-&lt;p&gt;The remote machine IP address can get stuck - I had to create a new app when the IP of my device changed.&lt;/p&gt;
+&lt;p&gt;The device is serving up a webpage that can be viewed at http://IP.AD.DRE.SS. Once you have deployed you will go to this webpage to &lt;strong&gt;START&lt;/strong&gt; your app - using the webpage interface.&lt;/p&gt;
+
+&lt;p&gt;Heads up: The remote machine IP address setting can get stuck - I had to create a new app when the IP of my device changed.&lt;/p&gt;
 
 &lt;h2 id=&quot;photo-gallery&quot;&gt;Photo gallery&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/kiosk.png&quot; alt=&quot;End result&quot; /&gt;&lt;/p&gt;
@@ -57,7 +53,7 @@ bold
 &lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/deployed.png&quot; alt=&quot;The deployed code output&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;[ Words: 512 ]&lt;/p&gt;
+&lt;p&gt;[ Words: 503 ]&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Aug 2015 11:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html</link>

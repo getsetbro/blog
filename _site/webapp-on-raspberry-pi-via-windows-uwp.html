@@ -63,11 +63,7 @@
   </header>
 
   <article class="post-content">
-    <!-- 
-bold
-**bold**
- -->
-<p><img src="http://getsetbro.com/images/onraspiviawinuwp/win10iot.png" alt="Windows 10 IOT boot image" /></p>
+    <p><img src="http://getsetbro.com/images/onraspiviawinuwp/win10iot.png" alt="Windows 10 IOT boot image" /></p>
 
 <p>I mentioned in the last post I was going to try deploying our “Vacation Planner” web application to a Raspberry PI. I did try it and it did work. The web-app didn’t need any changes to run on the device. So while I don’t have a list of tweaks needed to make a webapp work on IOT devices I can tell you about some of the gotchas I encountered getting to the place where I could install the web-app.</p>
 
@@ -77,7 +73,7 @@ bold
 
 <p>First thing is to get the win10 IOT operating system on to a sdcard for the Raspberry Pi to run. I already had a build from a couple of months ago but that became a major obstacle when an error told me the debugger version on the device did not match the version of VS on my dev machine. As of today the correct steps are listed here <a href="http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm">ms-iot.github.io/content/en-US/win10/SetupRPI.htm</a></p>
 
-<p>With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this point, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.</p>
+<p>With the OS on the sdcard the Raspberry Pi will boot up and grab an IP address over a wired network connection. No wifi support at this time, which is a big barrier for many who wont feel like running a long network cable through their house or office. I, myself, do not mind.</p>
 
 <aside class="thumbnail pullright">
   <img src="http://getsetbro.com/images/onraspiviawinuwp/winservices.png" alt="Windows services list" />
@@ -86,17 +82,17 @@ bold
 
 <hr />
 
-<p>Scott Hanselman’s article is accurate for the commands to connect and login: <a href="http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx">hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx</a>. He had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:</p>
-
-<p><img src="http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png" alt="Project properties" /></p>
-
-<p>In your setting choose not to use authentication. (shown here <a href="http://oliviaklose.com/hello-blinky/">oliviaklose.com/hello-blinky/</a> )</p>
+<p>Scott Hanselman’s article is accurate for the commands to connect and login: <a href="http://www.hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx">hanselman.com/blog/SettingUpWindows10ForIoTOnYourRaspberryPi2.aspx</a>.</p>
 
 <p>Be aware that to the credentials for the Pi the username is “MINWINPC\administrator” and password is “p@ssw0rd” - some articles I saw did not have the machine name as part of the username in their instructions.</p>
 
-<p>The device is serving up a webpage that can be provide tasks at http://IP.AD.DRE.SS or http://minwinpc (if and when it works). Once you have deployed you will go to this webpage to START your app - using the webpage interface.</p>
+<p>Scott had all the steps I needed except he was deploying a C# app which has a different manual config screen than what I needed for my remote web-app. For me when I selected the properties of my project it looked like this:
+<img src="http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png" alt="Project properties" />
+In your setting choose not to use authentication. (shown here <a href="http://oliviaklose.com/hello-blinky/">oliviaklose.com/hello-blinky/</a> )</p>
 
-<p>The remote machine IP address can get stuck - I had to create a new app when the IP of my device changed.</p>
+<p>The device is serving up a webpage that can be viewed at http://IP.AD.DRE.SS. Once you have deployed you will go to this webpage to <strong>START</strong> your app - using the webpage interface.</p>
+
+<p>Heads up: The remote machine IP address setting can get stuck - I had to create a new app when the IP of my device changed.</p>
 
 <h2 id="photo-gallery">Photo gallery</h2>
 <p><img src="http://getsetbro.com/images/onraspiviawinuwp/kiosk.png" alt="End result" /></p>
@@ -108,7 +104,7 @@ bold
 <p><img src="http://getsetbro.com/images/onraspiviawinuwp/deployed.png" alt="The deployed code output" /></p>
 
 <hr />
-<p>[ Words: 512 ]</p>
+<p>[ Words: 503 ]</p>
 
   </article>
 
