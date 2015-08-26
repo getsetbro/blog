@@ -4,10 +4,7 @@ title:  "Webapp on Raspberry Pi via the Windows UWP"
 date:   2015-08-25 16:00:00
 categories:
 ---
-<!-- 
-bold
-**bold**
- -->
+
 ![Windows 10 IOT boot image](http://getsetbro.com/images/onraspiviawinuwp/win10iot.png)
 
 I mentioned in the last post I was going to try deploying our "Vacation Planner" web application to a Raspberry PI. I did try it and it did work. The web-app didn't need any changes to run on the device. So while I don't have a list of tweaks needed to make a webapp work on IOT devices I can tell you about some of the gotchas I encountered getting to the place where I could install the web-app.
@@ -35,9 +32,9 @@ Scott had all the steps I needed except he was deploying a C# app which has a di
 ![Project properties](http://getsetbro.com/images/onraspiviawinuwp/projectproperties.png)
 In your setting choose not to use authentication. (shown here [oliviaklose.com/hello-blinky/](http://oliviaklose.com/hello-blinky/) )
 
-The device is serving up a webpage that can be viewed at http://IP.AD.DRE.SS. Once you have deployed you will go to this webpage to START your app - using the webpage interface.
+The device is serving up a webpage that can be viewed at http://IP.AD.DRE.SS. Once you have deployed you will go to this webpage to **START** your app - using the webpage interface.
 
-The remote machine IP address can get stuck - I had to create a new app when the IP of my device changed.
+Heads up: The remote machine IP address setting can get stuck - I had to create a new app when the IP of my device changed.
 
 ##Photo gallery
 ![End result](http://getsetbro.com/images/onraspiviawinuwp/kiosk.png)
