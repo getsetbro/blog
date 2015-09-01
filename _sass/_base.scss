@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -22,8 +20,6 @@ body {
     background-color: $background-color;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertycal rhythm
  */
@@ -34,8 +30,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -43,8 +37,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -56,8 +48,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -73,16 +63,12 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
-
-
 
 /**
  * Links
@@ -124,9 +110,8 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-size: 15px;
+pre, code {
+    font-size: 13px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;

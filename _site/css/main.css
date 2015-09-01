@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   font-weight: 300;
   color: #111;
@@ -41,7 +41,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 17.5px; }
 
 /**
  * Lists
@@ -87,9 +87,8 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-  font-size: 15px;
+pre, code {
+  font-size: 13px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
   background-color: #eef; }
@@ -269,7 +268,7 @@ pre {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 14px;
+  font-size: 17.5px;
   color: #828282; }
 
 .post-link {
@@ -450,17 +449,19 @@ pre {
 a {
   background-image: linear-gradient(to right, rgba(111, 111, 111, 0) 50%, #dedede 50%);
   background-size: 200%;
-  transition: background-position .25s ease;
+  transition: background-position .25s, padding-right .25s, padding-left .25s;
   background-position: 0 0; }
 
 a:hover {
   background-position: -100% 0;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-right: 9px;
+  padding-left: 9px; }
 
 hr {
   border: 0 none;
   height: 1px;
-  background-color: silver;
+  background-color: #e8e8e8;
   margin: 15px 0;
   clear: both; }
 
