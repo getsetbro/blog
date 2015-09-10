@@ -455,8 +455,8 @@ a {
 a:hover {
   background-position: -100% 0;
   text-decoration: none;
-  padding-right: 9px;
-  padding-left: 9px; }
+  padding-right: 6px;
+  padding-left: 6px; }
 
 hr {
   border: 0 none;
@@ -484,8 +484,6 @@ aside {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: border .2s ease-in-out;
-  -o-transition: border .2s ease-in-out;
   transition: border 0.2s ease-in-out; }
 
 .thumbnail a > img, .thumbnail > img {
