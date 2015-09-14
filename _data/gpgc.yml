@@ -6,6 +6,6 @@ label_name: Post Comments
 label_color: 666666
 github_application:
   client_id: 0b175ce818e142d32aa7
-  code_authenticator: https://getsetblog.comments.herokuapp.com/authenticate/
+  code_authenticator: https://getsetblogcomments.herokuapp.com/authenticate/
   callback_url: http://blog.getsetbro.com/public/html/gpgc_redirect.html
 enable_diagnostics: true
