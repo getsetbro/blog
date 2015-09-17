@@ -41,7 +41,7 @@ Because the header and footer are block level elements - they are as wide as the
 
 ###So what can be done‽
 
-If you want the header and footer to expand to the same width as the other parts of the page you should set there parent to act like a table like this:
+If you want the header and footer to expand as far as the content you could set their parent to act like a TABLE like this:
 
 {% highlight ruby %}
 body{
