@@ -2,7 +2,7 @@
 layout: post
 title:  "The SVG tutorial that will make it click"
 date:   2015-03-01 13:00:00
-categories: JS
+categories:
 ---
 
 When you want a shape in your webapp that is responsive and looks sharp at any size SVG is the way to go but where would you start? Here are some steps that can get you something useable and hopefully make some concepts around SVG click for you. There is much more to it, of course, but this might get you off and running.
