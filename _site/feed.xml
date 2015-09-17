@@ -6,9 +6,65 @@
 </description>
     <link>http://blog.getsetbro.com/</link>
     <atom:link href="http://blog.getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 09 Sep 2015 22:07:18 -0500</pubDate>
-    <lastBuildDate>Wed, 09 Sep 2015 22:07:18 -0500</lastBuildDate>
+    <pubDate>Thu, 17 Sep 2015 02:53:05 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Sep 2015 02:53:05 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>CSS IS AWESOME or DIVs allow overflow TABLEs do not</title>
+        <description>&lt;p&gt;You could say that I have been wanting to write this blog for a while due to how attempted to &lt;a href=&quot;https://twitter.com/getsetbro/status/120936678981509120&quot;&gt;tweet it&lt;/a&gt; in 2011. But the concept deserves a longer post than what a tweet provides.&lt;/p&gt;
+
+&lt;p&gt;Here is the joke:
+&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesome.png&quot; alt=&quot;&amp;quot;alt&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I didn’t want to post the picture, but some would not know what I was referring to.&lt;/p&gt;
+
+&lt;p&gt;The - CSS is awesome - joke is not what inspired me to write this article today. So stay tuned until the very end to find what I really wanted to pervay.&lt;/p&gt;
+
+&lt;p&gt;What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png&quot; alt=&quot;&amp;quot;alt&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am guessing that this joke began when developers stopped using TABLEs and started using DIVs and found that content could over run the borders.&lt;/p&gt;
+
+&lt;p&gt;This lead them to feel that CSS was indeed NOT AWESOME because it caused problems. But it was the markup all along.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-what-is-the-real-reason-for-this-post&quot;&gt;But what is the real reason for this post?&lt;/h2&gt;
+
+&lt;p&gt;And the answer is that I want to point out where you are going to want to go back to the old table way of doing things to avoid this bug that the DIV has caused.&lt;/p&gt;
+
+&lt;p&gt;Lets say you have a site with a header, main area, and footer. You will probably have some kind of decoration on the header and footer like a background color or borders. Those will go the full width of the page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout1.png&quot; alt=&quot;&amp;quot;alt&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sometimes for some reason you have to have content that could become wider than the width of the page. And there is nothing you can do about it.&lt;/p&gt;
+
+&lt;p&gt;When you scroll horizontally to see the content that is farther to the right you will find that the header and footer do not continue as far as the content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout2.png&quot; alt=&quot;&amp;quot;alt&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;why-did-this-happen&quot;&gt;Why did this happen‽&lt;/h3&gt;
+
+&lt;p&gt;Because the header and footer are block level elements - they are as wide as their parent. The BODY and HTML elements are also block level elements. They are not working like a table. They allow overflow. A table would widen to make sure that it goes all the way around its content - like a mother goose, protecting her young. Even if you set it to be a certain width it would break that rule to hug it’s children.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-what-can-be-done&quot;&gt;So what can be done‽&lt;/h3&gt;
+
+&lt;p&gt;If you want the header and footer to expand to the same width as the other parts of the page you should set there parent to act like a table like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For my example I set it on the BODY element. You can see the &lt;a href=&quot;http://jsbin.com/muyowa/edit?html,css,output&quot;&gt;example bin here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png&quot; alt=&quot;&amp;quot;alt&amp;quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Sep 2015 02:00:00 -0500</pubDate>
+        <link>http://blog.getsetbro.com/css-is-awesome-or-divs-allow-overflow-tables-do-not.html</link>
+        <guid isPermaLink="true">http://blog.getsetbro.com/css-is-awesome-or-divs-allow-overflow-tables-do-not.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Webapp on Raspberry Pi via the Windows UWP</title>
@@ -51,9 +107,6 @@ In your setting choose not to use authentication. (shown here &lt;a href=&quot;h
 
 &lt;h3 id=&quot;deployed&quot;&gt;Deployed&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/deployed.png&quot; alt=&quot;The deployed code output&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;[ Words: 503 ]&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Aug 2015 11:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html</link>
@@ -784,54 +837,6 @@ Here is a article on React vs Ractive - via Ractive &lt;a href=&quot;//blog.ract
         
         
         <category>js</category>
-        
-      </item>
-    
-      <item>
-        <title>CSS systems</title>
-        <description>&lt;h4 id=&quot;i-am-making-a-list-of-css-systems-when-i-become-aware-of-them&quot;&gt;I am making a list of CSS systems when I become aware of them:&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;//twitter.github.com/bootstrap&quot;&gt;Bootstrap.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//foundation.zurb.com&quot;&gt;Foundation.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//www.getskeleton.com&quot;&gt;Skeleton.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//purecss.io&quot;&gt;Pure.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//topcoat.io&quot;&gt;Topcoat.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//pea.rs&quot;&gt;Pears.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//gumbyframework.com&quot;&gt;Gumby.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//malarkey.github.io/Rock-Hammer&quot;&gt;Rock Hammer.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//tuktuk.tapquo.com&quot;&gt;Tuktuk.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//www.unsemantic.com&quot;&gt;Unsemantic.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//zengrids.com&quot;&gt;Zen grid.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//inuitcss.com&quot;&gt;inuit.css.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//docs.atlassian.com/aui/latest&quot;&gt;AUI.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//baselinecss.com&quot;&gt;Baseline.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//typeplate.com&quot;&gt;Typeplate.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//960.gs&quot;&gt;960 grid.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//www.99lime.com/elements&quot;&gt;HTML KickStart.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//imperavi.com/kube/stencils&quot;&gt;Kube.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//weice.in/ivory&quot;&gt;Ivory.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//getkickstart.com&quot;&gt;Kickstart&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//getuikit.com&quot;&gt;Uikit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;styleguides&quot;&gt;Styleguides:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;//gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides&quot;&gt;gimmebar front end styleguides&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//bradfrost.github.io/this-is-responsive/patterns.html&quot;&gt;brad frost responsive patterns&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//www.starbucks.com/static/reference/styleguide&quot;&gt;starbucks styleguide&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;//clearleft.com/styleguide/&quot;&gt;clearleft styleguide&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;docs&quot;&gt;Docs:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;//docs.google.com/spreadsheet/ccc?key=0AiN0QfBTPpOCdDFjWlM0eU1ra21XanZkekxGbjA2WWc&quot;&gt;tyler sticka Styleguide and Boilerplate patterns spreadsheet&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 20 Nov 2014 02:00:00 -0600</pubDate>
-        <link>http://blog.getsetbro.com/CSS-systems.html</link>
-        <guid isPermaLink="true">http://blog.getsetbro.com/CSS-systems.html</guid>
-        
         
       </item>
     

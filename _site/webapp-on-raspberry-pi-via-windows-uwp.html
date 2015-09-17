@@ -2,17 +2,16 @@
 <html lang="en-us">
 
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Webapp on Raspberry Pi via the Windows UWP</title>
-    <meta name="description" content="Official blog spot of Seth Broweleit.
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webapp on Raspberry Pi via the Windows UWP</title>
+  <meta name="description" content="Official blog spot of Seth Broweleit.
 ">
-    <meta name="author" content="Seth Broweleit">
-
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html">
-
+  <meta name="author" content="Seth Broweleit">
+  <link rel="stylesheet" href="/public/css/gpgc_styles.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html">
 </head>
 
 
@@ -37,6 +36,8 @@
         
           
           <a class="page-link" href="/about/">About</a>
+          
+        
           
         
           
@@ -103,10 +104,74 @@ In your setting choose not to use authentication. (shown here <a href="http://ol
 <h3 id="deployed">Deployed</h3>
 <p><img src="http://getsetbro.com/images/onraspiviawinuwp/deployed.png" alt="The deployed code output" /></p>
 
-<hr />
-<p>[ Words: 503 ]</p>
-
+    
+    [ Words: 494 ]
   </article>
+  <div class="gpgc-new-section gpgc-comments-font gpgc-hidden" id="gpgc_all_comments">
+</div>
+
+<div class="gpgc-new-section gpgc-comments-font gpgc-hidden" id="gpgc_no_comments">
+  <p class="gpgc-centered-text">No comments</p>
+</div>
+
+<div class="gpgc-actions gpgc-hidden gpgc-color-theme" id="gpgc_actions">
+  <span class="gpgc-action gpgc-centered-text">
+    <button class="gpgc-large-secondary-button" id="show_comments_button" onclick="showAllComments(CommentsArray)"></button>
+  </span>
+</div>
+
+<div class="gpgc-comment gpgc-comments-font gpgc-color-theme" id="gpgc_new_comment">
+  <div class="gpgc-comment-header">
+    <a id="gpgc_reader_url" href="https://github.com/wireddown/ghpages-ghcomments"><img class="gpgc-avatar" id="gpgc_reader_avatar" src="https://raw.githubusercontent.com/wireddown/ghpages-ghcomments/gh-pages/public/apple-touch-icon-precomposed.png" height="42" /><span id="gpgc_reader_login">You</span></a>
+    <small>today</small>
+    <div class="gpgc-tabs">
+      <button class="gpgc-tab gpgc-text-button" id="write_button">Write</button>
+      <button class="gpgc-tab gpgc-text-button" id="preview_button">Preview</button>
+    </div>
+  </div>
+  <div class="gpgc-new-comment" id="write_div">
+    <div class="gpgc-new-comment-form">
+      <textarea class="gpgc-new-comment-form-textarea" id="new_comment_field" placeholder="Write a comment"></textarea>
+    </div>
+  </div>
+  <div class="gpgc-new-comment gpgc-comment-contents gpgc-hidden" id="preview_div">
+  </div>
+  <div class="gpgc-hidden gpgc-comment-help" id="help_message">
+  </div>
+  <div class="gpgc-new-comment-actions">
+    <button class="gpgc-normal-primary-button gpgc-text-button" id="login_button" onclick="loginToGitHub()"><strong>Login to GitHub</strong></button>
+    <button class="gpgc-normal-primary-button gpgc-text-button gpgc-hidden" id="submit_button" onclick="postComment()"><strong>Submit</strong></button>
+  </div>
+</div>
+
+<div class="gpgc-new-section gpgc-comments-font gpgc-hidden" id="gpgc_disabled">
+  <p class="gpgc-centered-text">Comments are closed</p>
+</div>
+
+<div class="gpgc-new-section gpgc-comments-font gpgc-help-error gpgc-hidden" id="gpgc_reader_error">
+</div>
+
+<div class="gpgc_last_div">
+</div>
+
+<script type="text/javascript" src="/public/js/gpgc_core.js"></script>
+
+<script>
+  var gpgc = {
+    new_comments_disabled: new Boolean(false).valueOf() || new Boolean().valueOf(),
+    site_url: "http://blog.getsetbro.com",
+    page_path: "_posts/2015-08-25-webapp-on-raspberry-pi-via-windows-uwp.markdown",
+    issue_title: "Webapp on Raspberry Pi via the Windows UWP",
+    repo_id: "getsetbro/blog",
+    use_show_action: false,
+    github_application_client_id: "0b175ce818e142d32aa7",
+    github_application_code_authenticator_url: "https://getsetblogcomments.herokuapp.com/authenticate/",
+    github_application_login_redirect_url: "http://blog.getsetbro.com/public/html/gpgc_redirect.html",
+    enable_diagnostics: true,
+  };
+
+  gpgc_main();
+</script>
 
 </div>
 

@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Override Windows fast-startup option</title>
+  <title>CSS IS AWESOME or DIVs allow overflow TABLEs do not</title>
   <meta name="description" content="Official blog spot of Seth Broweleit.
 ">
   <meta name="author" content="Seth Broweleit">
   <link rel="stylesheet" href="/public/css/gpgc_styles.css">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://blog.getsetbro.com/Override-Windows-fast-startup-option.html">
+  <link rel="canonical" href="http://blog.getsetbro.com/css-is-awesome-or-divs-allow-overflow-tables-do-not.html">
 </head>
 
 
@@ -59,42 +59,60 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Override Windows fast-startup option</h1>
-    <p class="post-meta">May 26, 2015</p>
+    <h1 class="post-title">CSS IS AWESOME or DIVs allow overflow TABLEs do not</h1>
+    <p class="post-meta">Sep 16, 2015</p>
   </header>
 
   <article class="post-content">
-    <h2 id="windows-has-a-fast-startup-option-which-makes-it-hard-to-boot-into-bios">Windows has a fast-startup option which makes it hard to boot into bios.</h2>
+    <p>You could say that I have been wanting to write this blog for a while due to how attempted to <a href="https://twitter.com/getsetbro/status/120936678981509120">tweet it</a> in 2011. But the concept deserves a longer post than what a tweet provides.</p>
 
-<p>I stroubled to get the tablet in to the boot menu for a while until I found info on this forum: 
-<a href="//forum.tabletpcreview.com/acer-gateway/40963-how-enter-into-iconia-w500s-bios-settings.html" target="_blank">forum.tabletpcreview.com/acer-gateway/40963-how-enter-into-iconia-w500s-bios-settings.html</a></p>
+<p>Here is the joke:
+<img src="http://getsetbro.com/images/divsallowoverflow/cssisawesome.png" alt="&quot;alt&quot;" /></p>
 
-<p>“If you have the Windows 8 Developer Preview installed, you will not be able to boot up the bios screen the normal way, as Win 8 has a fast-startup option that overrides it.”
-so find the “disable fast startup” option.</p>
+<p>I didn’t want to post the picture, but some would not know what I was referring to.</p>
 
-<p>If this helps just one person it is worth it. That person might be me.</p>
+<p>The - CSS is awesome - joke is not what inspired me to write this article today. So stay tuned until the very end to find what I really wanted to pervay.</p>
 
-<h2 id="to-disable-the-fast-startup-in-windows">To Disable the fast startup in windows:</h2>
+<p>What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.</p>
 
-<ul>
-  <li>In power options, “Choose what the Power buttons do”</li>
-  <li>Then click “Change settings that are currently unavailable”</li>
-  <li>Then scroll down to to the shutdown setting and disable fast startup.</li>
-</ul>
+<p><img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png" alt="&quot;alt&quot;" /></p>
 
-<h2 id="then-you-will-be-able-to-use-the-documented-steps-to-get-to-the-bios">Then you will be able to use the documented steps to get to the bios.</h2>
+<p>I am guessing that this joke began when developers stopped using TABLEs and started using DIVs and found that content could over run the borders.</p>
 
-<ul>
-  <li>Power button + windows button at the same time.</li>
-  <li>Then press F2 when you see the cursor.</li>
-</ul>
+<p>This lead them to feel that CSS was indeed NOT AWESOME because it caused problems. But it was the markup all along.</p>
 
-<p>If you do not press F2 quickly enough it will boot into Windows.</p>
+<h2 id="but-what-is-the-real-reason-for-this-post">But what is the real reason for this post?</h2>
 
-<p>Remember you will need a usb drive that has been prepared to be bootable, not just a iso file on a drive.</p>
+<p>And the answer is that I want to point out where you are going to want to go back to the old table way of doing things to avoid this bug that the DIV has caused.</p>
+
+<p>Lets say you have a site with a header, main area, and footer. You will probably have some kind of decoration on the header and footer like a background color or borders. Those will go the full width of the page.</p>
+
+<p><img src="http://getsetbro.com/images/divsallowoverflow/divlayout1.png" alt="&quot;alt&quot;" /></p>
+
+<p>Sometimes for some reason you have to have content that could become wider than the width of the page. And there is nothing you can do about it.</p>
+
+<p>When you scroll horizontally to see the content that is farther to the right you will find that the header and footer do not continue as far as the content.</p>
+
+<p><img src="http://getsetbro.com/images/divsallowoverflow/divlayout2.png" alt="&quot;alt&quot;" /></p>
+
+<h3 id="why-did-this-happen">Why did this happen‽</h3>
+
+<p>Because the header and footer are block level elements - they are as wide as their parent. The BODY and HTML elements are also block level elements. They are not working like a table. They allow overflow. A table would widen to make sure that it goes all the way around its content - like a mother goose, protecting her young. Even if you set it to be a certain width it would break that rule to hug it’s children.</p>
+
+<h3 id="so-what-can-be-done">So what can be done‽</h3>
+
+<p>If you want the header and footer to expand to the same width as the other parts of the page you should set there parent to act like a table like this:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">body</span><span class="p">{</span>
+  <span class="nb">display</span><span class="ss">:table</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>For my example I set it on the BODY element. You can see the <a href="http://jsbin.com/muyowa/edit?html,css,output">example bin here.</a></p>
+
+<p><img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png" alt="&quot;alt&quot;" /></p>
 
     
-    [ Words: 200 ]
+    [ Words: 472 ]
   </article>
   <div class="gpgc-new-section gpgc-comments-font gpgc-hidden" id="gpgc_all_comments">
 </div>
@@ -149,8 +167,8 @@ so find the “disable fast startup” option.</p>
   var gpgc = {
     new_comments_disabled: new Boolean(false).valueOf() || new Boolean().valueOf(),
     site_url: "http://blog.getsetbro.com",
-    page_path: "_posts/2015-05-20-Override-Windows-fast-startup-option.markdown",
-    issue_title: "Override Windows fast-startup option",
+    page_path: "_posts/2015-09-16-css-is-awesome-or-divs-allow-overflow-tables-do-not.markdown",
+    issue_title: "CSS IS AWESOME or DIVs allow overflow TABLEs do not",
     repo_id: "getsetbro/blog",
     use_show_action: false,
     github_application_client_id: "0b175ce818e142d32aa7",
