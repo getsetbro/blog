@@ -6,23 +6,28 @@
 </description>
     <link>http://blog.getsetbro.com/</link>
     <atom:link href="http://blog.getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 17 Sep 2015 03:03:05 -0500</pubDate>
-    <lastBuildDate>Thu, 17 Sep 2015 03:03:05 -0500</lastBuildDate>
+    <pubDate>Fri, 18 Sep 2015 09:36:06 -0500</pubDate>
+    <lastBuildDate>Fri, 18 Sep 2015 09:36:06 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>CSS IS AWESOME or DIVs allow overflow TABLEs do not</title>
         <description>&lt;p&gt;You could say that I have been wanting to write this article for a while from how I &lt;a href=&quot;https://twitter.com/getsetbro/status/120936678981509120&quot;&gt;tweeted it&lt;/a&gt; in 2011. But the idea deserves a longer explanation than what a tweet provides.&lt;/p&gt;
 
-&lt;p&gt;Here is the joke: &lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesome.png&quot; alt=&quot;&amp;quot;css is awesome joke&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Here is the joke:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesome.png&quot; style=&quot;display:block;text-align:center;padding:15px;&quot;&gt;
+  &lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesome.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I didn’t want to post the picture, but some would not know what I was referring to.&lt;/p&gt;
 
 &lt;p&gt;The - CSS is awesome - joke is not what inspired me to write this article today. So stay tuned until the very end to find what I really wanted to pervey.&lt;/p&gt;
 
-&lt;p&gt;What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png&quot; alt=&quot;&amp;quot;3d&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.
+&lt;a href=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png&quot; style=&quot;display:block;text-align:center;padding:15px;&quot;&gt;
+  &lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I am guessing that this joke began when developers stopped using TABLEs and started using DIVs and found that content could overrun the borders.&lt;/p&gt;
 
@@ -32,15 +37,17 @@
 
 &lt;p&gt;In some cases you might need to use the TABLE layout to avoid this bug that the block-level-DIV has caused.&lt;/p&gt;
 
-&lt;p&gt;Lets say you have a site with a header, main area, and footer. You will probably have some kind of decoration on the header and footer like a background color or borders. Those will go the full width of the page.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout1.png&quot; alt=&quot;&amp;quot;html&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Lets say you have a site with a header, main area, and footer. You will probably have some kind of decoration on the header and footer like a background color or borders. Those will go the full width of the page.
+&lt;a href=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout1.png&quot; style=&quot;display:block;text-align:center;padding:15px;&quot;&gt;
+  &lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout1.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Sometimes for some reason you have to have content that could become wider than the width of the page. And there is nothing you can do about it.&lt;/p&gt;
 
-&lt;p&gt;When you scroll horizontally to see the content that is farther to the right you will find that the header and footer do not continue as far as the content.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout2.png&quot; alt=&quot;&amp;quot;scrolled&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;When you scroll horizontally to see the content that is farther to the right you will find that the header and footer do not continue as far as the content.
+&lt;a href=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout2.png&quot; style=&quot;display:block;text-align:center;padding:15px;&quot;&gt;
+  &lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/divlayout2.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;why-did-this-happen&quot;&gt;Why did this happen‽&lt;/h3&gt;
 
@@ -48,15 +55,16 @@
 
 &lt;h3 id=&quot;so-what-can-be-done&quot;&gt;So what can be done‽&lt;/h3&gt;
 
-&lt;p&gt;If you want the header and footer to expand to the same width as the other parts of the page you should set there parent to act like a table like this:&lt;/p&gt;
+&lt;p&gt;If you want the header and footer to expand as far as the content you could set their parent to act like a TABLE like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;For my example I set it on the BODY element. You can see the &lt;a href=&quot;http://jsbin.com/muyowa/edit?html,css,output&quot;&gt;example bin here.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png&quot; alt=&quot;&amp;quot;scrolling div&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;For my example I set it on the BODY element. You can see the &lt;a href=&quot;http://jsbin.com/muyowa/edit?html,css,output&quot;&gt;example bin here.&lt;/a&gt;
+&lt;a href=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png&quot; style=&quot;display:block;text-align:center;padding:15px;&quot;&gt;
+  &lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Sep 2015 02:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/css-is-awesome-or-divs-allow-overflow-tables-do-not.html</link>
@@ -792,11 +800,9 @@ This might lead to the second team finding that the components have bugs after i
 &lt;p&gt;&lt;img src=&quot;//pbs.twimg.com/media/B-4asHkUcAE42Kv.png&quot; alt=&quot;svg&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Mar 2015 07:00:00 -0600</pubDate>
-        <link>http://blog.getsetbro.com/js/the-svg-tutorial-that-will-make-it-click.html</link>
-        <guid isPermaLink="true">http://blog.getsetbro.com/js/the-svg-tutorial-that-will-make-it-click.html</guid>
+        <link>http://blog.getsetbro.com/the-svg-tutorial-that-will-make-it-click.html</link>
+        <guid isPermaLink="true">http://blog.getsetbro.com/the-svg-tutorial-that-will-make-it-click.html</guid>
         
-        
-        <category>js</category>
         
       </item>
     

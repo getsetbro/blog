@@ -66,15 +66,20 @@
   <article class="post-content">
     <p>You could say that I have been wanting to write this article for a while from how I <a href="https://twitter.com/getsetbro/status/120936678981509120">tweeted it</a> in 2011. But the idea deserves a longer explanation than what a tweet provides.</p>
 
-<p>Here is the joke: <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesome.png" alt="&quot;css is awesome joke&quot;" /></p>
+<p>Here is the joke:</p>
+
+<p><a href="http://getsetbro.com/images/divsallowoverflow/cssisawesome.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesome.png" />
+</a></p>
 
 <p>I didn’t want to post the picture, but some would not know what I was referring to.</p>
 
 <p>The - CSS is awesome - joke is not what inspired me to write this article today. So stay tuned until the very end to find what I really wanted to pervey.</p>
 
-<p>What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.</p>
-
-<p><img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png" alt="&quot;3d&quot;" /></p>
+<p>What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.
+<a href="http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png" />
+</a></p>
 
 <p>I am guessing that this joke began when developers stopped using TABLEs and started using DIVs and found that content could overrun the borders.</p>
 
@@ -84,15 +89,17 @@
 
 <p>In some cases you might need to use the TABLE layout to avoid this bug that the block-level-DIV has caused.</p>
 
-<p>Lets say you have a site with a header, main area, and footer. You will probably have some kind of decoration on the header and footer like a background color or borders. Those will go the full width of the page.</p>
-
-<p><img src="http://getsetbro.com/images/divsallowoverflow/divlayout1.png" alt="&quot;html&quot;" /></p>
+<p>Lets say you have a site with a header, main area, and footer. You will probably have some kind of decoration on the header and footer like a background color or borders. Those will go the full width of the page.
+<a href="http://getsetbro.com/images/divsallowoverflow/divlayout1.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/divlayout1.png" />
+</a></p>
 
 <p>Sometimes for some reason you have to have content that could become wider than the width of the page. And there is nothing you can do about it.</p>
 
-<p>When you scroll horizontally to see the content that is farther to the right you will find that the header and footer do not continue as far as the content.</p>
-
-<p><img src="http://getsetbro.com/images/divsallowoverflow/divlayout2.png" alt="&quot;scrolled&quot;" /></p>
+<p>When you scroll horizontally to see the content that is farther to the right you will find that the header and footer do not continue as far as the content.
+<a href="http://getsetbro.com/images/divsallowoverflow/divlayout2.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/divlayout2.png" />
+</a></p>
 
 <h3 id="why-did-this-happen">Why did this happen‽</h3>
 
@@ -100,18 +107,19 @@
 
 <h3 id="so-what-can-be-done">So what can be done‽</h3>
 
-<p>If you want the header and footer to expand to the same width as the other parts of the page you should set there parent to act like a table like this:</p>
+<p>If you want the header and footer to expand as far as the content you could set their parent to act like a TABLE like this:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">body</span><span class="p">{</span>
   <span class="nb">display</span><span class="ss">:table</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p>For my example I set it on the BODY element. You can see the <a href="http://jsbin.com/muyowa/edit?html,css,output">example bin here.</a></p>
-
-<p><img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png" alt="&quot;scrolling div&quot;" /></p>
+<p>For my example I set it on the BODY element. You can see the <a href="http://jsbin.com/muyowa/edit?html,css,output">example bin here.</a>
+<a href="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png" />
+</a></p>
 
     
-    [ Words: 457 ]
+    [ Words: 472 ]
   </article>
   <div class="gpgc-new-section gpgc-comments-font gpgc-hidden" id="gpgc_all_comments">
 </div>

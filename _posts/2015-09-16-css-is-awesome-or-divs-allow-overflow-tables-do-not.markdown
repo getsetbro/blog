@@ -7,15 +7,20 @@ categories:
 
 You could say that I have been wanting to write this article for a while from how I [tweeted it](https://twitter.com/getsetbro/status/120936678981509120) in 2011. But the idea deserves a longer explanation than what a tweet provides.
 
-Here is the joke: !["css is awesome joke"](http://getsetbro.com/images/divsallowoverflow/cssisawesome.png)
+Here is the joke:
+
+<a href="http://getsetbro.com/images/divsallowoverflow/cssisawesome.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesome.png"/>
+</a>
 
 I didn't want to post the picture, but some would not know what I was referring to.
 
 The - CSS is awesome - joke is not what inspired me to write this article today. So stay tuned until the very end to find what I really wanted to pervey.
 
 What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.
-
-!["3d"](http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png)
+<a href="http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomerin3d.png"/>
+</a>
 
 I am guessing that this joke began when developers stopped using TABLEs and started using DIVs and found that content could overrun the borders.
 
@@ -26,14 +31,16 @@ This lead them to feel that CSS was indeed NOT AWESOME because it caused problem
 In some cases you might need to use the TABLE layout to avoid this bug that the block-level-DIV has caused.
 
 Lets say you have a site with a header, main area, and footer. You will probably have some kind of decoration on the header and footer like a background color or borders. Those will go the full width of the page.
-
-!["html"](http://getsetbro.com/images/divsallowoverflow/divlayout1.png)
+<a href="http://getsetbro.com/images/divsallowoverflow/divlayout1.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/divlayout1.png"/>
+</a>
 
 Sometimes for some reason you have to have content that could become wider than the width of the page. And there is nothing you can do about it.
 
 When you scroll horizontally to see the content that is farther to the right you will find that the header and footer do not continue as far as the content.
-
-!["scrolled"](http://getsetbro.com/images/divsallowoverflow/divlayout2.png)
+<a href="http://getsetbro.com/images/divsallowoverflow/divlayout2.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/divlayout2.png"/>
+</a>
 
 ###Why did this happen‽
 
@@ -50,5 +57,6 @@ body{
 {% endhighlight %}
 
 For my example I set it on the BODY element. You can see the [example bin here.](http://jsbin.com/muyowa/edit?html,css,output)
-
-!["scrolling div"](http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png)
+<a href="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png" style="display:block;text-align:center;padding:15px;">
+  <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png"/>
+</a>
