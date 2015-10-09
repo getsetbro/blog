@@ -60,3 +60,7 @@ For my example I set it on the BODY element. You can see the [example bin here.]
 <a href="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png" style="display:block;text-align:center;padding:15px;">
   <img src="http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png"/>
 </a>
+
+---
+
+Comments can happen here: [/blog/issues/16](https://github.com/getsetbro/blog/issues/16)

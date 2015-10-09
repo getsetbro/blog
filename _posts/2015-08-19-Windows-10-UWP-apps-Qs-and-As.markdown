@@ -30,4 +30,4 @@ A: With custom CSS3, using things like flexbox or height: calc( 100% - 20px ​)
 
 ---
 
-#####...more to come...
+Comments can happen here: [/blog/issues/3](https://github.com/getsetbro/blog/issues/3)

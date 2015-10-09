@@ -54,3 +54,7 @@ $(f);
 
 </script>
 {% endhighlight %}
+
+---
+
+Comments can happen here: [/blog/issues/15](https://github.com/getsetbro/blog/issues/15)

@@ -23,3 +23,7 @@ categories:
 11.  Choose "Crop to selection" from the "Image" menu.
 12.  Save as a PNG - 32bit. Allow it to "Flatten" before saving.
 13.  Done.
+
+---
+
+Comments can happen here: [/blog/issues/13](https://github.com/getsetbro/blog/issues/13)

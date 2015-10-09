@@ -20,3 +20,7 @@ Here is the code in the link I pasted above.
 Newer hotterness
 
 <pre><code>data:text/html;charset=utf-8,&lt;title&gt;TextArea&lt;/title&gt;&lt;style&gt;html{height: 100%;}body{margin:0;padding:4%;border:20px solid #eee;background-color:#fff;border-radius:2em}textarea{width:100%;height:100%;border:0 none;font-family:&quot;Lucida Grande&quot;,sans-serif;font-size:2em;outline:none;color:#444}&lt;/style&gt;&lt;body&gt;&lt;textarea spellcheck=&quot;false&quot; autofocus=&apos;autofocus&apos;&gt;&lt;/textarea&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+
+---
+
+Comments can happen here: [/blog/issues/4](https://github.com/getsetbro/blog/issues/4)

@@ -24,4 +24,4 @@ Here is a article on React vs Ractive - via Ractive [//blog.ractivejs.org/posts/
 
 ---
 
-Comments can happen here: [https://github.com/getsetbro/blog/issues/9](https://github.com/getsetbro/blog/issues/9)
+Comments can happen here: [/blog/issues/9](https://github.com/getsetbro/blog/issues/9)

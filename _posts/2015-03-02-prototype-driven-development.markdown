@@ -147,3 +147,6 @@ How might I make a shape? [//blog.getsetbro.com/js/the-svg-tutorial-that-will-ma
 A thought about the teams who build this. Often a "front-end" team builds the prototype and hands it off for it to be integrated into production by the "back-end" team.
 This might lead to the second team finding that the components have bugs after integration that were not there in the prototype. At this point either team can make necessary changes with both integration and the prototype in mind.
 
+---
+
+Comments can happen here: [/blog/issues/7](https://github.com/getsetbro/blog/issues/7)

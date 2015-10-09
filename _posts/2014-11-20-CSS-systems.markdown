@@ -39,3 +39,7 @@ categories:
 
 ####Docs:
  - [tyler sticka Styleguide and Boilerplate patterns spreadsheet](//docs.google.com/spreadsheet/ccc?key=0AiN0QfBTPpOCdDFjWlM0eU1ra21XanZkekxGbjA2WWc)
+
+---
+
+Comments can happen here: [/blog/issues/10](https://github.com/getsetbro/blog/issues/10)

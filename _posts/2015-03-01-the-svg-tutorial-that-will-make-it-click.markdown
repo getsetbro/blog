@@ -55,3 +55,7 @@ I wont go into what this tag does but it's a good thing: preserveAspectRatio="xM
 To put it simply, to make a SVG element responsive the width & height move to the viewBox & change them to 100%.
 
 <img src="//pbs.twimg.com/media/B-4asHkUcAE42Kv.png" alt="svg"/>
+
+---
+
+Comments can happen here: [/blog/issues/8](https://github.com/getsetbro/blog/issues/8)

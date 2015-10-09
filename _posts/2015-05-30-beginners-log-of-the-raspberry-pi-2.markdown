@@ -174,3 +174,7 @@ process.on('SIGINT', function (data) {
 
 * Run the index.js file with node "node index.js"
 * The mp3 plays through the audio jack
+
+---
+
+Comments can happen here: [/blog/issues/6](https://github.com/getsetbro/blog/issues/6)

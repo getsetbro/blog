@@ -44,3 +44,7 @@ Heads up: The remote machine IP address setting can get stuck - I had to create 
 
 ###Deployed
 ![The deployed code output](http://getsetbro.com/images/onraspiviawinuwp/deployed.png)
+
+---
+
+Comments can happen here: [/blog/issues/2](https://github.com/getsetbro/blog/issues/2)

@@ -29,3 +29,7 @@ If this helps just one person it is worth it. That person might be me.
 If you do not press F2 quickly enough it will boot into Windows.
 
 Remember you will need a usb drive that has been prepared to be bootable, not just a iso file on a drive.
+
+---
+
+Comments can happen here: [/blog/issues/5](https://github.com/getsetbro/blog/issues/5)

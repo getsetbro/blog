@@ -83,3 +83,7 @@ Getting Cortana working took a few more steps than the others, there are more fi
 ###Windows 10 IOT
 
 Next we will install the Vacation Planner UWP app on a Raspberry Pi running Windows 10 IOT. Wish us luck and check back for the results.
+
+---
+
+Comments can happen here: [/blog/issues/1](https://github.com/getsetbro/blog/issues/1)

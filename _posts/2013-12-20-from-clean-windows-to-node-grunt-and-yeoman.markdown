@@ -63,3 +63,7 @@ for a production build. And to run the tests:
 {% highlight ruby %}
 grunt test
 {% endhighlight %}
+
+---
+
+Comments can happen here: [/blog/issues/14](https://github.com/getsetbro/blog/issues/14)

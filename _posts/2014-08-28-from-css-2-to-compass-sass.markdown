@@ -65,3 +65,7 @@ But then with Compass (which uses SASS) we don't have to write the MIXINs. They 
   @include border-radius(10px);
 }
 {% endhighlight %}
+
+---
+
+Comments can happen here: [/blog/issues/11](https://github.com/getsetbro/blog/issues/11)

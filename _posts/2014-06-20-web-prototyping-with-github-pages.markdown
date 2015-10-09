@@ -49,3 +49,7 @@ To upload to github. Go to CHANGES tab of the repo in GITHUB FOR MAC/WINDOWS and
 Real soon your changes will show at your repo pages url like mine [//getsetbro.github.io/newrepo](//getsetbro.github.io/newrepo)
 
 ![example](https://farm6.staticflickr.com/5526/14114190508_d8ecb61ce3_o.png)
+
+---
+
+Comments can happen here: [/blog/issues/12](https://github.com/getsetbro/blog/issues/12)
