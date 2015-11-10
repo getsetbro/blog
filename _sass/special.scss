@@ -1,0 +1,61 @@
+a {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(238, 238, 255, 1) 50%);
+    background-size: 200%;
+    /*transition: background-position .25s, padding-right .25s, padding-left .25s;*/
+    transition: background-position .25s;
+    background-position: 0 0;
+}
+
+a:hover {
+    background-position: -100% 0;
+    text-decoration: none;
+    /*padding-right: 6px;*/
+    /*padding-left: 6px;*/
+}
+
+hr {
+    border: 0 none;
+    height: 1px;
+    background-color: $grey-color-light;
+    margin: 15px 0;
+    clear: both;
+}
+
+.pullleft {
+    float: left;
+    margin-right: 20px;
+}
+
+.pullright {
+    float: right;
+    margin-left: 20px;
+}
+
+aside {
+    width: 40%;
+}
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border .2s ease-in-out
+}
+
+.thumbnail a>img, .thumbnail>img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+    border-color: #337ab7
+}
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #333;
+}

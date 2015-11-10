@@ -2,7 +2,8 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    background-color: tomato;
+    /*border-top: 5px solid $grey-color-dark;*/
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -93,7 +94,7 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    /*padding: $spacing-unit 0;*/
 }
 
 .footer-heading {
@@ -161,10 +162,11 @@
 /**
  * Page content
  */
-.page-content {
-    padding: $spacing-unit 0;
+@media screen{
+    .page-content {
+        /*padding: $spacing-unit 0;*/
+    }
 }
-
 .page-heading {
     font-size: 20px;
 }
@@ -196,9 +198,13 @@
 .post-header {
     margin-bottom: $spacing-unit;
 }
+ @media screen{
+    .post-title {
+        font-size: 42px;
 
+    }
+}
 .post-title {
-    font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
 

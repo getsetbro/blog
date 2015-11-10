@@ -10,13 +10,15 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+@media screen {
+  body {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #111;
+    background-color: #fdfdfd; } }
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #111;
-  background-color: #fdfdfd; }
+  font-family: Helvetica, Arial, sans-serif; }
 
 /**
  * Set `margin-bottom` to maintain vertycal rhythm
@@ -107,19 +109,22 @@ pre {
 /**
  * Wrapper
  */
-.wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
-  @media screen and (max-width: 800px) {
-    .wrapper {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
-      padding-right: 15px;
-      padding-left: 15px; } }
+@media screen {
+  .wrapper {
+    border: 1px solid #e8e8e8;
+    border-width: 0 1px;
+    max-width: -webkit-calc(800px - (30px * 2));
+    max-width: calc(800px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px; } }
+@media screen and (max-width: 800px) {
+  .wrapper {
+    max-width: -webkit-calc(800px - (30px));
+    max-width: calc(800px - (30px));
+    padding-right: 15px;
+    padding-left: 15px; } }
 
 /**
  * Clearfix
@@ -144,7 +149,8 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
+  background-color: tomato;
+  /*border-top: 5px solid $grey-color-dark;*/
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
   position: relative; }
@@ -205,7 +211,7 @@ pre {
  */
 .site-footer {
   border-top: 1px solid #e8e8e8;
-  padding: 30px 0; }
+  /*padding: $spacing-unit 0;*/ }
 
 .footer-heading {
   font-size: 18px;
@@ -255,9 +261,9 @@ pre {
 /**
  * Page content
  */
-.page-content {
-  padding: 30px 0; }
-
+@media screen {
+  .page-content {
+    /*padding: $spacing-unit 0;*/ } }
 .page-heading {
   font-size: 20px; }
 
@@ -281,8 +287,10 @@ pre {
 .post-header {
   margin-bottom: 30px; }
 
+@media screen {
+  .post-title {
+    font-size: 42px; } }
 .post-title {
-  font-size: 42px;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (max-width: 800px) {
@@ -447,16 +455,17 @@ pre {
     color: #099; }
 
 a {
-  background-image: linear-gradient(to right, rgba(111, 111, 111, 0) 50%, #dedede 50%);
+  background-image: linear-gradient(to right, transparent 50%, #eeeeff 50%);
   background-size: 200%;
-  transition: background-position .25s, padding-right .25s, padding-left .25s;
+  /*transition: background-position .25s, padding-right .25s, padding-left .25s;*/
+  transition: background-position .25s;
   background-position: 0 0; }
 
 a:hover {
   background-position: -100% 0;
   text-decoration: none;
-  padding-right: 6px;
-  padding-left: 6px; }
+  /*padding-right: 6px;*/
+  /*padding-left: 6px;*/ }
 
 hr {
   border: 0 none;
@@ -496,3 +505,11 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 .thumbnail .caption {
   padding: 9px;
   color: #333; }
+
+@media print {
+  .site-header, .site-footer {
+    display: none; }
+
+  img {
+    max-height: 150px;
+    max-width: 250px; } }

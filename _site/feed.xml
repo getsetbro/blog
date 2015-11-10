@@ -6,9 +6,9 @@
 </description>
     <link>http://blog.getsetbro.com/</link>
     <atom:link href="http://blog.getsetbro.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 18 Sep 2015 09:50:55 -0500</pubDate>
-    <lastBuildDate>Fri, 18 Sep 2015 09:50:55 -0500</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Tue, 10 Nov 2015 13:11:43 -0600</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2015 13:11:43 -0600</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>CSS IS AWESOME or DIVs allow overflow TABLEs do not</title>
@@ -65,6 +65,10 @@
 &lt;a href=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png&quot; style=&quot;display:block;text-align:center;padding:15px;&quot;&gt;
   &lt;img src=&quot;http://getsetbro.com/images/divsallowoverflow/cssisawesomewithscroll.png&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/16&quot;&gt;/blog/issues/16&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Sep 2015 02:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/css-is-awesome-or-divs-allow-overflow-tables-do-not.html</link>
@@ -114,6 +118,10 @@ In your setting choose not to use authentication. (shown here &lt;a href=&quot;h
 
 &lt;h3 id=&quot;deployed&quot;&gt;Deployed&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;http://getsetbro.com/images/onraspiviawinuwp/deployed.png&quot; alt=&quot;The deployed code output&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/2&quot;&gt;/blog/issues/2&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Aug 2015 11:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/webapp-on-raspberry-pi-via-windows-uwp.html</link>
@@ -203,6 +211,10 @@ I hope you notice that there is not much there, and there is not going to be. It
 &lt;h3 id=&quot;windows-10-iot&quot;&gt;Windows 10 IOT&lt;/h3&gt;
 
 &lt;p&gt;Next we will install the Vacation Planner UWP app on a Raspberry Pi running Windows 10 IOT. Wish us luck and check back for the results.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/1&quot;&gt;/blog/issues/1&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 24 Aug 2015 05:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/Your-webapp-on-the-UWP-Tested.html</link>
@@ -243,7 +255,7 @@ I hope you notice that there is not much there, and there is not going to be. It
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;more-to-come&quot;&gt;…more to come…&lt;/h5&gt;
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/3&quot;&gt;/blog/issues/3&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 19 Aug 2015 06:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/Windows-10-UWP-apps-Qs-and-As.html</link>
@@ -460,6 +472,10 @@ I hope you notice that there is not much there, and there is not going to be. It
   &lt;li&gt;Run the index.js file with node “node index.js”&lt;/li&gt;
   &lt;li&gt;The mp3 plays through the audio jack&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/6&quot;&gt;/blog/issues/6&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 May 2015 06:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/beginners-log-of-the-raspberry-pi-2.html</link>
@@ -485,6 +501,10 @@ I hope you notice that there is not much there, and there is not going to be. It
 &lt;p&gt;Newer hotterness&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;data:text/html;charset=utf-8,&amp;lt;title&amp;gt;TextArea&amp;lt;/title&amp;gt;&amp;lt;style&amp;gt;html{height: 100%;}body{margin:0;padding:4%;border:20px solid #eee;background-color:#fff;border-radius:2em}textarea{width:100%;height:100%;border:0 none;font-family:&amp;quot;Lucida Grande&amp;quot;,sans-serif;font-size:2em;outline:none;color:#444}&amp;lt;/style&amp;gt;&amp;lt;body&amp;gt;&amp;lt;textarea spellcheck=&amp;quot;false&amp;quot; autofocus=&amp;apos;autofocus&amp;apos;&amp;gt;&amp;lt;/textarea&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/4&quot;&gt;/blog/issues/4&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 May 2015 07:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/Bookmarklet-to-make-your-browser-a-Text-Editor.html</link>
@@ -523,6 +543,10 @@ so find the “disable fast startup” option.&lt;/p&gt;
 &lt;p&gt;If you do not press F2 quickly enough it will boot into Windows.&lt;/p&gt;
 
 &lt;p&gt;Remember you will need a usb drive that has been prepared to be bootable, not just a iso file on a drive.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/5&quot;&gt;/blog/issues/5&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 May 2015 06:00:00 -0500</pubDate>
         <link>http://blog.getsetbro.com/Override-Windows-fast-startup-option.html</link>
@@ -699,6 +723,9 @@ It is a learning curve for sure but the results are worth it. This will scale fr
 &lt;p&gt;A thought about the teams who build this. Often a “front-end” team builds the prototype and hands it off for it to be integrated into production by the “back-end” team.
 This might lead to the second team finding that the components have bugs after integration that were not there in the prototype. At this point either team can make necessary changes with both integration and the prototype in mind.&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/7&quot;&gt;/blog/issues/7&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Mar 2015 07:00:00 -0600</pubDate>
         <link>http://blog.getsetbro.com/prototype-driven-development.html</link>
@@ -798,6 +825,10 @@ This might lead to the second team finding that the components have bugs after i
 &lt;p&gt;To put it simply, to make a SVG element responsive the width &amp;amp; height move to the viewBox &amp;amp; change them to 100%.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;//pbs.twimg.com/media/B-4asHkUcAE42Kv.png&quot; alt=&quot;svg&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/8&quot;&gt;/blog/issues/8&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Mar 2015 07:00:00 -0600</pubDate>
         <link>http://blog.getsetbro.com/the-svg-tutorial-that-will-make-it-click.html</link>
@@ -828,13 +859,16 @@ Here is a article on React vs Ractive - via Ractive &lt;a href=&quot;//blog.ract
     &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;//github.com/reactiveui/ReactiveUI&quot;&gt;ReactiveUI&lt;/a&gt;&lt;/strong&gt; - For building with the &lt;a href=&quot;//xamarin.com&quot;&gt;Xamarin Platform&lt;/a&gt;. “A framework that integrates with the Reactive Extensions for .NET to create elegant, testable User Interfaces that run on any mobile or desktop platform.”&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;//reactive-extensions.github.io/RxJS&quot;&gt;ReactiveX (RxJS)&lt;/a&gt;&lt;/strong&gt; - or Reactive Extensions (Rx). For building with the &lt;a href=&quot;//xamarin.com&quot;&gt;Xamarin Platform&lt;/a&gt;. “An API for asynchronous programming with observable streams” It’s the JS “flavor” of Reactive Extensions which is “is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators.” &lt;a href=&quot;//rx.codeplex.com&quot;&gt;//rx.codeplex.com&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;//github.com/Reactive-Extensions/RxJS&quot;&gt;ReactiveX (RxJS)&lt;/a&gt;&lt;/strong&gt; - or Reactive Extensions (Rx). “An API for asynchronous programming with observable streams” It’s the JS “flavor” of Reactive Extensions which is “is a library to compose asynchronous and event-based programs using observable collections and LINQ-style query operators.” &lt;a href=&quot;//rx.codeplex.com&quot;&gt;//rx.codeplex.com&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;//reactnative.com&quot;&gt;React Native&lt;/a&gt;&lt;/strong&gt; - Facebook again. “Build native iOS and Android apps with JavaScript” with React. The home page points to twitter &lt;a href=&quot;//twitter.com/reactjs&quot;&gt;@reactjs&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
+&lt;p&gt;Comments can happen here: &lt;a href=&quot;https://github.com/getsetbro/blog/issues/9&quot;&gt;/blog/issues/9&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 25 Feb 2015 07:00:00 -0600</pubDate>
         <link>http://blog.getsetbro.com/js/FB-react-vs-reactiveJS-vs-ractiveJS-vs-reactiveUI-vs-reactiveX.html</link>

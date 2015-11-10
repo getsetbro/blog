@@ -11,13 +11,17 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+@media screen{
+    body {
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+        font-weight: 300;
+        color: $text-color;
+        background-color: $background-color;
+    }
+}
 body {
     font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
 }
 
 /**
@@ -137,13 +141,21 @@ pre {
 /**
  * Wrapper
  */
+ @media screen{
+    .wrapper {
+        border: 1px solid #e8e8e8;
+        border-width: 0 1px;
+        max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
+        max-width:         calc(800px - (#{$spacing-unit} * 2));
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
+    }
+
+}
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -186,3 +198,4 @@ pre {
         }
     }
 }
+
