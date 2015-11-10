@@ -138,7 +138,7 @@ Since you do not like that all of that SVG code move the SVG code to a re-usable
 
 SVG sprites so the code stays clean and repurposable: [//css-tricks.com/svg-sprites-use-better-icon-fonts](//css-tricks.com/svg-sprites-use-better-icon-fonts) and [//css-tricks.com/svg-symbol-good-choice-icons/](//css-tricks.com/svg-symbol-good-choice-icons/)
 
-How might I make a shape? [//blog.getsetbro.com/js/the-svg-tutorial-that-will-make-it-click.html](//blog.getsetbro.com/js/the-svg-tutorial-that-will-make-it-click.html)
+How might I make a shape? [//blog.getsetbro.com/the-svg-tutorial-that-will-make-it-click.html](//blog.getsetbro.com/the-svg-tutorial-that-will-make-it-click.html)
 
 ---
 
