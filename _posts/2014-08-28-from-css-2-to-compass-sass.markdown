@@ -9,7 +9,7 @@ If you have been seeing talk of CSS extensions like LESS and SASS but have not h
 First I will show what it was like using CSS 2 before CSS 3 came along.
 
 ##CSS 2:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 .box{
   border: 1px solid gainsboro;
 }
@@ -19,7 +19,7 @@ Wee. No wait. Boring.
 Then CSS3 came and we can do great stuff like round corners.
 
 ##CSS 3:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 .box {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -31,7 +31,7 @@ Then CSS3 came and we can do great stuff like round corners.
 But look at all those pre-fixes. So with SASS we can define it once and use it many many times.
 
 ##SASS:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -45,7 +45,7 @@ But look at all those pre-fixes. So with SASS we can define it once and use it m
 .box3 { @include border-radius(14px); }
 {% endhighlight %}
 The output is converted to be just like the CSS3 above that was all written by hand:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 .box1 {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -58,7 +58,7 @@ The output is converted to be just like the CSS3 above that was all written by h
 But then with Compass (which uses SASS) we don't have to write the MIXINs. They are written for us. We can just include the set of MIXINs we want and then start using them like this...
 
 ##Compass:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 @import "compass/css3";
 
 .box {

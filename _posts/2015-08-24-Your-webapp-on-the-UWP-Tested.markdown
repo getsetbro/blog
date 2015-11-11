@@ -38,7 +38,7 @@ Once we saw the web-app was just as usable in it's uwp app version we could star
 A quick hit was to get the date pickers working. For that we just made sure that our input fields in HTML had "date" as their type. Any date-picker polyfills should be deactivated.
 
 Example:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 <input type="date" />
 {% endhighlight %}
 
@@ -48,7 +48,7 @@ Example:
 
 ####Using the Windows API in your web-app JS
 Like I have indicated, integrating these platform utilities works as promised but they should be hidden from browsers. You only want Windows to find them. So with this IF statement you can keep your Windows API code from breaking in browsers:
-{% highlight ruby %}
+{% highlight ruby linenos %}
   if (typeof Windows !== 'undefined' && typeof Windows.UI !== 'undefined')
 {% endhighlight %}
 Only a Windows platform will pass the IF test and continue into the code.

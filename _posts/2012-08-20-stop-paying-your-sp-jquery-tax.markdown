@@ -9,7 +9,7 @@ Stop paying your jQuery tax by Sam Saffron is a great post about why but also ho
 Here are some simplified steps of how you will want to accomplish it:
 
 1. Put a line of JS in the HEAD of your site that sets up the JavaScript array. This will collect all of the JS that you put in the middle of your page:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 <script type='text/javascript'>
 
 window.q=[];
@@ -23,7 +23,7 @@ q.push(f);
 </script>
 {% endhighlight %}
 2. Put some JS in the middle of your page in this format:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 <div id="jQueryTest">Content BEFORE jQuery code has selected and changed it.</div>
 
 <script type="text/javascript">
@@ -41,7 +41,7 @@ q.push(MyTest);
 Each time that you add JS code to the middle of the page you push it into the array.
 
 3. At the bottom of the site link to jQuery JS and after that add a function that loops through the array and runs it:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 <script type="text/javascript" src="jquery.min.js"></script>
 
 <script type="text/javascript">

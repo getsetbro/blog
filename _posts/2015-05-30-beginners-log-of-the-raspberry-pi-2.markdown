@@ -28,7 +28,7 @@ I found this helpful guide for the config menu
 * I set the timezone
 * I ran "sudo apt-get update && sudo apt-get upgrade"
 * I indeed have wheezy and I have ARM hardware as shown by these lines:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 Hit http://raspberrypi.collabora.com wheezy Release
 Hit http://archive.raspberrypi.org wheezy/main armhf Packages
 {% endhighlight %}
@@ -77,7 +77,7 @@ Hit http://archive.raspberrypi.org wheezy/main armhf Packages
 
 * I want to play sound through the audio jack
 * Check to see if sound is ready
-{% highlight ruby %}"lsmod | grep snd_bcm2835"{% endhighlight %}
+{% highlight ruby linenos %}"lsmod | grep snd_bcm2835"{% endhighlight %}
 * It shows bcm2835 is there
 * Grab a WAV file "wget http://www.freespecialeffects.co.uk/soundfx/computers/bleep_01.wav"
 * Play it using "aplay bleep_01.wav"
@@ -114,7 +114,7 @@ Using NodeJS
 * Get the needed numbers below by typing "ifconfig" and "netstat -nr"
 * Typed "sudo nano /etc/network/interfaces"
 * Changed this:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 auto eth0
 allow-hotplug eth0
 iface eth0 inet manual
@@ -123,7 +123,7 @@ allow-hotplug wlan0
 iface wlan0 inet manual
 {% endhighlight %}
 * To this:
-{% highlight ruby %}
+{% highlight ruby linenos %}
 auto eth0
 allow-hotplug eth0
 iface eth0 inet dhcp
@@ -158,7 +158,7 @@ Use nodejs to play a mp3
 * Open to edit the index.js file "nano index.js"
 * Paste the following:
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 var mpg321 = require('mpg321');
 
 var proc = mpg321()

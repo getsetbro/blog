@@ -21,8 +21,8 @@ A: -PageControls- are 3 files (html, css, js) and should go in their own folder 
 
 ###Q: How do navigate from page to page?​​​
 A: Program the links to run
-{% highlight ruby %}WinJS.Navigation.navigate( "/pages/page2/page2.html" );​​{% endhighlight %}
-{% highlight ruby %}WinJS.Navigation.navigate(location, initialState).done();​​{% endhighlight %}
+{% highlight ruby linenos %}WinJS.Navigation.navigate( "/pages/page2/page2.html" );​​{% endhighlight %}
+{% highlight ruby linenos %}WinJS.Navigation.navigate(location, initialState).done();​​{% endhighlight %}
 ---
 
 ###Q: How do I layout items so they fit and scroll like a native app
