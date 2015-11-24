@@ -111,7 +111,8 @@
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
+    // margin-left: -$spacing-unit / 2;
+    padding: 20px 0;
     @extend %clearfix;
 }
 
@@ -167,6 +168,10 @@
         /*padding: $spacing-unit 0;*/
     }
 }
+
+.home, .post{
+  padding-top: $spacing-unit / 2;
+}
 .page-heading {
     font-size: 20px;
 }
@@ -214,7 +219,7 @@
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
 
     h2 {
         font-size: 32px;
