@@ -12,3 +12,6 @@ github_username:  getsetbro
 # Build settings
 markdown: kramdown
 permalink: none
+exclude:
+  - Gemfile
+  - Gemfile.lock
