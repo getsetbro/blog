@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-##Official blog spot of Seth Broweleit; a UI coder.
+Official blog spot of Seth Broweleit; a UI coder.
 
 + <a href="//www.linkedin.com/in/sethbroweleit">linkedin</a>
 + <a href="//twitter.com/getsetbro">twitter</a>
