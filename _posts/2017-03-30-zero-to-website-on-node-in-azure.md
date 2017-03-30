@@ -7,8 +7,7 @@ categories:
 
 These are steps for going from zero, nothing setup, to a simple site built with node and hosted in azure. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an api which pulls data from a database (documentDB but treated like it is mongoDB).
 
-###Preparation
-
+###Prep / Setup
 - Download and install the latest stable version of Node from [https://nodejs.org](https://nodejs.org).
 - Create a folder on your system, let's name it 'dev'.
 - Open a terminal tab to this folder.
@@ -16,7 +15,6 @@ These are steps for going from zero, nothing setup, to a simple site built with 
 - Add Hapi by entering 'npm i Hapi -S'. The 'i' installs and the '-S' adds it to the package as a dependency for this app. This will tell the cloud service what packages are needed to build this project.
 
 ###Create the server with Hapi
-
 - Create a 'index.js' file in the 'dev' folder. Copy and paste the first example from [https://hapijs.com](https://hapijs.com)
 - In the terminal window, that is open to the 'dev' folder type 'node .' This tells Node to run the server.
 - In a browser go to 'localhost:8000/hello' to view the app.
