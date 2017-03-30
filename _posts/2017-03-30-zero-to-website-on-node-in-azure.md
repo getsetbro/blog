@@ -4,16 +4,15 @@ title:  "Zero to website on Node in Azure"
 date:   2017-03-30 09:00:00
 categories:
 ---
-#h1
-##h2
-###h3
 
-- Download and install the latest stable version of Node from https://nodejs.org
+Steps for going from zero, nothing setup, to a simple site built with node and hosted in azure. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an api which pulls data from a database (documentDB but treated like it is mongoDB).
+
+- Download and install the latest stable version of Node from [https://nodejs.org](nodejs.org)
 - Create a folder in your documents or desktop, I will name mine 'dev'
 - Open a terminal tab to this folder
 - Type npm init to initialize with a package.json file. Press ENTER through all the prompts to select the defaults.
 - Add Hapi by entering 'npm install Hapi -save'. This installs and adds to the package.
-- Create a 'index.js' file in the 'dev' folder. Copy and paste the first example from https://hapijs.com
+- Create a 'index.js' file in the 'dev' folder. Copy and paste the first example from [https://hapijs.com](https://hapijs.com)
 - In the terminal window, that is open to the 'dev' folder type 'node .' This tells Node to run the server.
 - In a browser go to 'localhost:8000/hello' to view the app.
 - Use 'ctrl C', in the terminal window, to shut it down the server app.
