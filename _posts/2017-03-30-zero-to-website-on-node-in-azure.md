@@ -125,7 +125,8 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 ### Create an API with I/O to the database
 
 - First install the 'hapi-mongodb' package with `npm install -S hapi-mongodb`.
-- In the 'index.js' find and instead of the block that starts with `server.start(err => {...` paste this block:
+- In the 'index.js' find the block that starts with `server.start(err => {...`
+- Instead of that whole block paste this one but include your Database Connection String:
 
     ```javascript
     var MongoDB = require('hapi-mongodb');
@@ -167,19 +168,20 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
         }
     ]);
     server.register({ register: MongoDB, options: dbOpts }, function(err){
-    if (err) { throw err; }
-    server.start(function(err){
-        console.log(server.info.uri);
-    });
+        if (err) { throw err; }
+        server.start(function(err){
+            console.log(server.info.uri);
+        });
     });
     ```
 
 - Lets walk through what the above code does.
 - - It 'requires' the hapi-mongodb package.
 - - It includes the DB connection string from azure
-- - It creates two routes. One for getting all books from the database and one for adding books to the database.
+- - It creates two routes. One for getting all records from the database and one for adding records to the database.
+- - Then it starts the server after registering the MongoDB module.
 
-### Use the API in our view file
+### Use the API from the view
 
 - In the 'index.html' file add this jQuery script under the IMG tag: `<script src='https://code.jquery.com/jquery-latest.js'></script>`
 - Then add this block inside of a new SCRIPT block:
@@ -192,8 +194,6 @@ sendr.then(function(){
 });
 ```
 - The above code sends off a request tells the API to create a new record in the database. When that request is complete it asks the api to get all records and appends them to the BODY.
-
-
 
 ---
 
