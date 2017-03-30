@@ -21,7 +21,7 @@ These are a set of steps for going from having nothing setup to a simple site bu
 
 ## Create the app
 
-###Hapi
+### Hapi
 
 - Create a 'index.js' file in the 'dev' folder. This can also be 'server.js' or 'app.js'.
 - Copy and paste into 'index.js' the first example from [https://hapijs.com/](https://hapijs.com/)
@@ -33,7 +33,7 @@ These are a set of steps for going from having nothing setup to a simple site bu
   server.connection({ port: process.env.PORT || 7070 });
   ```
 
-### Serving html
+### Serving HTML and static files
 
 - Add a 'views' folder to the 'dev' folder.
 - Add an 'index.html' file with HTML code such as:
@@ -85,7 +85,7 @@ These are a set of steps for going from having nothing setup to a simple site bu
 
 ## Deploying to a cloud service
 
-In this demo we will be deploying to Azure but it could be another Paas. I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
+In this demo we will be deploying to Azure but it could be another PaaS. I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
 
 ### Azure
 
@@ -99,10 +99,15 @@ In this demo we will be deploying to Azure but it could be another Paas. I am ke
 
 - Install Git from [https://git-scm.com/](https://git-scm.com/) or see all the ways [here](https://www.atlassian.com/git/tutorials/install-git)
 - In command-line tool type `git init` to initialize this folder as a git repo.
-- Then `git add -A` to add all files to the git repo.
-- Then `git commit -m "Hello Azure App Service"` to commit the changes.
-- Then `git remote add azure https://USERNAME@WEBAPPNAME.scm.azurewebsites.net:443/WEBAPPNAME.git`
-- Then `git push azure master`
+- Add a .gitignore file to your repo paste these two items into it:
+```
+node_modules
+.DS_Store
+```
+- Type `git add -A` to add all files to the git repo.
+- Type `git commit -m "Hello Azure App Service"` to commit the changes.
+- Type `git remote add azure https://USERNAME@WEBAPPNAME.scm.azurewebsites.net:443/WEBAPPNAME.git`
+- Type `git push azure master`
 
 The official MS Docs with more info can be found [here](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-deploy-local-git)
 
@@ -110,58 +115,84 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 
 ### DocumentDB
 
-- In Azure Click NEW > DATABASES > NOSQL/DOCUMENTDB.
+- In the Azure portal Click NEW > DATABASES > NOSQL/DOCUMENTDB.
 - Give it a name.
-- Click to give it a MongDB API.
+- Click to make it use the MongDB API.
 - Choose a Resource Group and Location.
 - Click Ok.
 - In the properties click the Quickstart button. Choose the Node.js tab and find the connection string.
 
 ### Create an API with I/O to the database
 
-- In the 'index.js' file add a new block
+- First install the 'hapi-mongodb' package with `npm install -S hapi-mongodb`.
+- In the 'index.js' file paste this block of code instead of the block that starts `server.start(err => {...`:
 ```javascript
 const MongoDB = require('hapi-mongodb');
 const dbOpts = {
-    url: 'PASTE-DB-CONNECTION-STRING-HERE',
+    url: 'DB_CONNECTION_STRING_HERE',
     settings: {
         db: { native_parser: false },
     },
 };
-server.register({ register: MongoDB, options: dbOpts }, err => {
-    server.route([
-        {
-            method: 'GET',
-            path: '/allbooks',
-            config: {
-                handler: (request, reply) => {
-                    var db = request.server.plugins['hapi-mongodb'].db;
-                    reply(db.collection('booksDBColl').find({}, { title: 1 }).toArray());
-                },
-                cors: true
+server.route([
+    {
+        method: 'GET',
+        path: '/allbooks',
+        config: {
+            handler: function(request, reply){
+                var db = request.server.plugins['hapi-mongodb'].db;
+                reply(db.collection('books').find({}, { title: 1 }).toArray());
             },
+            cors: true
         },
-        {
-            method: 'POST',
-            path: '/addbook',
-            config: {
-                handler: (request, reply) => {
-                    var dbDoc = { title: request.payload.title };
-                    var db = request.server.plugins['hapi-mongodb'].db;
-                    db.collection('booksDBColl').updateOne({ title: request.payload.title }, dbDoc, { upsert: true }, (err, result) => {
-                        return reply(result);
-                    });
-                },
-                cors: true
-            }
+    },
+    {
+        method: 'POST',
+        path: '/addbook',
+        config: {
+            handler: function(request, reply){
+                var db = request.server.plugins['hapi-mongodb'].db;
+                db.collection('books').updateOne(
+                  { title: request.payload.title },
+                  { title: request.payload.title },
+                  { upsert: true },
+                  function(err, result){
+                    return reply(result);
+                  }
+                );
+            },
+            cors: true
         }
-    ]);
+    }
+]);
+
+server.register({ register: MongoDB, options: dbOpts }, function(err){
+  if (err) { throw err; }
+  server.start(function(err){
+      console.log(server.info.uri);
+  });
 });
 ```
+- Lets walk through what the above code does.
+- - It 'requires' the hapi-mongodb package.
+- - It includes the DB connection string from azure
+- - It creates two routes. One for getting all books from the database and one for adding books to the database.
 
 ### Use the API in our view file
 
-- CODE STILL TO COME.
+- In the 'index.html' file add this jQuery script under the IMG tag: `<script src='https://code.jquery.com/jquery-latest.js'></script>`
+- Then add this block inside of a new SCRIPT block:
+```javascript
+var sendr = $.ajax({url:"/addbook", method:"POST", data:{ title: "Title " + new Date().getTime() }});
+sendr.then(function(){
+  $.ajax({url:"/allbooks", method:"GET"}).then(function (d) {
+    $.each(d, function (k, v) {$(document.body).append('<div>' + v.title + '</div>');});
+  });
+});
+```
+- The above code sends off a request tells the API to create a new record in the database. When that request is complete it asks the api to get all records and appends them to the BODY.
+
+
 
 ---
 
