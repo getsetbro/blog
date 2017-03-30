@@ -17,35 +17,65 @@ These are steps for going from zero, nothing setup, to a simple site built with 
 
 ### Create the server with Hapi
 
-- Create a 'index.js' file in the 'dev' folder. Copy and paste the first example from [https://hapijs.com](https://hapijs.com)
-- In the terminal window, that is open to the 'dev' folder type 'node .' This tells Node to run the server.
+- Create a 'index.js' file in the 'dev' folder.
+- Copy and paste the first example from [https://hapijs.com/](https://hapijs.com/)
+- In the terminal window, that is open to the 'dev' folder type `node .` or `npm start`. This tells Node to run the server.
 - In a browser go to 'localhost:8000/hello' to view the app.
-- Use `ctrl C`, in the terminal window, to shut it down the server app.
-- Next lets change the server connection port to be ready for deployment to azure.
-```javascript
-server.connection({ port: process.env.PORT || 7070 });
-```
-- Add a 'views' folder to the 'dev' folder. Add an 'index.html' html document with and H1 of 'hi'. Be sure to use a web text editor, TextEdit gave me issues at this step.
-- With NPM install vision and handlebars: `npm i -S vision` and `npm i -S handlebars`
-- change Routes block to this
+- Use `ctrl C`, in the terminal window, to shut down the app.
+- Next lets change the server connection port to be ready for deployment to a cloud service. I am dropping localhost, if that breaks things for you than put it back.
+  ```javascript
+  server.connection({ port: process.env.PORT || 7070 });
+  ```
 
+### Serving html
+
+- Add a 'views' folder to the 'dev' folder. Add an 'index.html' html document with and H1 of 'hi'. Be sure to use a web text editor, TextEdit gave me issues at this step.
+- With NPM install vision and handlebars:
+  `npm i -S vision` and `npm i -S handlebars`
+- Change the 'Routes' block to this:
+  ```javascript
+  server.register(require('vision'), function(err) {
+      if (err) {throw err;}
+      server.route({
+          method: 'GET',
+          path: '/',
+          handler: function (request, reply) {reply.view('index');}
+      });
+      server.views({
+          engines: { html: require('handlebars') },
+          relativeTo: __dirname,
+          path: 'views',
+      });
+  });
+  ```
+
+- Now start the app from the terminal window with `node .` or `npm start`.
+- Check it out at http://localhost:7070/. You should see the text in the BODY of your index file.
+
+### Serve up static files
+
+- Create a folder in 'dev' named 'public'.
+- Add an image file named 'logo.png' or 'logo.jpg' just remember which one.
+- With NPM install inert:
+  `npm i -S inert`
+- In the 'index.js' file add this block above `server.register(require('vision')...`
 ```javascript
-server.register(require('vision'), function(err) {
+server.register(require('inert'), function(err){
     if (err) {throw err;}
     server.route({
         method: 'GET',
-        path: '/',
-        handler: function (request, reply) {reply.view('index');}
-    });
-    server.views({
-        engines: { html: require('handlebars') },
-        relativeTo: __dirname,
-        path: 'views',
+        path: '/{file*}',
+        handler: {
+            directory: {path: 'public'},
+        },
     });
 });
 ```
 
-- step
+- In the 'index.html' file (in the views folder) add the logo image `<img src="/img/logo.png" />` in the BODY.
+- Now start the app from the terminal window with `node .` or `npm start`.
+- Check it out at http://localhost:7070/. You should see the image in the BODY of the web page.
+
 
 ---
 
