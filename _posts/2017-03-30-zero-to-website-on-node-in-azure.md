@@ -5,18 +5,26 @@ date:   2017-03-30 09:00:00
 categories:
 ---
 
-Steps for going from zero, nothing setup, to a simple site built with node and hosted in azure. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an api which pulls data from a database (documentDB but treated like it is mongoDB).
+These are steps for going from zero, nothing setup, to a simple site built with node and hosted in azure. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an api which pulls data from a database (documentDB but treated like it is mongoDB).
 
-- Download and install the latest stable version of Node from [https://nodejs.org](nodejs.org)
-- Create a folder in your documents or desktop, I will name mine 'dev'
-- Open a terminal tab to this folder
+###Preparation
+
+- Download and install the latest stable version of Node from [https://nodejs.org](https://nodejs.org).
+- Create a folder on your system, let's name it 'dev'.
+- Open a terminal tab to this folder.
 - Type npm init to initialize with a package.json file. Press ENTER through all the prompts to select the defaults.
-- Add Hapi by entering 'npm install Hapi -save'. This installs and adds to the package.
+- Add Hapi by entering 'npm i Hapi -S'. The 'i' installs and the '-S' adds it to the package as a dependency for this app. This will tell the cloud service what packages are needed to build this project.
+
+###Create the server with Hapi
+
 - Create a 'index.js' file in the 'dev' folder. Copy and paste the first example from [https://hapijs.com](https://hapijs.com)
 - In the terminal window, that is open to the 'dev' folder type 'node .' This tells Node to run the server.
 - In a browser go to 'localhost:8000/hello' to view the app.
 - Use 'ctrl C', in the terminal window, to shut it down the server app.
-- Next lets change the server connection port to be ready for deployment to azure. 'server.connection({ port: process.env.PORT || 7070 });'
+- Next lets change the server connection port to be ready for deployment to azure.
+{% highlight ruby %}
+'server.connection({ port: process.env.PORT || 7070 });'
+{% endhighlight %}
 - Add a 'views' folder to the 'dev' folder. Add an 'index.html' html document with and H1 of 'hi'. Be sure to use a web text editor, TextEdit gave me issues at this step.
 - npm install vision and handlebars
 - change Routes block to this
