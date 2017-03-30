@@ -11,16 +11,32 @@ These are a set of steps for going from having nothing setup to a simple site bu
 
 ## Prep / Setup
 
+### Azure web app
+
+- In Azure create a new Web App. You will give it a name, select a Resource Group, and select a Service Plan.
+- When that is created click the Quickstart button in the Web App properties. Choose Node and then 'Local Source Control'.
+- Click the link to configure credentials. Make a Username and Password.
+- Click to the Deployment Options. Choose 'Local Git Repo'. Click OK.
+- Find the GIT URL on the properties page of your Web App.
+
+### Git
+
+- Download and install git from [https://git-scm.com/](https://git-scm.com/)
+- Open your Command Line app to a folder where you want to work on the repo.
+- Type 'git clone' plus space, and then the path your repo. All together it will look like: `git clone https://USERNAME@WEB-APP-NAME.scm.azurewebsites.net:443/WEB-APP-NAME.git`.
+- It will download it and may report back that it is empty.
+
+### Node and Hapi
+
 - Download and install the latest stable version of Node from [https://nodejs.org](https://nodejs.org).
-- Create a folder on your system, let's name it 'dev'.
-- Open a terminal tab to this folder.
-- Type npm init to initialize with a package.json file. Press ENTER through all the prompts to select the defaults.
-- Add Hapi by entering 'npm i Hapi -S'. The 'i' installs and the '-S' adds it to the package as a dependency for this app. This will tell the cloud service what packages are needed to build this project.
+- Make sure your Command Line app is still open to the repo folder.
+- Type `npm init` to initialize with a 'package.json' file. Press ENTER through all the prompts to select the defaults.
+- Add Hapi by entering `npm i Hapi -S`. The 'i' installs and the '-S' adds it to the package as a dependency for this app. This will tell Azure what packages are needed to build this project.
 
 ## Create the server with Hapi
 
-- Create a 'index.js' file in the 'dev' folder.
-- Copy and paste the first example from [https://hapijs.com/](https://hapijs.com/)
+- Create a 'index.js' file in the repo folder. This can also be 'server.js' or 'app.js'.
+- Copy and paste into it the first example from [https://hapijs.com/](https://hapijs.com/)
 - In the terminal window, that is open to the 'dev' folder type `node .` or `npm start`. This tells Node to run the server.
 - In a browser go to 'localhost:8000/hello' to view the app.
 - Use `ctrl C`, in the terminal window, to shut down the app.
@@ -82,7 +98,13 @@ server.register(require('inert'), function(err){
 
 ### Create an API for I/O with a database
 
--
+- In Azure Click NEW > DATABASES > NOSQL/DOCUMENTDB.
+- Give it a name.
+- Click to give it a MongDB API.
+- Choose a Resource Group and Location.
+- Click Ok.
+- In the properties click the Quickstart button. Choose the Node.js tab and find the connection string.
+
 
 ---
 
