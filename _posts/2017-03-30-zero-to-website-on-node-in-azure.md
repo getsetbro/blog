@@ -30,18 +30,7 @@ These are steps for going from zero, nothing setup, to a simple site built with 
 ### Serving html
 
 - Add a 'views' folder to the 'dev' folder.
-- Add an 'index.html' file with HTML code such as:
-```php
-<!doctype html>
-<html>
-<head>
- <meta charset='UTF-8'>
- <title>doc</title>
-</head>
-<body>About</body>
-</html>
-```
-
+- Add an 'index.html' file with HTML code such as `<!doctype html><html><head><meta charset="UTF-8"></head><body>About</body></html>`
 - Be sure to use a web text editor, TextEdit gave me issues at this step.
 - With NPM install vision and handlebars:
   `npm i -S vision` and `npm i -S handlebars`
