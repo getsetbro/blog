@@ -5,9 +5,11 @@ date:   2017-03-30 09:00:00
 categories:
 ---
 
-These are steps for going from zero, nothing setup, to a simple site built with node and hosted in azure. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an api which pulls data from a database (documentDB but treated like it is mongoDB).
+# Go from having no previous setup to deploying a simple Node website
 
-### Prep / Setup
+These are a set of steps for going from having nothing setup to a simple site built with node and hosted in the cloud. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an api which pulls data from a database (documentDB but treated like it is mongoDB).
+
+## Prep / Setup
 
 - Download and install the latest stable version of Node from [https://nodejs.org](https://nodejs.org).
 - Create a folder on your system, let's name it 'dev'.
@@ -15,7 +17,7 @@ These are steps for going from zero, nothing setup, to a simple site built with 
 - Type npm init to initialize with a package.json file. Press ENTER through all the prompts to select the defaults.
 - Add Hapi by entering 'npm i Hapi -S'. The 'i' installs and the '-S' adds it to the package as a dependency for this app. This will tell the cloud service what packages are needed to build this project.
 
-### Create the server with Hapi
+## Create the server with Hapi
 
 - Create a 'index.js' file in the 'dev' folder.
 - Copy and paste the first example from [https://hapijs.com/](https://hapijs.com/)
@@ -27,13 +29,13 @@ These are steps for going from zero, nothing setup, to a simple site built with 
   server.connection({ port: process.env.PORT || 7070 });
   ```
 
-### Serving html
+## Serving html
 
 - Add a 'views' folder to the 'dev' folder.
-- Add an 'index.html' file with HTML code such as `<!doctype html><html><head><meta charset="UTF-8"></head><body>About</body></html>`
-- Be sure to use a web text editor, TextEdit gave me issues at this step.
-- With NPM install vision and handlebars:
-  `npm i -S vision` and `npm i -S handlebars`
+- Add an 'index.html' file with HTML code such as:
+  `<!doctype html><html><head><meta charset="UTF-8"></head><body>About</body></html>`
+  Be sure to use a web text editor, TextEdit gave me issues at this step.
+- With NPM install the node modules 'vision' and 'handlebars': `npm i -S vision` and `npm i -S handlebars`
 - Change the 'Routes' block to this:
   ```javascript
   server.register(require('vision'), function(err) {
@@ -54,7 +56,7 @@ These are steps for going from zero, nothing setup, to a simple site built with 
 - Now start the app from the terminal window with `node .` or `npm start`.
 - Check it out at http://localhost:7070/. You should see the text in the BODY of your index file.
 
-### Serve up static files
+## Serve up static files
 
 - Create a folder in 'dev' named 'public'.
 - Add an image file named 'logo.png' or 'logo.jpg' just remember which one.
