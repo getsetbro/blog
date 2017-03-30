@@ -113,7 +113,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 
 ## Add a Database
 
-### DocumentDB
+### DocumentDB but really MongoDB but really DocumentDB
 
 - In the Azure portal Click NEW > DATABASES > NOSQL/DOCUMENTDB.
 - Give it a name.
