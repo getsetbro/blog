@@ -126,7 +126,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 
 - First install the 'hapi-mongodb' package with `npm install -S hapi-mongodb`.
 - In the 'index.js' file paste this block of code instead of the block that starts `server.start(err => {...`:
-```javascript
+```
 const MongoDB = require('hapi-mongodb');
 const dbOpts = {
     url: 'DB_CONNECTION_STRING_HERE',
