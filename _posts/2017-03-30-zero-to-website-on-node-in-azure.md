@@ -125,10 +125,10 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 ### Create an API with I/O to the database
 
 - First install the 'hapi-mongodb' package with `npm install -S hapi-mongodb`.
-- In the 'index.js' file paste this block of code instead of the block that starts `server.start(err => {...`:
-```
-const MongoDB = require('hapi-mongodb');
-const dbOpts = {
+- In the 'index.js' find and instead of this block `server.start(err => {...` paste this block:
+```javascript
+var MongoDB = require('hapi-mongodb');
+var dbOpts = {
     url: 'DB_CONNECTION_STRING_HERE',
     settings: {
         db: { native_parser: false },
@@ -173,6 +173,7 @@ server.register({ register: MongoDB, options: dbOpts }, function(err){
   });
 });
 ```
+
 - Lets walk through what the above code does.
 - - It 'requires' the hapi-mongodb package.
 - - It includes the DB connection string from azure
