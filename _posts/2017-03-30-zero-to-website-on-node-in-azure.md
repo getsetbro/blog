@@ -83,24 +83,19 @@ These are a set of steps for going from having nothing setup to a simple site bu
 - Now start the app from the command-line tool with `node .`.
 - Check it out at http://localhost:7070/. You should see the image in the web page.
 
-## Deployment setup
+## Deploying to a cloud service
 
-- Install Git from [https://git-scm.com/](https://git-scm.com/) or see all the ways [here](https://www.atlassian.com/git/tutorials/install-git)
-- In command-line tool type `git init` to initialize this folder as a git repo.
-- Then `git add -A` to add all files to the git repo.
-- Then `git commit -m "Hello Azure App Service"` to commit the changes.
+In this demo we will be deploying to Azure but it could be another Paas. I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
 
 ### Azure
 
-Now we will create a webapp in Azure.
-
-- In Azure create a NEW Web App. Give it a name, a Resource Group, and a Service Plan.
+- In the Azure portal create a NEW Web App. Give it a name, a Resource Group, and a Service Plan.
 - When it is created click the Quickstart button in the Web App properties. Choose Node and then 'Local Source Control'.
 - Click the link to configure credentials. Make a Username and Password.
 - Click to the Deployment Options. Choose 'Local Git Repo'. Click OK.
 - Find the GIT URL on the properties page of your Web App.
 
-## Git
+### Git
 
 - Install Git from [https://git-scm.com/](https://git-scm.com/) or see all the ways [here](https://www.atlassian.com/git/tutorials/install-git)
 - In command-line tool type `git init` to initialize this folder as a git repo.
@@ -111,8 +106,9 @@ Now we will create a webapp in Azure.
 
 The official MS Docs with more info can be found [here](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-deploy-local-git)
 
+## Add a Database
 
-## Create an API for I/O with a database
+### DocumentDB
 
 - In Azure Click NEW > DATABASES > NOSQL/DOCUMENTDB.
 - Give it a name.
@@ -120,6 +116,9 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 - Choose a Resource Group and Location.
 - Click Ok.
 - In the properties click the Quickstart button. Choose the Node.js tab and find the connection string.
+
+### Create an API with I/O to the database
+
 - In the 'index.js' file add a new block
 ```javascript
 const MongoDB = require('hapi-mongodb');
@@ -159,8 +158,10 @@ server.register({ register: MongoDB, options: dbOpts }, err => {
     ]);
 });
 ```
-- In your index file paste this: CODE STILL TO COME.
-- Test
+
+### Use the API in our view file
+
+- CODE STILL TO COME.
 
 ---
 
