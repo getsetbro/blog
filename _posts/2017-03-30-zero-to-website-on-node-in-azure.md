@@ -29,7 +29,19 @@ These are steps for going from zero, nothing setup, to a simple site built with 
 
 ### Serving html
 
-- Add a 'views' folder to the 'dev' folder. Add an 'index.html' html document with and H1 of 'hi'. Be sure to use a web text editor, TextEdit gave me issues at this step.
+- Add a 'views' folder to the 'dev' folder.
+- Add an 'index.html' file with HTML code such as:
+```html
+<!doctype html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>doc</title>
+</head>
+<body>About</body>
+</html>
+```
+- Be sure to use a web text editor, TextEdit gave me issues at this step.
 - With NPM install vision and handlebars:
   `npm i -S vision` and `npm i -S handlebars`
 - Change the 'Routes' block to this:
@@ -72,10 +84,13 @@ server.register(require('inert'), function(err){
 });
 ```
 
-- In the 'index.html' file (in the views folder) add the logo image `<img src="/img/logo.png" />` in the BODY.
+- In the 'index.html' file (in the views folder) add the logo image `<img src="/img/logo.png" />` or  `<img src="/img/logo.jpg" />` in the BODY.
 - Now start the app from the terminal window with `node .` or `npm start`.
-- Check it out at http://localhost:7070/. You should see the image in the BODY of the web page.
+- Check it out at http://localhost:7070/. You should see the image in the web page.
 
+### Create an API for I/O with a database
+
+-
 
 ---
 
