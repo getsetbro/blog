@@ -74,7 +74,7 @@ These are a set of steps for going from having nothing setup to a simple site bu
 
 ## Serve up static files
 
-- Create a folder in 'dev' named 'public'.
+- Create a folder named 'public'.
 - Add an image file named 'logo.png' or 'logo.jpg' just remember which one.
 - With NPM install inert:
   `npm i -S inert`
@@ -104,7 +104,89 @@ server.register(require('inert'), function(err){
 - Choose a Resource Group and Location.
 - Click Ok.
 - In the properties click the Quickstart button. Choose the Node.js tab and find the connection string.
+- In the 'index.js' file add a new block
+```javascript
+const MongoDB = require('hapi-mongodb');
+const dbOpts = {
+    url: 'PASTE-DB-CONNECTION-STRING-HERE',
+    settings: {
+        db: { native_parser: false },
+    },
+};
+server.register({ register: MongoDB, options: dbOpts }, err => {
+    server.route([
+        {
+            method: 'GET',
+            path: '/allbooks',
+            config: {
+                handler: (request, reply) => {
+                    var db = request.server.plugins['hapi-mongodb'].db;
+                    reply(db.collection('booksDBColl').find({}, { title: 1 }).toArray());
+                },
+                cors: true
+            },
+        },
+        {
+            method: 'POST',
+            path: '/addbook',
+            config: {
+                handler: (request, reply) => {
+                    var dbDoc = { title: request.payload.title };
+                    var db = request.server.plugins['hapi-mongodb'].db;
+                    db.collection('booksDBColl').updateOne({ title: request.payload.title }, dbDoc, { upsert: true }, (err, result) => {
+                        return reply(result);
+                    });
+                },
+                cors: true
+            }
+        }
+    ]);
+});
+```
+- In your index file paste this
+```
+<h1>books</h1>
+<ul id="ul"></ul>
+<p>add: <input type="text" id='input' />
+    <button type="button" id='btn'>add</button>
+</p>
+<script src='https://code.jquery.com/jquery-latest.js'>
+    //v1.11.1
+</script>
+<script>
+    var getr = $.ajax({
+        url: "/allbooks",
+        method: "GET"
+    });
+    getr.then(function (d) {
+        $.each(d, function (k, v) {
+            $('#ul').append('<li>' + v.title + '</li>');
+        });
+    });
 
+    $('#btn').on('click', function (e) {
+        var inpt = $('#input').val();
+        var sendr = $.ajax({
+            url: "/addbook",
+            method: "POST",
+            data: { title: inpt }
+        });
+
+        var getr2 = $.ajax({
+            url: "/allbooks",
+            method: "GET"
+        });
+        getr2.then(function (d) {
+            $('#ul').html('');
+            $.each(d, function (k, v) {
+                $('#ul').append('<li>' + v.title + '</li>');
+            });
+        });
+    })
+</script>
+```
+
+- Test
 
 ---
 
