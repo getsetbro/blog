@@ -125,54 +125,54 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 ### Create an API with I/O to the database
 
 - First install the 'hapi-mongodb' package with `npm install -S hapi-mongodb`.
-- In the 'index.js' find and instead of this block `server.start(err => {...` paste this block:
+- In the 'index.js' find and instead of the block that starts with `server.start(err => {...` paste this block:
 
-```
-var MongoDB = require('hapi-mongodb');
-var dbOpts = {
-    url: 'DB_CONNECTION_STRING_HERE',
-    settings: {
-        db: { native_parser: false },
-    },
-};
-server.route([
-    {
-        method: 'GET',
-        path: '/allbooks',
-        config: {
-            handler: function(request, reply){
-                var db = request.server.plugins['hapi-mongodb'].db;
-                reply(db.collection('books').find({}, { title: 1 }).toArray());
-            },
-            cors: true
+    ```javascript
+    var MongoDB = require('hapi-mongodb');
+    var dbOpts = {
+        url: 'DB_CONNECTION_STRING_HERE',
+        settings: {
+            db: { native_parser: false },
         },
-    },
-    {
-        method: 'POST',
-        path: '/addbook',
-        config: {
-            handler: function(request, reply){
-                var db = request.server.plugins['hapi-mongodb'].db;
-                db.collection('books').updateOne(
-                  { title: request.payload.title },
-                  { title: request.payload.title },
-                  { upsert: true },
-                  function(err, result){
-                    return reply(result);
-                  }
-                );
+    };
+    server.route([
+        {
+            method: 'GET',
+            path: '/allbooks',
+            config: {
+                handler: function(request, reply){
+                    var db = request.server.plugins['hapi-mongodb'].db;
+                    reply(db.collection('books').find({}, { title: 1 }).toArray());
+                },
+                cors: true
             },
-            cors: true
+        },
+        {
+            method: 'POST',
+            path: '/addbook',
+            config: {
+                handler: function(request, reply){
+                    var db = request.server.plugins['hapi-mongodb'].db;
+                    db.collection('books').updateOne(
+                    { title: request.payload.title },
+                    { title: request.payload.title },
+                    { upsert: true },
+                    function(err, result){
+                        return reply(result);
+                    }
+                    );
+                },
+                cors: true
+            }
         }
-    }
-]);
-server.register({ register: MongoDB, options: dbOpts }, function(err){
-  if (err) { throw err; }
-  server.start(function(err){
-      console.log(server.info.uri);
-  });
-});
-```
+    ]);
+    server.register({ register: MongoDB, options: dbOpts }, function(err){
+    if (err) { throw err; }
+    server.start(function(err){
+        console.log(server.info.uri);
+    });
+    });
+    ```
 
 - Lets walk through what the above code does.
 - - It 'requires' the hapi-mongodb package.
