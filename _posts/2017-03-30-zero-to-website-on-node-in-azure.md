@@ -143,49 +143,7 @@ server.register({ register: MongoDB, options: dbOpts }, err => {
     ]);
 });
 ```
-- In your index file paste this
-```
-<h1>books</h1>
-<ul id="ul"></ul>
-<p>add: <input type="text" id='input' />
-    <button type="button" id='btn'>add</button>
-</p>
-<script src='https://code.jquery.com/jquery-latest.js'>
-    //v1.11.1
-</script>
-<script>
-    var getr = $.ajax({
-        url: "/allbooks",
-        method: "GET"
-    });
-    getr.then(function (d) {
-        $.each(d, function (k, v) {
-            $('#ul').append('<li>' + v.title + '</li>');
-        });
-    });
-
-    $('#btn').on('click', function (e) {
-        var inpt = $('#input').val();
-        var sendr = $.ajax({
-            url: "/addbook",
-            method: "POST",
-            data: { title: inpt }
-        });
-
-        var getr2 = $.ajax({
-            url: "/allbooks",
-            method: "GET"
-        });
-        getr2.then(function (d) {
-            $('#ul').html('');
-            $.each(d, function (k, v) {
-                $('#ul').append('<li>' + v.title + '</li>');
-            });
-        });
-    })
-</script>
-```
-
+- In your index file paste this: CODE STILL TO COME.
 - Test
 
 ---
