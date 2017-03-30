@@ -183,7 +183,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 
 ### Use the API from the view
 
-- In the 'index.html' file add this jQuery script under the IMG tag: `<script src='https://code.jquery.com/jquery-latest.js'></script>`
+- In the 'index.html' file add this jQuery script under the IMG tag: `<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>`
 - Then add this block inside of a new SCRIPT block:
 ```javascript
 var sendr = $.ajax({url:"/addbook", method:"POST", data:{ title: "Title " + new Date().getTime() }});
