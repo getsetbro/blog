@@ -31,9 +31,9 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
 - In a browser go to 'http://localhost:8000/hello' to view the app.
 - Use `ctrl C`, in the terminal window, to shut down the app.
 - Next lets change the server connection port to be ready for deployment to a cloud service. I am dropping localhost, if that breaks things for you than put it back.
-  ```javascript
-  server.connection({ port: process.env.PORT || 7070 });
-  ```
+```javascript
+server.connection({ port: process.env.PORT || 7070 });
+```
 
 ### Serving HTML and static files
 
@@ -46,25 +46,26 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
     <body>Hello</body>
     </html>
     ```
-    _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
+
+_Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 
 - With NPM install the node modules 'vision' and 'handlebars': `npm install -S vision && npm install -S handlebars`
 - Change the 'Routes' block to this:
-  ```javascript
-  server.register(require('vision'), function(err) {
-      if (err) {throw err;}
-      server.route({
-          method: 'GET',
-          path: '/',
-          handler: function (request, reply) {reply.view('index');}
-      });
-      server.views({
-          engines: { html: require('handlebars') },
-          relativeTo: __dirname,
-          path: 'views',
-      });
-  });
-  ```
+```javascript
+server.register(require('vision'), function(err) {
+    if (err) {throw err;}
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function (request, reply) {reply.view('index');}
+    });
+    server.views({
+        engines: { html: require('handlebars') },
+        relativeTo: __dirname,
+        path: 'views',
+    });
+});
+```
 
 - Now start the app from the terminal window with `node .`.
 - Check it out at 'http://localhost:7070/'. You should see 'Hello' from your index view.
