@@ -46,7 +46,8 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
     <body>Hello</body>
     </html>
     ```
-- Be sure to use a web text editor, TextEdit gave me issues at this step.
+    _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
+
 - With NPM install the node modules 'vision' and 'handlebars': `npm install -S vision && npm install -S handlebars`
 - Change the 'Routes' block to this:
   ```javascript
