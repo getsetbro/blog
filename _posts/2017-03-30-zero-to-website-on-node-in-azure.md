@@ -7,7 +7,7 @@ categories:
 
 ## Go from having no previous setup to deploying a simple Node website
 
-These are a set of steps for going from having nothing setup to a simple site built with node and hosted in the cloud. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an api which pulls data from a database (documentDB but treated like it is mongoDB).
+These are a set of steps for going from having nothing setup to a simple site built with node and hosted in the cloud. This simple site will have one route to the index.html page. The html page will point to a static hosted image file. It will also call an API which pulls data from a database ( DocumentDB but with the MongoDB API ).
 
 ## Prep / Setup
 
@@ -17,11 +17,13 @@ These are a set of steps for going from having nothing setup to a simple site bu
 - Create a folder named 'dev' in your Documents folder.
 - Open your command-line tool to the 'dev' folder.
 - Type `npm init` to initialize by making a 'package.json' file. Press ENTER through all the prompts to select the defaults.
-- Add Hapi by entering `npm install --save Hapi`. The '--save' (or '-S') adds it to the 'package.json' file as a dependency for this app. This will tell cloud service what packages are needed to build this project. Cempetitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
+- Add Hapi by entering `npm install --save Hapi`. The '--save' (or '-S') adds it to the 'package.json' file as a dependency for this app. This will tell cloud service what packages are needed to build this project.
 
 ## Create the app
 
 ### Hapi
+
+Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
 
 - Create a 'index.js' file in the 'dev' folder. This can also be 'server.js' or 'app.js'.
 - Copy and paste into 'index.js' the first example from [https://hapijs.com/](https://hapijs.com/)
@@ -37,7 +39,13 @@ These are a set of steps for going from having nothing setup to a simple site bu
 
 - Add a 'views' folder to the 'dev' folder.
 - Add an 'index.html' file with HTML code such as:
-  `<!doctype html><html><head><meta charset="UTF-8"></head><body>Hello</body></html>`
+  ```html
+  <!doctype html>
+  <html>
+  <head><meta charset="UTF-8"></head>
+    <body>Hello</body>
+  </html>
+  ```
   Be sure to use a web text editor, TextEdit gave me issues at this step.
 - With NPM install the node modules 'vision' and 'handlebars': `npm install -S vision && npm install -S handlebars`
 - Change the 'Routes' block to this:
@@ -58,7 +66,7 @@ These are a set of steps for going from having nothing setup to a simple site bu
   ```
 
 - Now start the app from the terminal window with `node .`.
-- Check it out at http://localhost:7070/. You should see 'Hello' from your index view.
+- Check it out at 'http://localhost:7070/'. You should see 'Hello' from your index view.
 
 ### Serve up static files
 
@@ -81,11 +89,11 @@ These are a set of steps for going from having nothing setup to a simple site bu
 
 - In the BODY of the 'index.html' file add the logo image `<img src="/img/logo.png" />` or  `<img src="/img/logo.jpg" />`.
 - Now start the app from the command-line tool with `node .`.
-- Check it out at http://localhost:7070/. You should see the image in the web page.
+- Check it out at 'http://localhost:7070/'. You should see the image in the web page.
 
 ## Deploying to a cloud service
 
-In this demo we will be deploying to Azure but it could be another PaaS. I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
+In this demo we will be deploying to Azure but it could any PaaS. I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
 
 ### Azure
 
@@ -175,7 +183,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
     });
     ```
 
-- Lets walk through what the above code does.
+- Let's walk through what the above code does.
 - - It 'requires' the hapi-mongodb package.
 - - It includes the DB connection string from azure
 - - It creates two routes. One for getting all records from the database and one for adding records to the database.
