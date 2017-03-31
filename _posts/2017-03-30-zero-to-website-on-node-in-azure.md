@@ -39,13 +39,14 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
 
 - Add a 'views' folder to the 'dev' folder.
 - Add an 'index.html' file with HTML code such as:
-  ```html
-  <!doctype html>
-  <html>
-  <head><meta charset="UTF-8"></head>
-    <body>Hello</body>
-  </html>
-  ```
+
+```html
+<!doctype html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body>Hello</body>
+</html>
+```
   Be sure to use a web text editor, TextEdit gave me issues at this step.
 - With NPM install the node modules 'vision' and 'handlebars': `npm install -S vision && npm install -S handlebars`
 - Change the 'Routes' block to this:
