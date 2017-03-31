@@ -90,7 +90,8 @@ _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
     });
 ```
 
-- In the BODY of the 'index.html' file add the logo image `<img src="/img/logo.png" />` or  `<img src="/img/logo.jpg" />`.
+- In the BODY of the 'index.html' file add the logo image
+`<img src="/img/logo.png" />` or  `<img src="/img/logo.jpg" />`.
 - Now start the app from the command-line tool with `node .`.
 - Check it out at 'http://localhost:7070/'. You should see the image in the web page.
 
@@ -191,23 +192,28 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 - - It 'requires' the hapi-mongodb package.
 - - It includes the DB connection string from azure
 - - It creates two routes. One for getting all records from the database and one for adding records to the database.
-- - Then it starts the server after registering the MongoDB module.
+- - Then it starts the server after registering the MongoDB module with an options object.
 
 ### Use the API from the view
 
-- In the 'index.html' file add this jQuery script under the IMG tag: `<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>`
+- In the 'index.html' file add this jQuery script under the IMG tag:
+`<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>`
 - Then add this block inside of a new SCRIPT block:
 ```javascript
-    var sendr = $.ajax({url:"/addbook", method:"POST", data:{ title: "Title " + new Date().getTime() }});
+    var unique = new Date().getTime();
+    var sendr = $.post("/addbook", { title: "Title " + unique });
     sendr.then(function(){
-    $.ajax({url:"/allbooks", method:"GET"}).then(function (d) {
-        $.each(d, function (k, v) {$(document.body).append('<div>' + v.title + '</div>');});
-    });
+        $.getJSON("/allbooks").then(function (res) {
+            var arr = res.map(function(o){
+                return '<li>' + o.title + '</li>';
+            });
+            $(document.body).append( '<ol>' + arr.join('') + '</ol>');
+        });
     });
 ```
 
-- The above code sends off a request tells the API to create a new record in the database. When that request is complete it asks the api to get all records and appends them to the BODY.
+- The above code sends off a request that tells the API to create a new record in the database. When that request is complete it asks the api to get all records and appends them to the BODY.
 
 ---
 
-Comments can happen here: [/blog/issues/17](https://github.com/getsetbro/blog/issues/17)
+Comments and questions are here: [https://github.com/getsetbro/blog/issues/17](https://github.com/getsetbro/blog/issues/17)
