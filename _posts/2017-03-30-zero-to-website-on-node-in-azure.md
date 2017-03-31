@@ -216,4 +216,4 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 
 ---
 
-Comments and questions are here: [https://github.com/getsetbro/blog/issues/17](https://github.com/getsetbro/blog/issues/17)
+Comments and questions are here: [/blog/issues/17](https://github.com/getsetbro/blog/issues/17)
