@@ -40,7 +40,7 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
 - Add a 'views' folder to the 'dev' folder.
 - Add an 'index.html' file with HTML code such as:
 
-```html
+```
 <!doctype html>
 <html>
 <head><meta charset="UTF-8"></head>
