@@ -32,39 +32,40 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
 - Use `ctrl C`, in the terminal window, to shut down the app.
 - Next lets change the server connection port to be ready for deployment to a cloud service. I am dropping localhost, if that breaks things for you than put it back.
 ```javascript
-server.connection({ port: process.env.PORT || 7070 });
+    server.connection({ port: process.env.PORT || 7070 });
 ```
 
 ### Serving HTML and static files
 
 - Add a 'views' folder to the 'dev' folder.
 - Add an 'index.html' file with HTML code such as:
-    ```
+```
     <!doctype html>
     <html>
     <head><meta charset="UTF-8"></head>
     <body>Hello</body>
     </html>
-    ```
+```
 
 _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 
-- With NPM install the node modules 'vision' and 'handlebars': `npm install -S vision && npm install -S handlebars`
+- With NPM install the node modules 'vision' and 'handlebars':
+`npm install -S vision && npm install -S handlebars`
 - Change the 'Routes' block to this:
 ```javascript
-server.register(require('vision'), function(err) {
-    if (err) {throw err;}
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, reply) {reply.view('index');}
+    server.register(require('vision'), function(err) {
+        if (err) {throw err;}
+        server.route({
+            method: 'GET',
+            path: '/',
+            handler: function (request, reply) {reply.view('index');}
+        });
+        server.views({
+            engines: { html: require('handlebars') },
+            relativeTo: __dirname,
+            path: 'views',
+        });
     });
-    server.views({
-        engines: { html: require('handlebars') },
-        relativeTo: __dirname,
-        path: 'views',
-    });
-});
 ```
 
 - Now start the app from the terminal window with `node .`.
@@ -76,18 +77,18 @@ server.register(require('vision'), function(err) {
 - Add an image file named 'logo.png' or 'logo.jpg' just remember which one.
 - With NPM install inert: `npm install -S inert`
 - In the 'index.js' file add the following block above this line `server.register(require('vision')...`:
-  ```javascript
-  server.register(require('inert'), function(err){
-    if (err) {throw err;}
-    server.route({
-      method: 'GET',
-      path: '/{file*}',
-      handler: {
-        directory: {path: 'public'},
-      },
+```javascript
+    server.register(require('inert'), function(err){
+        if (err) {throw err;}
+        server.route({
+            method: 'GET',
+            path: '/{file*}',
+            handler: {
+            directory: {path: 'public'},
+            },
+        });
     });
-  });
-  ```
+```
 
 - In the BODY of the 'index.html' file add the logo image `<img src="/img/logo.png" />` or  `<img src="/img/logo.jpg" />`.
 - Now start the app from the command-line tool with `node .`.
@@ -111,9 +112,10 @@ In this demo we will be deploying to Azure but it could any PaaS. I am keeping a
 - In command-line tool type `git init` to initialize this folder as a git repo.
 - Add a .gitignore file to your repo paste these two items into it:
 ```
-node_modules
-.DS_Store
+    node_modules
+    .DS_Store
 ```
+
 - Type `git add -A` to add all files to the git repo.
 - Type `git commit -m "Hello Azure App Service"` to commit the changes.
 - Type `git remote add azure https://USERNAME@WEBAPPNAME.scm.azurewebsites.net:443/WEBAPPNAME.git`
@@ -138,7 +140,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 - In the 'index.js' find the block that starts with `server.start(err => {...`
 - Instead of that whole block paste this one but include your Database Connection String:
 
-    ```javascript
+```javascript
     var MongoDB = require('hapi-mongodb');
     var dbOpts = {
         url: 'DB_CONNECTION_STRING_HERE',
@@ -183,7 +185,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
             console.log(server.info.uri);
         });
     });
-    ```
+```
 
 - Let's walk through what the above code does.
 - - It 'requires' the hapi-mongodb package.
@@ -196,13 +198,14 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 - In the 'index.html' file add this jQuery script under the IMG tag: `<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>`
 - Then add this block inside of a new SCRIPT block:
 ```javascript
-var sendr = $.ajax({url:"/addbook", method:"POST", data:{ title: "Title " + new Date().getTime() }});
-sendr.then(function(){
-  $.ajax({url:"/allbooks", method:"GET"}).then(function (d) {
-    $.each(d, function (k, v) {$(document.body).append('<div>' + v.title + '</div>');});
-  });
-});
+    var sendr = $.ajax({url:"/addbook", method:"POST", data:{ title: "Title " + new Date().getTime() }});
+    sendr.then(function(){
+    $.ajax({url:"/allbooks", method:"GET"}).then(function (d) {
+        $.each(d, function (k, v) {$(document.body).append('<div>' + v.title + '</div>');});
+    });
+    });
 ```
+
 - The above code sends off a request tells the API to create a new record in the database. When that request is complete it asks the api to get all records and appends them to the BODY.
 
 ---
