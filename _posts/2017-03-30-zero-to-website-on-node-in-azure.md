@@ -16,14 +16,17 @@ These are a set of steps for going from having nothing setup to a simple site bu
 - Install the latest stable version of Node from [https://nodejs.org](https://nodejs.org).
 - Create a folder named 'dev' in your Documents folder.
 - Open your command-line tool to the 'dev' folder.
-- Type `npm init` to initialize by making a 'package.json' file. Press ENTER through all the prompts to select the defaults.
-- Add Hapi by entering `npm install --save Hapi`. The '--save' (or '-S') adds it to the 'package.json' file as a dependency for this app. This will tell cloud service what packages are needed to build this project.
+- Type `npm init` to initialize by creating a 'package.json' file. Press ENTER through all the prompts to select the defaults.
+- Add Hapi by entering `npm install --save Hapi`
+  _The '--save' (or '-S') adds it to the 'package.json' file as a dependency for this app. This will tell cloud service, or any dev, what packages are needed to build this project._
 
 ## Create the app
 
-### Hapi
 
-Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
+> Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
+
+
+### Hapi
 
 - Create a 'index.js' file in the 'dev' folder. This can also be 'server.js' or 'app.js'.
 - Copy and paste into 'index.js' the first example from [https://hapijs.com/](https://hapijs.com/)
@@ -31,11 +34,10 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
 - In a browser go to 'http://localhost:8000/hello' to view the app.
 - Use `ctrl C`, in the terminal window, to shut down the app.
 - Next lets change the server connection port to be ready for deployment to a cloud service.
-```js
+```javascript
   server.connection({ port: process.env.PORT || 7070 });
 ```
-
-_I am dropping localhost, if that breaks things for you than put it back._
+  _I am dropping localhost because it's my system knows that and azure won't want it. If that breaks things for you than put it back._
 
 ### Serving HTML and static files
 
@@ -48,8 +50,7 @@ _I am dropping localhost, if that breaks things for you than put it back._
     <body>Hello</body>
     </html>
 ```
-
-_Be sure to use a **web text editor**, TextEdit gave me issues at this step._
+  _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 
 - With NPM install the node modules 'vision' and 'handlebars':
 ```
@@ -111,7 +112,7 @@ _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 
 ## Deploying to a cloud service
 
-In this demo we will be deploying to Azure but it could any PaaS. I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
+In this demo we will be deploying to Azure but it could any PaaS (Platform as a Service). I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
 
 ### Azure
 
