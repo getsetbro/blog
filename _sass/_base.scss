@@ -97,8 +97,7 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    border-left: 4px solid #ff6347;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -115,9 +114,9 @@ blockquote {
  * Code formatting
  */
 pre, code {
-    font-size: 13px;
-    border: 1px solid $grey-color-light;
+    color: white;
     border-radius: 3px;
+    font-size: 13px;
 }
 
 code {
