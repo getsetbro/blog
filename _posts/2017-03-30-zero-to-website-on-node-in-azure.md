@@ -98,7 +98,7 @@ _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 > 'Inert' is static file and directory handlers for hapi.js from the core team [https://github.com/hapijs/inert](https://github.com/hapijs/inert)
 
 
-- In the 'index.js' file add the following block above this line `server.register(require('vision')...`:
+- In the 'index.js' file add the following block above this line 'server.register(require('vision')...':
 ```javascript
   server.register(require('inert'), function(err){
       if (err) {throw err;}
@@ -221,7 +221,9 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 ### Use the API from the view
 
 - In the 'index.html' file add this jQuery script under the IMG tag:
-`<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>`
+```
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+```
 - Then add this block inside of a new SCRIPT block:
 ```javascript
   var unique = new Date().getTime();
