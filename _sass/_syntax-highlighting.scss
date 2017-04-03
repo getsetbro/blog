@@ -1,6 +1,7 @@
 /**
  * Syntax highlighting styles
  */
+pre { background-color: #272822; }
 .highlight {
     background: #272822;
     @extend %vertical-rhythm;
