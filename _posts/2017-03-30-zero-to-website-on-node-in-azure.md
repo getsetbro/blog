@@ -16,7 +16,8 @@ These are a set of steps for going from having nothing setup to a simple site bu
 - Install the latest stable version of Node from [https://nodejs.org](https://nodejs.org).
 - Create a folder named 'dev' in your Documents folder.
 - Open your command-line tool to the 'dev' folder.
-- Type `npm init` to initialize by creating a 'package.json' file. Press ENTER through all the prompts to select the defaults.
+- Type `npm init` to initialize by creating a 'package.json' file.
+- - Press ENTER through all the prompts to select the defaults.
 - Add Hapi by entering `npm install --save Hapi`
 
 _The '--save' (or '-S') adds it to the 'package.json' file as a dependency for this app. This will tell cloud service, or any dev, what packages are needed to build this project._
@@ -36,25 +37,27 @@ _The '--save' (or '-S') adds it to the 'package.json' file as a dependency for t
 ```javascript
   server.connection({ port: process.env.PORT || 7070 });
 ```
-  _I am dropping localhost because it's my system knows that and azure won't want it. If that breaks things for you than put it back._
+
+_I am dropping localhost because it's my system knows that and azure won't want it. If that breaks things for you than put it back._
 
 ### Serving HTML and static files
 
 - Add a 'views' folder to the 'dev' folder.
 - Add an 'index.html' file with HTML code such as:
+```html
+  <!doctype html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Hi</title>
+    </head>
+    <body>
+      Hello
+    </body>
+  </html>
 ```
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hi</title>
-  </head>
-  <body>
-    Hello
-  </body>
-</html>
-```
-  _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
+
+_Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 
 - With NPM install the node modules 'vision' and 'handlebars':
 ```
@@ -63,19 +66,19 @@ _The '--save' (or '-S') adds it to the 'package.json' file as a dependency for t
 
 - Change the 'routes' block to this:
 ```javascript
-server.register(require('vision'), function(err) {
-    if (err) {throw err;}
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, reply) {reply.view('index');}
-    });
-    server.views({
-        engines: { html: require('handlebars') },
-        relativeTo: __dirname,
-        path: 'views',
-    });
-});
+  server.register(require('vision'), function(err) {
+      if (err) {throw err;}
+      server.route({
+          method: 'GET',
+          path: '/',
+          handler: function (request, reply) {reply.view('index');}
+      });
+      server.views({
+          engines: { html: require('handlebars') },
+          relativeTo: __dirname,
+          path: 'views',
+      });
+  });
 ```
 
 
@@ -97,21 +100,21 @@ server.register(require('vision'), function(err) {
 
 - In the 'index.js' file add the following block above this line `server.register(require('vision')...`:
 ```javascript
-server.register(require('inert'), function(err){
-    if (err) {throw err;}
-    server.route({
-        method: 'GET',
-        path: '/{file*}',
-        handler: {
-        directory: {path: 'public'},
-        },
-    });
-});
+  server.register(require('inert'), function(err){
+      if (err) {throw err;}
+      server.route({
+          method: 'GET',
+          path: '/{file*}',
+          handler: {
+          directory: {path: 'public'},
+          },
+      });
+  });
 ```
 
 - In the BODY of the 'index.html' file add the logo image
 ```html
-<img src="/img/logo.png" />
+  <img src="/img/logo.png" />
 ```
 - Now start the app from the command-line tool with `node .`.
 - Check it out at 'http://localhost:7070/'. You should see the image in the web page.
@@ -134,8 +137,8 @@ In this demo we will be deploying to Azure but it could any PaaS (Platform as a 
 - In command-line tool type `git init` to initialize this folder as a git repo.
 - Add a .gitignore file to your repo paste these two items into it:
 ```
-node_modules
-.DS_Store
+  node_modules
+  .DS_Store
 ```
 
 - Type `git add -A` to add all files to the git repo.
@@ -163,50 +166,50 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 - Instead of that whole block paste this one but include your Database Connection String:
 
 ```javascript
-var MongoDB = require('hapi-mongodb');
-var dbOpts = {
-    url: 'DB_CONNECTION_STRING_HERE',
-    settings: {
-        db: { native_parser: false },
-    },
-};
-server.route([
-    {
-        method: 'GET',
-        path: '/allbooks',
-        config: {
-            handler: function(request, reply){
-                var db = request.server.plugins['hapi-mongodb'].db;
-                reply(db.collection('books').find({}, { title: 1 }).toArray());
-            },
-            cors: true
-        },
-    },
-    {
-        method: 'POST',
-        path: '/addbook',
-        config: {
-            handler: function(request, reply){
-                var db = request.server.plugins['hapi-mongodb'].db;
-                db.collection('books').updateOne(
-                { title: request.payload.title },
-                { title: request.payload.title },
-                { upsert: true },
-                function(err, result){
-                    return reply(result);
-                }
-                );
-            },
-            cors: true
-        }
-    }
-]);
-server.register({ register: MongoDB, options: dbOpts }, function(err){
-    if (err) { throw err; }
-    server.start(function(err){
-        console.log(server.info.uri);
-    });
-});
+  var MongoDB = require('hapi-mongodb');
+  var dbOpts = {
+      url: 'DB_CONNECTION_STRING_HERE',
+      settings: {
+          db: { native_parser: false },
+      },
+  };
+  server.route([
+      {
+          method: 'GET',
+          path: '/allbooks',
+          config: {
+              handler: function(request, reply){
+                  var db = request.server.plugins['hapi-mongodb'].db;
+                  reply(db.collection('books').find({}, { title: 1 }).toArray());
+              },
+              cors: true
+          },
+      },
+      {
+          method: 'POST',
+          path: '/addbook',
+          config: {
+              handler: function(request, reply){
+                  var db = request.server.plugins['hapi-mongodb'].db;
+                  db.collection('books').updateOne(
+                  { title: request.payload.title },
+                  { title: request.payload.title },
+                  { upsert: true },
+                  function(err, result){
+                      return reply(result);
+                  }
+                  );
+              },
+              cors: true
+          }
+      }
+  ]);
+  server.register({ register: MongoDB, options: dbOpts }, function(err){
+      if (err) { throw err; }
+      server.start(function(err){
+          console.log(server.info.uri);
+      });
+  });
 ```
 
 - Let's walk through what the above code does.
@@ -221,16 +224,16 @@ server.register({ register: MongoDB, options: dbOpts }, function(err){
 `<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>`
 - Then add this block inside of a new SCRIPT block:
 ```javascript
-var unique = new Date().getTime();
-var sendr = $.post("/addbook", { title: "Title " + unique });
-sendr.then(function(){
-    $.getJSON("/allbooks").then(function (res) {
-        var arr = res.map(function(o){
-            return '<li>' + o.title + '</li>';
-        });
-        $(document.body).append( '<ol>' + arr.join('') + '</ol>');
-    });
-});
+  var unique = new Date().getTime();
+  var sendr = $.post("/addbook", { title: "Title " + unique });
+  sendr.then(function(){
+      $.getJSON("/allbooks").then(function (res) {
+          var arr = res.map(function(o){
+              return '<li>' + o.title + '</li>';
+          });
+          $(document.body).append( '<ol>' + arr.join('') + '</ol>');
+      });
+  });
 ```
 
 - The above code sends off a request that tells the API to create a new record in the database. When that request is complete it asks the api to get all records and appends them to the BODY.
