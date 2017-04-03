@@ -30,10 +30,9 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
 - In the terminal window, that is open to the 'dev' folder type `node .`. This tells Node to run the app.
 - In a browser go to 'http://localhost:8000/hello' to view the app.
 - Use `ctrl C`, in the terminal window, to shut down the app.
-- Next lets change the server connection port to be ready for deployment to a cloud service. I am dropping localhost, if that breaks things for you than put it back.
-```javascript
-    server.connection({ port: process.env.PORT || 7070 });
-```
+- Next lets change the server connection port to be ready for deployment to a cloud service. `server.connection({ port: process.env.PORT || 7070 });`
+
+> I am dropping localhost, if that breaks things for you than put it back.
 
 ### Serving HTML and static files
 
@@ -47,7 +46,7 @@ Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here]
     </html>
 ```
 
-_Be sure to use a **web text editor**, TextEdit gave me issues at this step._
+> _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 
 - With NPM install the node modules 'vision' and 'handlebars':
 `npm install -S vision && npm install -S handlebars`
@@ -68,6 +67,8 @@ _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
     });
 ```
 
+> 'Vision' is "Templates rendering support for hapi.js" from the core team [https://github.com/hapijs/vision](https://github.com/hapijs/vision)
+
 - Now start the app from the terminal window with `node .`.
 - Check it out at 'http://localhost:7070/'. You should see 'Hello' from your index view.
 
@@ -76,6 +77,9 @@ _Be sure to use a **web text editor**, TextEdit gave me issues at this step._
 - Create a folder named 'public'.
 - Add an image file named 'logo.png' or 'logo.jpg' just remember which one.
 - With NPM install inert: `npm install -S inert`
+
+> 'Inert' is static file and directory handlers for hapi.js from the core team [https://github.com/hapijs/inert](https://github.com/hapijs/inert)
+
 - In the 'index.js' file add the following block above this line `server.register(require('vision')...`:
 ```javascript
     server.register(require('inert'), function(err){
@@ -189,7 +193,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 ```
 
 - Let's walk through what the above code does.
-- - It 'requires' the hapi-mongodb package.
+- - It 'requires' the `hapi-mongodb` package.
 - - It includes the DB connection string from azure
 - - It creates two routes. One for getting all records from the database and one for adding records to the database.
 - - Then it starts the server after registering the MongoDB module with an options object.
