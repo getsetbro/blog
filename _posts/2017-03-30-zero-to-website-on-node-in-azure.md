@@ -18,15 +18,14 @@ These are a set of steps for going from having nothing setup to a simple site bu
 - Open your command-line tool to the 'dev' folder.
 - Type `npm init` to initialize by creating a 'package.json' file. Press ENTER through all the prompts to select the defaults.
 - Add Hapi by entering `npm install --save Hapi`
-  _The '--save' (or '-S') adds it to the 'package.json' file as a dependency for this app. This will tell cloud service, or any dev, what packages are needed to build this project._
+
+_The '--save' (or '-S') adds it to the 'package.json' file as a dependency for this app. This will tell cloud service, or any dev, what packages are needed to build this project._
 
 ## Create the app
 
+### Hapi
 
 > Competitors to Hapi are Express, Koa, Lazo, Restify - I am keeping a list [here](https://github.com/getsetbro/csv-files/blob/master/node-tools.csv)
-
-
-### Hapi
 
 - Create a 'index.js' file in the 'dev' folder. This can also be 'server.js' or 'app.js'.
 - Copy and paste into 'index.js' the first example from [https://hapijs.com/](https://hapijs.com/)
@@ -128,8 +127,8 @@ In this demo we will be deploying to Azure but it could any PaaS (Platform as a 
 - In command-line tool type `git init` to initialize this folder as a git repo.
 - Add a .gitignore file to your repo paste these two items into it:
 ```
-    node_modules
-    .DS_Store
+  node_modules
+  .DS_Store
 ```
 
 - Type `git add -A` to add all files to the git repo.
@@ -153,7 +152,7 @@ The official MS Docs with more info can be found [here](https://docs.microsoft.c
 ### Create an API with I/O to the database
 
 - First install the 'hapi-mongodb' package with `npm install -S hapi-mongodb`.
-- In the 'index.js' find the block that starts with `server.start(err => {...`
+- In the 'index.js' find the block that starts with 'server.start(err => {...'
 - Instead of that whole block paste this one but include your Database Connection String:
 
 ```javascript
