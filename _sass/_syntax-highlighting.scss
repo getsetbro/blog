@@ -1,7 +1,32 @@
 /**
  * Syntax highlighting styles
  */
-pre { background-color: #272822; }
+
+ /**
+  * Code formatting
+  */
+ pre, code {
+    background-color: #272822;
+    border-radius: 3px;
+    color: white;
+    font-size: 13px;
+ }
+
+ code {
+     padding: 1px 5px;
+ }
+
+ pre {
+     padding: 8px 12px;
+     overflow-x: scroll;
+
+     > code {
+         border: 0;
+         padding-right: 0;
+         padding-left: 0;
+     }
+ }
+
 .highlight {
     background: #272822;
     @extend %vertical-rhythm;
