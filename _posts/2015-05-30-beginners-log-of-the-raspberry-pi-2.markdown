@@ -5,7 +5,7 @@ date:   2015-05-30 11:00:00
 categories:
 ---
 
-##Log
+## Log
 
 * I do not yet have a wifi adapter so I plugged the PI into my router
 * On a Mac I tried "ssh pi@raspberrypi.lan" but I got "ssh: Could not resolve hostname raspberrypi.lan: nodename nor servname provided, or not known"
@@ -35,14 +35,14 @@ Hit http://archive.raspberrypi.org wheezy/main armhf Packages
 
 ***
 
-###To open config files in the nano editor
+### To open config files in the nano editor
 
 - network "sudo nano /etc/network/interfaces"
 - keyboard "sudo nano /etc/default/keyboard"
 
 ***
 
-###Log continued...
+### Log continued...
 
 * When using my keyboard I noticed some characters weren't what I typed
 * In the keyboard file I change XKBLAYOUT from "gb" to "us"
@@ -51,7 +51,7 @@ Hit http://archive.raspberrypi.org wheezy/main armhf Packages
 
 ***
 
-###List of commands to know
+### List of commands to know
 
 * "sudo raspi-config" This opens the configuration screen for the operating system
 * power off "sudo poweroff"
@@ -73,7 +73,7 @@ Hit http://archive.raspberrypi.org wheezy/main armhf Packages
 
 ***
 
-###Log continued...
+### Log continued...
 
 * I want to play sound through the audio jack
 * Check to see if sound is ready
@@ -109,7 +109,7 @@ Using NodeJS
 
 ***
 
-###For setting a static IP address
+### For setting a static IP address
 
 * Get the needed numbers below by typing "ifconfig" and "netstat -nr"
 * Typed "sudo nano /etc/network/interfaces"
@@ -140,12 +140,12 @@ gateway 192.168.1.1
 
 ***
 
-###Misc
+### Misc
 
 * Installed Chromium "sudo apt-get install chromium-browser"
 * Chromium in Kiosk Mode: "chromium --kiosk http://www.google.com" - ALT + F4 to close it
 
-###Add a user
+### Add a user
 
 * "sudo adduser admin" follow the prompts to complete the new user
 * as pi "sudo su" and then run "visudo" which allows you to edit the /etc/sudoers file. add a line exactly matching the one for pi
