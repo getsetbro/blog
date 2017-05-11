@@ -15,14 +15,12 @@ Here is the code in the link I pasted above.
 
 <pre><code>data:text/html;charset=utf-8,&lt;title&gt;TextEditor&lt;/title&gt;&lt;body%20contenteditable%20style="font-size:2rem;font-family:monaco;line-height:1.4;max-width:60rem;margin:0%20auto;padding:4rem;"%20spellcheck="false"&gt;&lt;h1&gt;Text%20Editor&lt;/h1&gt;&lt;p&gt;Start%20Here.</code></pre>
 
-###Update
-
+##Update
 Newer hotterness
 
 <pre><code>data:text/html;charset=utf-8,&lt;title&gt;TextArea&lt;/title&gt;&lt;style&gt;html{height: 100%;}body{margin:0;padding:4%;border:20px solid #eee;background-color:#fff;border-radius:2em}textarea{width:100%;height:100%;border:0 none;font-family:&quot;Lucida Grande&quot;,sans-serif;font-size:2em;outline:none;color:#444}&lt;/style&gt;&lt;body&gt;&lt;textarea spellcheck=&quot;false&quot; autofocus=&apos;autofocus&apos;&gt;&lt;/textarea&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
 
-###Update
-
+##Update
 Newer hotterness with localStorage
 
 <pre><code>javascript:&apos;&lt;title&gt;TextArea&lt;/title&gt;&lt;style&gt;body{margin:-10px;padding:20px;border:20px solid #aaa;border-radius:1em;font-family:-apple-system,&quot;Roboto&quot;,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Helvetica Neue&quot;,sans-serif;font-size:2em;color:#444}
