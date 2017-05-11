@@ -20,7 +20,7 @@ Prototypes are more valuable than wireframes or designs. You will see that requi
 
 ---
 
-###Prototyping
+### Prototyping
 
 A prototype will provide proof of concepts and be a source of documentation throughout the project.
 

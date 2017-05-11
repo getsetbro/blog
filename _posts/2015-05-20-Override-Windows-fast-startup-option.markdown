@@ -5,9 +5,9 @@ date:   2015-05-26 11:00:00
 categories:
 ---
 
-##Windows has a fast-startup option which makes it hard to boot into bios.
+## Windows has a fast-startup option which makes it hard to boot into bios.
 
-I stroubled to get the tablet in to the boot menu for a while until I found info on this forum: 
+I stroubled to get the tablet in to the boot menu for a while until I found info on this forum:
 <a href="//forum.tabletpcreview.com/acer-gateway/40963-how-enter-into-iconia-w500s-bios-settings.html" target="_blank">forum.tabletpcreview.com/acer-gateway/40963-how-enter-into-iconia-w500s-bios-settings.html</a>
 
 "If you have the Windows 8 Developer Preview installed, you will not be able to boot up the bios screen the normal way, as Win 8 has a fast-startup option that overrides it."

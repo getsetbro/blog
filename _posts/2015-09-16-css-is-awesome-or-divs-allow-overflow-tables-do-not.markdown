@@ -26,7 +26,7 @@ I am guessing that this joke began when developers stopped using TABLEs and star
 
 This lead them to feel that CSS was indeed NOT AWESOME because it caused problems. But it was the markup all along.
 
-##But what is the real reason for this post?
+## But what is the real reason for this post?
 
 In some cases you might need to use the TABLE layout to avoid this bug that the block-level-DIV has caused.
 
@@ -42,11 +42,11 @@ When you scroll horizontally to see the content that is farther to the right you
   <img src="http://getsetbro.com/images/divsallowoverflow/divlayout2.png"/>
 </a>
 
-###Why did this happen‽
+### Why did this happen‽
 
 Because the header and footer are block level elements - they are as wide as their parent. The BODY and HTML elements are also block level elements. They are not working like a table. They allow overflow. A table would widen to make sure that it goes all the way around its content - like a mother goose, protecting her young. Even if you set it to be a certain width it would break that rule to hug it's children.
 
-###So what can be done‽
+### So what can be done‽
 
 If you want the header and footer to expand as far as the content you could set their parent to act like a TABLE like this:
 

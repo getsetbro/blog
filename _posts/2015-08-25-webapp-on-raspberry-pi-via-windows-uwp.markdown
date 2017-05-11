@@ -36,13 +36,13 @@ The device is serving up a webpage that can be viewed at http://IP.AD.DRE.SS. On
 
 Heads up: The remote machine IP address setting can get stuck - I had to create a new app when the IP of my device changed.
 
-##Photo gallery
+## Photo gallery
 ![End result](http://getsetbro.com/images/onraspiviawinuwp/kiosk.png)
 
-###Date Picker
+### Date Picker
 ![Date picker in effect](http://getsetbro.com/images/onraspiviawinuwp/datepicker.png)
 
-###Deployed
+### Deployed
 ![The deployed code output](http://getsetbro.com/images/onraspiviawinuwp/deployed.png)
 
 ---
