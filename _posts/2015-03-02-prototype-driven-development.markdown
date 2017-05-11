@@ -35,7 +35,7 @@ Example: [PatternLab](//demo.patternlab.io). Shows the single components, compon
 
 ---
 
-###Build System
+### Build System
 
 With an enhanced build system we can build the Prototype + Style Guide alongside our project in VS.
 
@@ -58,7 +58,7 @@ Why not Nuget and MSBuild? [Hanselman answered](//www.hanselman.com/blog/Introdu
 
 ---
 
-###JavaScript
+### JavaScript
 
 We'll need some JS Patterns to avoid conflicts so components can be reusable. If two components want to save a number to a variable named "width" then the last one to define it will win. And the app will lose.
 
@@ -67,14 +67,14 @@ We'll need some JS Patterns to avoid conflicts so components can be reusable. If
 
 <iframe src="//jsbin.com/lumeqa/12/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 300px;"></iframe>
 
-<br>
+
 
 Or just use the jQuery plug-in format.
 [//jsbin.com/lumeqa/14/edit?html,js,output](//jsbin.com/lumeqa/8/edit?html,js,output)
 
 <iframe src="//jsbin.com/lumeqa/14/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 300px;"></iframe>
 
-<br>
+
 
 Elements affected by JS should have separate css classes that look different: "js-icon" or potentially data-attributes. That way you can safely change style classes but carefully change JS classes.
 
@@ -84,14 +84,15 @@ Example(s)
 - $(".js-icon").on(...);
 - $("[data-icon]").on(...);
 
-<br>
+
 
 <iframe src="//jsbin.com/lumeqa/11/embed?html,js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 300px;"></iframe>
-<br>
+
+
 
 ---
 
-###CSS
+### CSS
 
 As a base use the latest bootstrap. Everybody learn bootstrap. They have put much time into finding the configuration that works best for the web today. You can transfer your knowledge to other UI frameworks later.
 
@@ -113,12 +114,13 @@ For a full demo see: [//jsbin.com/lumeqa/2/](//jsbin.com/lumeqa/2/)
 
 <iframe src="//jsbin.com/lumeqa/10/embed?html" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 300px;"></iframe>
 
-<br>
+  
+
 It is a learning curve for sure but the results are worth it. This will scale from small to large projects and make for happier teams.
 
 ---
 
-###SVG & Icon font opinions
+### SVG & Icon font opinions
 
 No more IMG for icons.
 
@@ -142,7 +144,7 @@ How might I make a shape? [//blog.getsetbro.com/the-svg-tutorial-that-will-make-
 
 ---
 
-###PS
+### PS
 
 A thought about the teams who build this. Often a "front-end" team builds the prototype and hands it off for it to be integrated into production by the "back-end" team.
 This might lead to the second team finding that the components have bugs after integration that were not there in the prototype. At this point either team can make necessary changes with both integration and the prototype in mind.
