@@ -10,7 +10,7 @@ You could say that I have been wanting to write this article for a while from ho
 Here is the joke:
 
 <a href="//getsetbro.github.io/images/divsallowoverflow/cssisawesome.png" style="display:block;text-align:center;padding:15px;">
-  <img src="//github.com/getsetbro/images/divsallowoverflow/cssisawesome.png"/>
+  <img src="https://getsetbro.github.io/images/divsallowoverflow/cssisawesome.png"/>
 </a>
 
 I didn't want to post the picture, but some would not know what I was referring to.
