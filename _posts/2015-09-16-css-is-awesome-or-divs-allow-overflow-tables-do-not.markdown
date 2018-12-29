@@ -10,7 +10,7 @@ You could say that I have been wanting to write this article for a while from ho
 Here is the joke:
 
 <a href="//getsetbro.github.io/images/divsallowoverflow/cssisawesome.png" style="display:block;text-align:center;padding:15px;">
-  <img src="//getsetbro.github.io/images/divsallowoverflow/cssisawesome.png"/>
+  <img src="//github.com/getsetbro/images/divsallowoverflow/cssisawesome.png"/>
 </a>
 
 I didn't want to post the picture, but some would not know what I was referring to.
@@ -19,7 +19,7 @@ The - CSS is awesome - joke is not what inspired me to write this article today.
 
 What I was pointing out in 2011 and what I want to expound on today is that the bug shown in the joke is not a CSS issue. It comes from how DIVs allow overflow where TABLEs never did.
 <a href="//getsetbro.github.io/images/divsallowoverflow/cssisawesomerin3d.png" style="display:block;text-align:center;padding:15px;">
-<img src="//getsetbro.github.io/images/divsallowoverflow/cssisawesomerin3d.png"/>
+<img src="//github.com/getsetbro/images/divsallowoverflow/cssisawesomerin3d.png"/>
 </a>
 
 I am guessing that this joke began when developers stopped using TABLEs and started using DIVs and found that content could overrun the borders.
