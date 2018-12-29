@@ -50,11 +50,11 @@ Because the header and footer are block level elements - they are as wide as the
 
 If you want the header and footer to expand as far as the content you could set their parent to act like a TABLE like this:
 
-{% highlight ruby %}
+```
 body{
 display:table;
 }
-{% endhighlight %}
+```
 
 For my example I set it on the BODY element. You can see the [example bin here.](http://jsbin.com/muyowa/edit?html,css,output)
 <a href="https://getsetbro.github.io/images/divsallowoverflow/cssisawesomewithscroll.png" style="display:block;text-align:center;padding:15px;">
