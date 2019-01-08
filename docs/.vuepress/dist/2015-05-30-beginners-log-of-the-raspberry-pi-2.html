@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Beginners Log of the Raspberry Pi 2 | getsetbro blog</title>
+    <meta name="description" content="Official blog area of getsetbro">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.d6130bc8.css" as="style"><link rel="preload" href="/blog/assets/js/app.5fb0c628.js" as="script"><link rel="preload" href="/blog/assets/js/7.922575b9.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.f4b0a49c.js"><link rel="prefetch" href="/blog/assets/js/11.7e4316f2.js"><link rel="prefetch" href="/blog/assets/js/2.16669377.js"><link rel="prefetch" href="/blog/assets/js/3.b8e12a31.js"><link rel="prefetch" href="/blog/assets/js/4.00dad9a6.js"><link rel="prefetch" href="/blog/assets/js/5.3103a4a4.js"><link rel="prefetch" href="/blog/assets/js/6.0f0585ec.js"><link rel="prefetch" href="/blog/assets/js/8.46a45450.js"><link rel="prefetch" href="/blog/assets/js/9.7e4fefd5.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.d6130bc8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">getsetbro blog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <!----> </div> <div class="page"> <div class="content"><h1 id="beginners-log-of-the-raspberry-pi-2"><a href="#beginners-log-of-the-raspberry-pi-2" aria-hidden="true" class="header-anchor">#</a> Beginners Log of the Raspberry Pi 2</h1> <h2 id="log"><a href="#log" aria-hidden="true" class="header-anchor">#</a> Log</h2> <ul><li>I do not yet have a wifi adapter so I plugged the PI into my router</li> <li>On a Mac I tried &quot;ssh pi@raspberrypi.lan&quot; but I got &quot;ssh: Could not resolve hostname raspberrypi.lan: nodename nor servname provided, or not known&quot;</li> <li>I could see on my router app the IP of the PI so I was able to connect with &quot;ssh pi@192.168.1.12&quot;</li> <li>The default password was &quot;raspberry&quot; for the user &quot;pi&quot;</li> <li>I typed &quot;sudo raspi-config&quot; and the config UI showed up in my terminal app</li></ul> <p>I found this helpful guide for the config menu</p> <blockquote><ol><li>Expand Filesystem: no need to do this — some may disagree on this point</li> <li>Change User Password: up to you</li> <li>Enable Boot to Desktop/Scratch: by <em>default</em>, this is set to console, which is what we want to keep</li> <li>Internationalisation Options: set your timezone (if in the US, choose America, then find the correct city with your timezone)</li> <li>Enable Camera: <em>no</em> (you can always change this later)</li> <li>Add to Rastrack: <em>no</em></li> <li>Overclock: this is up to you, I usually choose Medium, which makes the Pi run a little bit faster at the expense of power and potential component damange</li> <li>Advanced options: <em>choose A4 SSH</em> - this will enable secure shell access, which means that you can control your Raspberry Pi from a remote computer (extremely useful)</li></ol></blockquote> <ul><li>Number 8 was done for me</li> <li>I set the timezone</li> <li>I ran &quot;sudo apt-get update &amp;&amp; sudo apt-get upgrade&quot;</li> <li>I indeed have wheezy and I have ARM hardware as shown by these lines:<div class="language- extra-class"><pre class="language-text"><code>Hit http://raspberrypi.collabora.com wheezy Release
+Hit http://archive.raspberrypi.org wheezy/main armhf Packages
+</code></pre></div></li></ul> <hr> <h3 id="to-open-config-files-in-the-nano-editor"><a href="#to-open-config-files-in-the-nano-editor" aria-hidden="true" class="header-anchor">#</a> To open config files in the nano editor</h3> <ul><li>network &quot;sudo nano /etc/network/interfaces&quot;</li> <li>keyboard &quot;sudo nano /etc/default/keyboard&quot;</li></ul> <hr> <h3 id="log-continued"><a href="#log-continued" aria-hidden="true" class="header-anchor">#</a> Log continued...</h3> <ul><li>When using my keyboard I noticed some characters weren't what I typed</li> <li>In the keyboard file I change XKBLAYOUT from &quot;gb&quot; to &quot;us&quot;</li> <li>nano is a simple built-in editor. Type in ctrl-X and Y then enter to overwrite to save the file.</li> <li>Make these keyboard changes take effect by rebooting: &quot;sudo reboot&quot;</li></ul> <hr> <h3 id="list-of-commands-to-know"><a href="#list-of-commands-to-know" aria-hidden="true" class="header-anchor">#</a> List of commands to know</h3> <ul><li>&quot;sudo raspi-config&quot; This opens the configuration screen for the operating system</li> <li>power off &quot;sudo poweroff&quot;</li> <li>&quot;sudo shutdown -h now&quot; (or sudo halt)</li> <li>reboot &quot;sudo reboot&quot; or &quot;sudo shutdown -r now&quot;</li> <li>apt-get update &lt;--updates the list</li> <li>apt-get upgrade &lt;--installs the updates</li> <li>apt-get autoclean &lt;--cleans up afterwards if necessary</li> <li>You can substitute &quot;aptitude&quot; for &quot;apt-get.&quot; Aptitude is an Ncurses viewer of packages installed or available. Aptitude can be used from the command line in a similar way to apt-get. See man aptitude for more information.</li> <li>&quot;startx&quot; start GUI from prompt</li> <li>&quot;lsusb&quot; to display a list of usb devices</li> <li>&quot;ls&quot; command can be used to list items attached</li> <li>&quot;cat /proc/cpuinfo&quot; display hardware info</li> <li>&quot;cat /proc/meminfo&quot; displays details about the Raspberry Pi’s memory</li> <li>&quot;cat /proc/partitions&quot; reveals the size and number of partitions on your SD card or HDD</li> <li>&quot;cat /proc/version&quot; shows you which version of the Pi you are using.</li> <li>&quot;vcgencmd measure_temp&quot; vcgencmd series of commands, which can reveal things like CPU temperature</li> <li>To check all your environment variables &quot;env&quot;</li></ul> <hr> <h3 id="log-continued-2"><a href="#log-continued-2" aria-hidden="true" class="header-anchor">#</a> Log continued...</h3> <ul><li>I want to play sound through the audio jack</li> <li>Check to see if sound is ready
+<code>&quot;lsmod | grep snd_bcm2835&quot;</code></li> <li>It shows bcm2835 is there</li> <li>Grab a WAV file &quot;wget http://www.freespecialeffects.co.uk/soundfx/computers/bleep_01.wav&quot;</li> <li>Play it using &quot;aplay bleep_01.wav&quot;</li></ul> <p>Play mp3 files</p> <ul><li>To play mp3s &quot;sudo apt-get -y install mpg321&quot;</li> <li>Get an mp3 &quot;wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3&quot;</li> <li>Play &quot;mpg321 fire_burning.mp3&quot;</li> <li>Play with volume at 50% &quot;mpg321 -g 50 fire_burning.mp3&quot;</li></ul> <p>Installing NodeJS</p> <ul><li>Latest stable node.js package available from the node-arm site &quot;wget http://node-arm.herokuapp.com/node_latest_armhf.deb&quot;</li> <li>Install it &quot;sudo dpkg -i node_latest_armhf.deb&quot;</li> <li>Check to see if we get a version number &quot;node -v&quot; it says &quot;v0.12.1&quot;</li> <li>Check NPM &quot;npm -v&quot; it says &quot;2.5.1&quot;</li></ul> <p>Using NodeJS</p> <ul><li>Another check to see Node working is to type &quot;node&quot; and then at the prompt &quot;new Date()&quot; it says &quot;Sun May 31 2015 09:25:09 GMT-0500 (CDT)&quot;</li> <li>After SSH we are in /home/pi folder</li> <li>Make a directory called node_programs &quot;mkdir node_programs&quot;</li> <li>Change directory to node_programs &quot;cd node_programs&quot;</li> <li>Make and change to new folder helloworld &quot;mkdir helloworld &amp;&amp; cd helloworld&quot;</li> <li>Initialize a new node project here &quot;npm init&quot; and click enter through all the prompts</li> <li>Start an empty file named index.js &quot;nano index.js&quot; - the nano editor opens to a blank file.</li> <li>CTRL + X to exit, Y selects Yes, and Enter completes and closes it.</li></ul> <hr> <h3 id="for-setting-a-static-ip-address"><a href="#for-setting-a-static-ip-address" aria-hidden="true" class="header-anchor">#</a> For setting a static IP address</h3> <ul><li>Get the needed numbers below by typing &quot;ifconfig&quot; and &quot;netstat -nr&quot;</li> <li>Typed &quot;sudo nano /etc/network/interfaces&quot;</li> <li>Changed this:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+</code></pre></div><ul><li>To this:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>  auto eth0
+  allow-hotplug eth0
+  iface eth0 inet dhcp
+  auto wlan0
+  allow-hotplug wlan0
+  iface wlan0 inet static
+  address 192.168.1.185 //something higher than the amount of dhcp devices
+  netmask 255.255.255.0
+  broadcast 192.168.1.255
+  network 192.168.1.0
+  gateway 192.168.1.1
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>* &quot;sudo reboot&quot; - once back in run &quot;ifconfig&quot; to reveal your new settings.
+
+***
+
+### Misc
+
+* Installed Chromium &quot;sudo apt-get install chromium-browser&quot;
+* Chromium in Kiosk Mode: &quot;chromium --kiosk http://www.google.com&quot; - ALT + F4 to close it
+
+### Add a user
+
+* &quot;sudo adduser admin&quot; follow the prompts to complete the new user
+* as pi &quot;sudo su&quot; and then run &quot;visudo&quot; which allows you to edit the /etc/sudoers file. add a line exactly matching the one for pi
+
+***
+Use nodejs to play a mp3
+
+* &quot;npm install mpg321&quot; in the node program folder created above
+* Put an mp3 in the current folder &quot;wget http://www.freespecialeffects.co.uk//soundfx/various/fire_burning.mp3&quot;
+* Open to edit the index.js file &quot;nano index.js&quot;
+* Paste the following:
+
+</code></pre></div><p>var mpg321 = require('mpg321');</p> <p>var proc = mpg321()
+.loop(0) // infinity loop
+.file('./fire_burning.mp3')
+.exec();</p> <p>// SIGINT hack - stops running on ctrl + C in the terminal
+process.on('SIGINT', function (data) {
+process.exit();
+});</p> <div class="language- extra-class"><pre class="language-text"><code>
+- Run the index.js file with node &quot;node index.js&quot;
+- The mp3 plays through the audio jack
+
+---
+
+Comments can happen here: [/blog/issues/6](https://github.com/getsetbro/blog/issues/6)
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">1/7/2019, 10:15:34 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/blog/assets/js/app.5fb0c628.js" defer></script><script src="/blog/assets/js/7.922575b9.js" defer></script>
+  </body>
+</html>
